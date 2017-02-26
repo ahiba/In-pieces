@@ -1,0 +1,504 @@
+/*! Created by Reddy Huang. */
+/*
+ * css reset
+ *      By Moudicat
+ * 2016/9/8   created original version.
+ * 2016/9/13  Added class 'clearfix' for float clear.
+ * 2016/9/22  Added form css reset part1.
+ * 2016/10/19 Added mobile device reset css for a & input.
+ * 2016/10/21 Added fieldset & legend css reset.
+ * */
+body,dd,dl,fieldset,h1,h2,h3,h4,h5,h6,legend,ol,p,ul{margin:0;padding:0}body{font-family:"microsoft yahei"}ol,ul{list-style:none}b,em,h1,h2,h3,h4,h5,h6,i,strong{font-weight:400;font-style:normal}a{text-decoration:none;color:#000;-webkit-tap-highlight-color:transparent}img{vertical-align:middle;border:none}input{padding:0;border:none;background:0 0;-webkit-tap-highlight-color:transparent;-webkit-appearance:none}textarea{resize:none}button,input,select,textarea{outline:0}legend{border:0}.clearfix:after{content:"";display:block;clear:both;overflow:hidden;height:0;visibility:hidden}.clearfix{zoom:1}/**
+ * Created by Moudi on 2017/2/25.
+ */
+/**
+ * Created by Moudi on 2017/2/26.
+ */
+body,
+html {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: .5s;
+  background: #181818; }
+
+body.main {
+  background-color: #181818; }
+
+body.startup {
+  background-color: #181818; }
+
+body.crow {
+  background-color: #84A5DD; }
+
+body.vaquita {
+  background-color: #64d6e2; }
+
+body.kakapo {
+  background-color: #dbbe39; }
+
+body.ostrich {
+  background-color: #de89ac; }
+
+body.parrotfish {
+  background-color: #ccc5e3; }
+
+body.penguin {
+  background-color: #3CCAD1; }
+
+body.iguana {
+  background-color: #F6D860; }
+
+body.drill {
+  background-color: #87C4A3; }
+
+body.owl {
+  background-color: #a09de5; }
+
+body.tapir {
+  background-color: #FEC54F; }
+
+body.peccary {
+  background-color: #F4696B; }
+
+body.oryx {
+  background-color: #79BBB5; }
+
+body.frog {
+  background-color: #785ebb; }
+
+body.seahorse {
+  background-color: #9988CD; }
+
+body.camel {
+  background-color: #FD9372; }
+
+body.butterfly {
+  background-color: #9B7AD5; }
+
+body.sloth {
+  background-color: #FDACB4; }
+
+body.armadillo {
+  background-color: #EDB948; }
+
+body.damselfly {
+  background-color: #F68F6F; }
+
+body.loris {
+  background-color: #9B7FE6; }
+
+body.echidna {
+  background-color: #DFBC94; }
+
+body.bear {
+  background-color: #9787EA; }
+
+body.lynx {
+  background-color: #F4C3C5; }
+
+body.okapi {
+  background-color: #E794AE; }
+
+body.panda {
+  background-color: #98BFF6; }
+
+body.hirola {
+  background-color: #EF9F64; }
+
+body.sifaka {
+  background-color: #9784ED; }
+
+body.rhino {
+  background-color: #63C5AB; }
+
+body.tamarin {
+  background-color: #FDAED4; }
+
+body.turtle {
+  background-color: #A0CADB; }
+
+#show-stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 60%;
+  height: 80%;
+  border: 1px solid red; }
+  #show-stage .wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  #show-stage .pieces {
+    width: 100%;
+    height: 100%;
+    transition: 0.8s cubic-bezier(0.62, 0.02, 0.34, 1); }
+
+.wrapper:nth-of-type(1) .pieces {
+  -webkit-clip-path: polygon(9.75% 39.337%, 10.65% 33.194%, 21.65% 33.337%);
+  clip-path: polygon(9.75% 39.337%, 10.65% 33.194%, 21.65% 33.337%);
+  background-color: #e9ddb2;
+  transition-delay: 0.04s; }
+
+.wrapper:nth-of-type(2) .pieces {
+  -webkit-clip-path: polygon(9.75% 39.194%, 21.35% 33.194%, 23.45% 43.194%);
+  clip-path: polygon(9.75% 39.194%, 21.35% 33.194%, 23.45% 43.194%);
+  background-color: #cebf82;
+  transition-delay: 0.08s; }
+
+.wrapper:nth-of-type(3) .pieces {
+  -webkit-clip-path: polygon(9.75% 39.051%, 23.45% 43.051%, 9.35% 45.48%);
+  clip-path: polygon(9.75% 39.051%, 23.45% 43.051%, 9.35% 45.48%);
+  background-color: #d2c895;
+  transition-delay: 0.12s; }
+
+.wrapper:nth-of-type(4) .pieces {
+  -webkit-clip-path: polygon(14.95% 40.48%, 17.65% 41.337%, 13.75% 43.051%);
+  clip-path: polygon(14.95% 40.48%, 17.65% 41.337%, 13.75% 43.051%);
+  background-color: #231f20;
+  transition-delay: 0.16s; }
+
+.wrapper:nth-of-type(5) .pieces {
+  -webkit-clip-path: polygon(9.35% 45.766%, 10.95% 55.051%, 9.25% 51.051%);
+  clip-path: polygon(9.35% 45.766%, 10.95% 55.051%, 9.25% 51.051%);
+  background-color: #d3eadd;
+  transition-delay: 0.2s; }
+
+.wrapper:nth-of-type(6) .pieces {
+  -webkit-clip-path: polygon(9.35% 45.337%, 12.75% 44.908%, 10.95% 55.051%);
+  clip-path: polygon(9.35% 45.337%, 12.75% 44.908%, 10.95% 55.051%);
+  background-color: #dbdb60;
+  transition-delay: 0.24s; }
+
+.wrapper:nth-of-type(7) .pieces {
+  -webkit-clip-path: polygon(11.95% 49.766%, 12.75% 45.051%, 20.85% 56.337%);
+  clip-path: polygon(11.95% 49.766%, 12.75% 45.051%, 20.85% 56.337%);
+  background-color: #9c9c6d;
+  transition-delay: 0.28s; }
+
+.wrapper:nth-of-type(8) .pieces {
+  -webkit-clip-path: polygon(12.7% 44.908%, 23.35% 43.1%, 20.9% 56.194%);
+  clip-path: polygon(12.7% 44.908%, 23.35% 43.1%, 20.9% 56.194%);
+  background-color: #dbd095;
+  transition-delay: 0.32s; }
+
+.wrapper:nth-of-type(9) .pieces {
+  -webkit-clip-path: polygon(10.65% 33.337%, 34.45% 18.48%, 21.35% 33.337%);
+  clip-path: polygon(10.65% 33.337%, 34.45% 18.48%, 21.35% 33.337%);
+  background-color: #76b166;
+  transition-delay: 0.36s; }
+
+.wrapper:nth-of-type(10) .pieces {
+  -webkit-clip-path: polygon(21.35% 33.337%, 32.95% 20.051%, 23.45% 43.051%);
+  clip-path: polygon(21.35% 33.337%, 32.95% 20.051%, 23.45% 43.051%);
+  background-color: #6da13a;
+  transition-delay: 0.4s; }
+
+.wrapper:nth-of-type(11) .pieces {
+  -webkit-clip-path: polygon(20.85% 56.337%, 23.55% 43.051%, 35.15% 63.766%);
+  clip-path: polygon(20.85% 56.337%, 23.55% 43.051%, 35.15% 63.766%);
+  background-color: #939c42;
+  transition-delay: 0.44s; }
+
+.wrapper:nth-of-type(12) .pieces {
+  -webkit-clip-path: polygon(30.85% 25.051%, 44.65% 23.48%, 59.85% 31.194%);
+  clip-path: polygon(30.85% 25.051%, 44.65% 23.48%, 59.85% 31.194%);
+  background-color: #7cb949;
+  transition-delay: 0.48s; }
+
+.wrapper:nth-of-type(13) .pieces {
+  -webkit-clip-path: polygon(30.75% 25.194%, 43.25% 41.908%, 23.35% 43.051%);
+  clip-path: polygon(30.75% 25.194%, 43.25% 41.908%, 23.35% 43.051%);
+  background-color: #85aa48;
+  transition-delay: 0.52s; }
+
+.wrapper:nth-of-type(14) .pieces {
+  -webkit-clip-path: polygon(23.45% 43.1%, 43.33% 41.8%, 39.85% 51.766%);
+  clip-path: polygon(23.45% 43.1%, 43.33% 41.8%, 39.85% 51.766%);
+  background-color: #699f43;
+  transition-delay: 0.56s; }
+
+.wrapper:nth-of-type(15) .pieces {
+  -webkit-clip-path: polygon(23.45% 43.194%, 39.85% 51.766%, 34.75% 63.48%);
+  clip-path: polygon(23.45% 43.194%, 39.85% 51.766%, 34.75% 63.48%);
+  background-color: #6c7e4b;
+  transition-delay: 0.6s; }
+
+.wrapper:nth-of-type(16) .pieces {
+  -webkit-clip-path: polygon(33.15% 19.623%, 47.95% 23.623%, 30.85% 25.194%);
+  clip-path: polygon(33.15% 19.623%, 47.95% 23.623%, 30.85% 25.194%);
+  background-color: #6aa84e;
+  transition-delay: 0.64s; }
+
+.wrapper:nth-of-type(17) .pieces {
+  -webkit-clip-path: polygon(30.7% 25.1%, 57.95% 30.65%, 43.35% 42.051%);
+  clip-path: polygon(30.7% 25.1%, 57.95% 30.65%, 43.35% 42.051%);
+  background-color: #70aa48;
+  transition-delay: 0.68s; }
+
+.wrapper:nth-of-type(18) .pieces {
+  -webkit-clip-path: polygon(34.75% 63.48%, 39.85% 51.623%, 45.05% 81.766%);
+  clip-path: polygon(34.75% 63.48%, 39.85% 51.623%, 45.05% 81.766%);
+  background-color: #588025;
+  transition-delay: 0.72s; }
+
+.wrapper:nth-of-type(19) .pieces {
+  -webkit-clip-path: polygon(37.65% 80.48%, 44.15% 83.194%, 41.95% 84.48%);
+  clip-path: polygon(37.65% 80.48%, 44.15% 83.194%, 41.95% 84.48%);
+  background-color: #6e6255;
+  transition-delay: 0.76s; }
+
+.wrapper:nth-of-type(20) .pieces {
+  -webkit-clip-path: polygon(44.55% 78.051%, 42.55% 88.194%, 45.75% 79.908%);
+  clip-path: polygon(44.55% 78.051%, 42.55% 88.194%, 45.75% 79.908%);
+  background-color: #6d7161;
+  transition-delay: 0.8s; }
+
+.wrapper:nth-of-type(21) .pieces {
+  -webkit-clip-path: polygon(35.95% 86.48%, 44.15% 83.051%, 43.15% 85.48%);
+  clip-path: polygon(35.95% 86.48%, 44.15% 83.051%, 43.15% 85.48%);
+  background-color: #4a4b46;
+  transition-delay: 0.84s; }
+
+.wrapper:nth-of-type(22) .pieces {
+  -webkit-clip-path: polygon(42.25% 65.908%, 63.45% 54.051%, 44.75% 81.766%);
+  clip-path: polygon(42.25% 65.908%, 63.45% 54.051%, 44.75% 81.766%);
+  background-color: #435a2c;
+  transition-delay: 0.88s; }
+
+.wrapper:nth-of-type(23) .pieces {
+  -webkit-clip-path: polygon(39.85% 51.766%, 62.85% 48.48%, 42.45% 66.908%);
+  clip-path: polygon(39.85% 51.766%, 62.85% 48.48%, 42.45% 66.908%);
+  background-color: #56712b;
+  transition-delay: 0.92s; }
+
+.wrapper:nth-of-type(24) .pieces {
+  -webkit-clip-path: polygon(58.35% 49.051%, 69.05% 43.908%, 63.25% 54.337%);
+  clip-path: polygon(58.35% 49.051%, 69.05% 43.908%, 63.25% 54.337%);
+  background-color: #458b23;
+  transition-delay: 0.96s; }
+
+.wrapper:nth-of-type(25) .pieces {
+  -webkit-clip-path: polygon(42.45% 66.337%, 59.95% 50.766%, 63.25% 54.337%);
+  clip-path: polygon(42.45% 66.337%, 59.95% 50.766%, 63.25% 54.337%);
+  background-color: #406c2b;
+  transition-delay: 1s; }
+
+.wrapper:nth-of-type(26) .pieces {
+  -webkit-clip-path: polygon(43.35% 41.766%, 58.75% 49.051%, 39.75% 51.908%);
+  clip-path: polygon(43.35% 41.766%, 58.75% 49.051%, 39.75% 51.908%);
+  background-color: #6aa84e;
+  transition-delay: 1.04s; }
+
+.wrapper:nth-of-type(27) .pieces {
+  -webkit-clip-path: polygon(43.35% 41.766%, 58.15% 30.48%, 58.65% 49.051%);
+  clip-path: polygon(43.35% 41.766%, 58.15% 30.48%, 58.65% 49.051%);
+  background-color: #57954f;
+  transition-delay: 1.08s; }
+
+.wrapper:nth-of-type(28) .pieces {
+  -webkit-clip-path: polygon(57.95% 30.766%, 70.25% 43.623%, 58.55% 49%);
+  clip-path: polygon(57.95% 30.766%, 70.25% 43.623%, 58.55% 49%);
+  background-color: #519f4b;
+  transition-delay: 1.12s; }
+
+.wrapper:nth-of-type(29) .pieces {
+  -webkit-clip-path: polygon(63.25% 54.337%, 69% 43.95%, 70.95% 51.623%);
+  clip-path: polygon(63.25% 54.337%, 69% 43.95%, 70.95% 51.623%);
+  background-color: #56712b;
+  transition-delay: 1.16s; }
+
+.wrapper:nth-of-type(30) .pieces {
+  -webkit-clip-path: polygon(63.35% 54.337%, 70.75% 51.623%, 88.05% 73.051%);
+  clip-path: polygon(63.35% 54.337%, 70.75% 51.623%, 88.05% 73.051%);
+  background-color: #2b3108;
+  transition-delay: 1.2s; }
+
+#show-stage:hover .wrapper:nth-of-type(1) .pieces {
+  -webkit-clip-path: polygon(15.1% 69.071%, 18% 56.929%, 20% 74.5%);
+  clip-path: polygon(15.1% 69.071%, 18% 56.929%, 20% 74.5%);
+  background-color: #473F34;
+  transition-delay: 0.04s; }
+
+#show-stage:hover .wrapper:nth-of-type(2) .pieces {
+  -webkit-clip-path: polygon(17.9% 56.929%, 36.4% 52.071%, 20% 74.5%);
+  clip-path: polygon(17.9% 56.929%, 36.4% 52.071%, 20% 74.5%);
+  background-color: #786E5B;
+  transition-delay: 0.08s; }
+
+#show-stage:hover .wrapper:nth-of-type(3) .pieces {
+  -webkit-clip-path: polygon(15.2% 57.5%, 18% 56.786%, 16.4% 63.643%);
+  clip-path: polygon(15.2% 57.5%, 18% 56.786%, 16.4% 63.643%);
+  background-color: #8F8574;
+  transition-delay: 0.12s; }
+
+#show-stage:hover .wrapper:nth-of-type(4) .pieces {
+  -webkit-clip-path: polygon(17.9% 56.786%, 18.4% 61.214%, 16.4% 63.5%);
+  clip-path: polygon(17.9% 56.786%, 18.4% 61.214%, 16.4% 63.5%);
+  background-color: #8F8574;
+  transition-delay: 0.16s; }
+
+#show-stage:hover .wrapper:nth-of-type(5) .pieces {
+  -webkit-clip-path: polygon(17.8% 57.214%, 18.9% 36.786%, 30.7% 41.786%);
+  clip-path: polygon(17.8% 57.214%, 18.9% 36.786%, 30.7% 41.786%);
+  background-color: #B4A696;
+  transition-delay: 0.2s; }
+
+#show-stage:hover .wrapper:nth-of-type(6) .pieces {
+  -webkit-clip-path: polygon(17.8% 57.071%, 30.5% 41.786%, 36.3% 52.071%);
+  clip-path: polygon(17.8% 57.071%, 30.5% 41.786%, 36.3% 52.071%);
+  background-color: #8F8574;
+  transition-delay: 0.24s; }
+
+#show-stage:hover .wrapper:nth-of-type(7) .pieces {
+  -webkit-clip-path: polygon(22.6% 55.786%, 27.5% 53.071%, 26.7% 58.214%);
+  clip-path: polygon(22.6% 55.786%, 27.5% 53.071%, 26.7% 58.214%);
+  background-color: #ACA191;
+  transition-delay: 0.28s; }
+
+#show-stage:hover .wrapper:nth-of-type(8) .pieces {
+  -webkit-clip-path: polygon(18.7% 41.643%, 13.7% 33.929%, 20.5% 37.357%);
+  clip-path: polygon(18.7% 41.643%, 13.7% 33.929%, 20.5% 37.357%);
+  background-color: #8F8574;
+  transition-delay: 0.32s; }
+
+#show-stage:hover .wrapper:nth-of-type(9) .pieces {
+  -webkit-clip-path: polygon(28.6% 62.5%, 36.2% 51.929%, 40.6% 59.357%);
+  clip-path: polygon(28.6% 62.5%, 36.2% 51.929%, 40.6% 59.357%);
+  background-color: #463E33;
+  transition-delay: 0.36s; }
+
+#show-stage:hover .wrapper:nth-of-type(10) .pieces {
+  -webkit-clip-path: polygon(28.6% 62.5%, 37.2% 60.071%, 24.4% 79.786%);
+  clip-path: polygon(28.6% 62.5%, 37.2% 60.071%, 24.4% 79.786%);
+  background-color: #312720;
+  transition-delay: 0.4s; }
+
+#show-stage:hover .wrapper:nth-of-type(11) .pieces {
+  -webkit-clip-path: polygon(24.3% 79.786%, 31.9% 68.071%, 29.7% 82.071%);
+  clip-path: polygon(24.3% 79.786%, 31.9% 68.071%, 29.7% 82.071%);
+  background-color: #473F34;
+  transition-delay: 0.44s; }
+
+#show-stage:hover .wrapper:nth-of-type(12) .pieces {
+  -webkit-clip-path: polygon(20.4% 37.5%, 36.5% 20.643%, 49.5% 21.786%);
+  clip-path: polygon(20.4% 37.5%, 36.5% 20.643%, 49.5% 21.786%);
+  background-color: #B3A595;
+  transition-delay: 0.48s; }
+
+#show-stage:hover .wrapper:nth-of-type(13) .pieces {
+  -webkit-clip-path: polygon(20.4% 37.357%, 49.4% 21.643%, 44.4% 48.071%);
+  clip-path: polygon(20.4% 37.357%, 49.4% 21.643%, 44.4% 48.071%);
+  background-color: #8F8574;
+  transition-delay: 0.52s; }
+
+#show-stage:hover .wrapper:nth-of-type(14) .pieces {
+  -webkit-clip-path: polygon(30.4% 41.786%, 44.6% 47.786%, 40.4% 59.5%);
+  clip-path: polygon(30.4% 41.786%, 44.6% 47.786%, 40.4% 59.5%);
+  background-color: #776D5A;
+  transition-delay: 0.56s; }
+
+#show-stage:hover .wrapper:nth-of-type(15) .pieces {
+  -webkit-clip-path: polygon(26.1% 39.786%, 34.6% 36.786%, 29% 43.643%);
+  clip-path: polygon(26.1% 39.786%, 34.6% 36.786%, 29% 43.643%);
+  background-color: #615844;
+  transition-delay: 0.6s; }
+
+#show-stage:hover .wrapper:nth-of-type(16) .pieces {
+  -webkit-clip-path: polygon(44.3% 47.786%, 49.4% 21.5%, 72% 45.357%);
+  clip-path: polygon(44.3% 47.786%, 49.4% 21.5%, 72% 45.357%);
+  background-color: #978C7F;
+  transition-delay: 0.64s; }
+
+#show-stage:hover .wrapper:nth-of-type(17) .pieces {
+  -webkit-clip-path: polygon(44.4% 47.643%, 71.8% 44.929%, 49.8% 60.5%);
+  clip-path: polygon(44.4% 47.643%, 71.8% 44.929%, 49.8% 60.5%);
+  background-color: #787161;
+  transition-delay: 0.68s; }
+
+#show-stage:hover .wrapper:nth-of-type(18) .pieces {
+  -webkit-clip-path: polygon(40.4% 59.214%, 44.5% 47.786%, 50% 60.357%);
+  clip-path: polygon(40.4% 59.214%, 44.5% 47.786%, 50% 60.357%);
+  background-color: #675D49;
+  transition-delay: 0.72s; }
+
+#show-stage:hover .wrapper:nth-of-type(19) .pieces {
+  -webkit-clip-path: polygon(40.3% 59.214%, 49.9% 60.214%, 49.5% 85.357%);
+  clip-path: polygon(40.3% 59.214%, 49.9% 60.214%, 49.5% 85.357%);
+  background-color: #454133;
+  transition-delay: 0.76s; }
+
+#show-stage:hover .wrapper:nth-of-type(20) .pieces {
+  -webkit-clip-path: polygon(44.2% 70.357%, 49.5% 85.357%, 41.9% 85.214%);
+  clip-path: polygon(44.2% 70.357%, 49.5% 85.357%, 41.9% 85.214%);
+  background-color: #32302D;
+  transition-delay: 0.8s; }
+
+#show-stage:hover .wrapper:nth-of-type(21) .pieces {
+  -webkit-clip-path: polygon(49.3% 21.643%, 72.9% 17.214%, 71.8% 45.5%);
+  clip-path: polygon(49.3% 21.643%, 72.9% 17.214%, 71.8% 45.5%);
+  background-color: #B1A394;
+  transition-delay: 0.84s; }
+
+#show-stage:hover .wrapper:nth-of-type(22) .pieces {
+  -webkit-clip-path: polygon(49.7% 60.071%, 71.8% 44.9%, 71.5% 65.7%);
+  clip-path: polygon(49.7% 60.071%, 71.8% 44.9%, 71.5% 65.7%);
+  background-color: #595041;
+  transition-delay: 0.88s; }
+
+#show-stage:hover .wrapper:nth-of-type(23) .pieces {
+  -webkit-clip-path: polygon(49.7% 60.071%, 71.4% 65.4%, 59.2% 67.071%);
+  clip-path: polygon(49.7% 60.071%, 71.4% 65.4%, 59.2% 67.071%);
+  background-color: #473F34;
+  transition-delay: 0.92s; }
+
+#show-stage:hover .wrapper:nth-of-type(24) .pieces {
+  -webkit-clip-path: polygon(71.6% 45.214%, 72.8% 17.214%, 85% 31.214%);
+  clip-path: polygon(71.6% 45.214%, 72.8% 17.214%, 85% 31.214%);
+  background-color: #8F8574;
+  transition-delay: 0.96s; }
+
+#show-stage:hover .wrapper:nth-of-type(25) .pieces {
+  -webkit-clip-path: polygon(71.5% 45.071%, 85.2% 31.071%, 77.7% 54.929%);
+  clip-path: polygon(71.5% 45.071%, 85.2% 31.071%, 77.7% 54.929%);
+  background-color: #615844;
+  transition-delay: 1s; }
+
+#show-stage:hover .wrapper:nth-of-type(26) .pieces {
+  -webkit-clip-path: polygon(77.4% 54.643%, 85.1% 31.214%, 79.6% 58.071%);
+  clip-path: polygon(77.4% 54.643%, 85.1% 31.214%, 79.6% 58.071%);
+  background-color: #473F34;
+  transition-delay: 1.04s; }
+
+#show-stage:hover .wrapper:nth-of-type(27) .pieces {
+  -webkit-clip-path: polygon(71.3% 65.5%, 71.6% 45.071%, 79.6% 57.929%);
+  clip-path: polygon(71.3% 65.5%, 71.6% 45.071%, 79.6% 57.929%);
+  background-color: #373020;
+  transition-delay: 1.08s; }
+
+#show-stage:hover .wrapper:nth-of-type(28) .pieces {
+  -webkit-clip-path: polygon(71.2% 65.357%, 79.6% 57.786%, 72.7% 79.214%);
+  clip-path: polygon(71.2% 65.357%, 79.6% 57.786%, 72.7% 79.214%);
+  background-color: #473F34;
+  transition-delay: 1.12s; }
+
+#show-stage:hover .wrapper:nth-of-type(29) .pieces {
+  -webkit-clip-path: polygon(70.8% 84.357%, 77.2% 64.929%, 79.7% 84.214%);
+  clip-path: polygon(70.8% 84.357%, 77.2% 64.929%, 79.7% 84.214%);
+  background-color: #32302D;
+  transition-delay: 1.16s; }
+
+#show-stage:hover .wrapper:nth-of-type(30) .pieces {
+  -webkit-clip-path: polygon(83.7% 37.786%, 85% 31.214%, 89.3% 51.786%);
+  clip-path: polygon(83.7% 37.786%, 85% 31.214%, 89.3% 51.786%);
+  background-color: #292216;
+  transition-delay: 1.2s; }
+
+/*# sourceMappingURL=main.css.map*/
