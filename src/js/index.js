@@ -9,8 +9,9 @@ require('../css/main.scss');
 class Pieces {
     constructor(id) {
         this.e = document.getElementById(id);
+        this.nameArr = ['crow', 'vaquita', 'kakapo', 'ostrich', 'parrotfish', 'penguin', 'iguana', 'peccary', 'drill', 'oryx', 'owl', 'tapir', 'frog', 'seahorse', 'camel', 'butterfly', 'sloth', 'armadillo', 'damselfly', 'loris', 'echidna', 'bear', 'lynx', 'hirola', 'okapi', 'sifaka', 'panda', 'rhino', 'tamarin', 'turtle'];
+        this.n = 0;
     }
-
     init() {
         let eleHTML = `
             <div class="wrapper">
@@ -22,6 +23,25 @@ class Pieces {
             ehtml += eleHTML;
         }
         this.e.innerHTML = ehtml;
+        document.body.className = this.nameArr[this.n];
+        this._resize();
+        this._initEvent();
+    }
+    _initEvent() {
+        document.addEventListener('click', () => {
+            this.n++;
+            this.n >= this.nameArr.length && (this.n = 0);
+            document.body.className = this.nameArr[this.n];
+        });
+        window.onresize =  () => {
+            this._resize();
+        };
+    }
+    _resize() {
+        let w = window.innerWidth * .9;
+        let h = w * (2/3);
+        this.e.style.width = w + 'px';
+        this.e.style.height = h + 'px';
     }
 }
 window.onload = function () {

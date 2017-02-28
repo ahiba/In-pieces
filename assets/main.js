@@ -96,6 +96,8 @@ var Pieces = function () {
         _classCallCheck(this, Pieces);
 
         this.e = document.getElementById(id);
+        this.nameArr = ['crow', 'vaquita', 'kakapo', 'ostrich', 'parrotfish', 'penguin', 'iguana', 'peccary', 'drill', 'oryx', 'owl', 'tapir', 'frog', 'seahorse', 'camel', 'butterfly', 'sloth', 'armadillo', 'damselfly', 'loris', 'echidna', 'bear', 'lynx', 'hirola', 'okapi', 'sifaka', 'panda', 'rhino', 'tamarin', 'turtle'];
+        this.n = 0;
     }
 
     _createClass(Pieces, [{
@@ -107,6 +109,31 @@ var Pieces = function () {
                 ehtml += eleHTML;
             }
             this.e.innerHTML = ehtml;
+            document.body.className = this.nameArr[this.n];
+            this._resize();
+            this._initEvent();
+        }
+    }, {
+        key: '_initEvent',
+        value: function _initEvent() {
+            var _this = this;
+
+            document.addEventListener('click', function () {
+                _this.n++;
+                _this.n >= _this.nameArr.length && (_this.n = 0);
+                document.body.className = _this.nameArr[_this.n];
+            });
+            window.onresize = function () {
+                _this._resize();
+            };
+        }
+    }, {
+        key: '_resize',
+        value: function _resize() {
+            var w = window.innerWidth * .9;
+            var h = w * (2 / 3);
+            this.e.style.width = w + 'px';
+            this.e.style.height = h + 'px';
         }
     }]);
 
