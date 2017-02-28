@@ -18,10 +18,24 @@ class Pieces {
                 <div class="pieces"></div>
             </div>
         `;
+        let eleHTMLExtra = `
+            <div class="wrapper extra">
+                <div class="pieces"></div>
+            </div>
+        `;
+        let eleHTMLShadow = `
+            <div class="wrapper shadow">
+                <div class="pieces"></div>
+            </div>
+        `;
         let ehtml = '';
         for (let i = 0; i < 30; i++) {
             ehtml += eleHTML;
         }
+        for (let i = 0; i < 3; i++) {
+            ehtml += eleHTMLExtra;
+        }
+        ehtml += eleHTMLShadow;
         this.e.innerHTML = ehtml;
         document.body.className = this.nameArr[this.n];
         this._resize();
