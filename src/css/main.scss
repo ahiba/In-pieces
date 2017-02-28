@@ -2,7 +2,14 @@
  * Created by Moudi on 2017/2/25.
  */
 @import "reset.css";
+//变量区
 @import "var.scss";
+//keyframes
+@import "animation.scss";
+//额外碎片的代码
+@import "extraPieces.scss";
+//过程动画
+@import "state-animation.scss";
 
 body,
 html {
@@ -44,7 +51,20 @@ html {
     transition-timing-function: cubic-bezier(0.37,-0.29, 0, 1.29);  //cubic-bezier(0.62, 0.02, 0.34, 1)
   }
 }
+.wrapper {
+  z-index: 2;
+}
+.extra {
+  z-index: 1;
+  .pieces {
+    -webkit-clip-path: polygon(50% 50%, 50% 50%, 50% 50%);
+    clip-path: polygon(50% 50%, 50% 50%, 50% 50%);
+  }
+}
+
+//遍历所有动物的形状及基础颜色
 @each $name, $p in $path {
+
   @for $i from 1 through 30 {
     body.#{$name} .wrapper:nth-of-type(#{$i}) .pieces {
       -webkit-clip-path: polygon(nth(map_get($path, $name), $i));
@@ -54,3 +74,4 @@ html {
     }
   }
 }
+
