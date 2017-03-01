@@ -20,7 +20,9 @@ html {
   height: 100%;
   transition: .5s;
   background: map-get($bg,startup);
+  overflow: hidden;
 }
+
 @each $color-name, $color in $bg {
   body.#{$color-name} {
     background-color: $color;
@@ -50,6 +52,15 @@ html {
     transition-duration: 0.9s;
     transition-timing-function: cubic-bezier(0.37,-0.29, 0, 1.29);  //cubic-bezier(0.62, 0.02, 0.34, 1)
   }
+  &.fly {
+    animation: fly 2s infinite;
+  }
+  &.fish-l {
+    animation: fish-l 2s infinite;
+  }
+  &.fish-r {
+    animation: fish-r 2s infinite;
+  }
 }
 .wrapper {
   z-index: 2;
@@ -64,7 +75,6 @@ html {
 
 //遍历所有动物的形状及基础颜色
 @each $name, $p in $path {
-
   @for $i from 1 through 30 {
     body.#{$name} .wrapper:nth-of-type(#{$i}) .pieces {
       -webkit-clip-path: polygon(nth(map_get($path, $name), $i));
