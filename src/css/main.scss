@@ -10,6 +10,9 @@
 @import "extraPieces.scss";
 //过程动画
 @import "state-animation.scss";
+//shadow
+@import "shadow.scss";
+
 
 body,
 html {
@@ -72,7 +75,37 @@ html {
     clip-path: polygon(50% 50%, 50% 50%, 50% 50%);
   }
 }
-
+.shadow {
+  position: absolute;
+  bottom: 10%;
+  left: 30%;
+  background-image: radial-gradient( closest-side, rgba(0, 0, 0, 0.35) 0, rgba(0, 0, 0, 0.14) 35%, transparent 100%);
+  width: 50%;
+  height: 5%;
+  transition: .6s cubic-bezier(1,0.3,0.3,1) .6s;
+  &.inactive {
+    opacity:0;
+    transition: .05s cubic-bezier(.7,0.3,0,1) 0s !important;
+  }
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background-image: radial-gradient( closest-side, rgba(0, 0, 0, 0.38) 0, rgba(0, 0, 0, 0.185) 35%, transparent 100%);
+    transition: .6s cubic-bezier(1,0.3,0.3,1) .6s;
+  }
+  &::before {
+    left: 30%
+  }
+  &::after {
+    left: -37%;
+    height: 60%;
+    bottom: 20%;
+  }
+}
 //遍历所有动物的形状及基础颜色
 @each $name, $p in $path {
   @for $i from 1 through 30 {
@@ -84,4 +117,3 @@ html {
     }
   }
 }
-

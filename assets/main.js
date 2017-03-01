@@ -105,7 +105,7 @@ var Pieces = function () {
         value: function init() {
             var eleHTML = '\n            <div class="wrapper">\n                <div class="pieces"></div>\n            </div>\n        ';
             var eleHTMLExtra = '\n            <div class="wrapper extra">\n                <div class="pieces"></div>\n            </div>\n        ';
-            var eleHTMLShadow = '\n            <div class="wrapper shadow">\n                <div class="pieces"></div>\n            </div>\n        ';
+            var eleHTMLShadow = '<div class="shadow"></div>';
             var ehtml = '';
             for (var i = 0; i < 30; i++) {
                 ehtml += eleHTML;

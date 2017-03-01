@@ -23,11 +23,7 @@ class Pieces {
                 <div class="pieces"></div>
             </div>
         `;
-        let eleHTMLShadow = `
-            <div class="wrapper shadow">
-                <div class="pieces"></div>
-            </div>
-        `;
+        let eleHTMLShadow = `<div class="shadow"></div>`;
         let ehtml = '';
         for (let i = 0; i < 30; i++) {
             ehtml += eleHTML;
