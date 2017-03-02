@@ -5,7 +5,6 @@
 //载入css
 require('../css/main.scss');
 
-
 class Pieces {
     constructor(id) {
         this.e = document.getElementById(id);
@@ -33,7 +32,7 @@ class Pieces {
         }
         ehtml += eleHTMLShadow;
         this.e.innerHTML = ehtml;
-        document.body.className = this.nameArr[this.n];
+        // document.body.className = this.nameArr[this.n];
         this._resize();
         this._initEvent();
     }
@@ -41,7 +40,11 @@ class Pieces {
         document.addEventListener('click', () => {
             this.n++;
             this.n >= this.nameArr.length && (this.n = 0);
-            document.body.className = this.nameArr[this.n];
+            // document.body.className = this.nameArr[this.n];
+            document.body.className = 'ready';
+            setTimeout(function () {
+                document.body.className = 'title';
+            }, 900)
         });
         window.onresize =  () => {
             this._resize();

@@ -11,14 +11,19 @@
 
 body.crow {
   .wrapper:nth-child(31) .pieces {
-    background-color: darken(#14aa78, 10%);
-    -webkit-clip-path: polygon(87% 70.5%, 85% 89%, 83% 89%);
-    clip-path: polygon(87% 70.5%, 85% 89%, 83% 89%);
+    background-color: #3a2228;
+    -webkit-clip-path: polygon(39% 87.5%, 41.7% 76.4%, 43.4% 78.6%);
+    clip-path: polygon(39% 87.5%, 41.7% 76.4%, 43.4% 78.6%);
   }
   .wrapper:nth-child(32) .pieces {
-    background-color: #14aa78;
-    -webkit-clip-path: polygon(81% 73.5%, 85% 92%, 83% 92%);
-    clip-path: polygon(81% 73.5%, 85% 92%, 83% 92%);
+    background-color: #4a3042;
+    -webkit-clip-path: polygon(41.5% 76.5%, 60% 63.7%, 43.3% 78.7%);
+    clip-path: polygon(41.5% 76.5%, 60% 63.7%, 43.3% 78.7%);
+  }
+  .wrapper:nth-child(33) .pieces {
+    background-color: #3a2228;
+    -webkit-clip-path: polygon(75.5% 30.5%, 75.5% 30.5%, 75.5% 30.5%);
+    clip-path: polygon(75.5% 30.5%, 75.5% 30.5%, 75.5% 30.5%);
   }
 }
 

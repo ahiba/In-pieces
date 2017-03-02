@@ -115,7 +115,7 @@ var Pieces = function () {
             }
             ehtml += eleHTMLShadow;
             this.e.innerHTML = ehtml;
-            document.body.className = this.nameArr[this.n];
+            // document.body.className = this.nameArr[this.n];
             this._resize();
             this._initEvent();
         }
@@ -127,7 +127,11 @@ var Pieces = function () {
             document.addEventListener('click', function () {
                 _this.n++;
                 _this.n >= _this.nameArr.length && (_this.n = 0);
-                document.body.className = _this.nameArr[_this.n];
+                // document.body.className = this.nameArr[this.n];
+                document.body.className = 'ready';
+                setTimeout(function () {
+                    document.body.className = 'title';
+                }, 900);
             });
             window.onresize = function () {
                 _this._resize();
