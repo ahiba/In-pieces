@@ -68,3 +68,32 @@
     filter: brightness(1);
   }
 }
+
+@keyframes loading {
+  0% {
+    background-color: rgba(0,0,0,.7);
+  }
+  50% {
+    background-color: rgba(200,20,20,0.45);
+  }
+  100% {
+    background-color: rgba(0,0,0,.7);
+
+  }
+}
+
+@keyframes shard-flow {
+  0% {
+    background-color: rgba(0,0,0,0);
+  }
+  30% {
+    background-color: rgba(255,0,0,.47);
+  }
+  66% {
+    background-color: rgba(245,45,64,.3);
+  }
+  100% {
+    background-color: rgba(0,0,0,0);
+
+  }
+}
