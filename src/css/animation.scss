@@ -24,7 +24,16 @@
   0% {
     transform: translateX(0);
   }
-  30% {
+  23% {
+    transform: translateX(0);
+  }
+  46% {
+    transform: translateX(5%);
+  }
+  60% {
+    transform: translateX(0);
+  }
+  80% {
     transform: translateX(5%);
   }
   100% {
@@ -35,7 +44,16 @@
   0% {
     transform: translateX(0);
   }
-  30% {
+  23% {
+    transform: translateX(0);
+  }
+  46% {
+    transform: translateX(-5%);
+  }
+  60% {
+    transform: translateX(0);
+  }
+  80% {
     transform: translateX(-5%);
   }
   100% {
@@ -56,16 +74,13 @@
 }
 @keyframes shimmer {
   0% {
-    -webkit-filter: brightness(1);
-    filter: brightness(1);
+    background-color: rgba(255,255,255,0);
   }
   35% {
-    -webkit-filter: brightness(1.5);
-    filter: brightness(1.5);
+    background-color: rgba(255,255,255,.1);
   }
   100% {
-    -webkit-filter: brightness(1);
-    filter: brightness(1);
+    background-color: rgba(255,255,255,0);
   }
 }
 

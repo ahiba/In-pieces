@@ -23,14 +23,34 @@ body.preloader {
 
 body.ready {
   #show-stage {
-    transform: scale(1.3);
+    transform: scale(1.2);
   }
   .wrapper {
     @for $i from 1 through 30 {
       &:nth-child(#{$i}) .pieces {
         -webkit-clip-path: polygon(nth(map-get($path-1, ready), $i));
         clip-path:  polygon(nth(map-get($path-1, ready), $i));
-        background-color: darken(#111, ($i*1%+16%));
+        transition-delay: $i * 0.06s;
+      }
+    }
+    &:nth-child(5n+1) .pieces {
+      background-color: #28282a;
+    }
+    &:nth-child(5n+2) .pieces {
+      background-color: #111;
+    }
+    &:nth-child(5n+3) .pieces {
+      background-color: #333;
+    }
+    &:nth-child(5n+4) .pieces {
+      background-color: #222;
+    }
+    &:nth-child(5n+5) .pieces {
+      background-color: #121212;
+    }
+    &:nth-child(31), &:nth-child(32), &:nth-child(33) {
+      .pieces {
+        -webkit-clip-path: polygon( 50% 50% ,50% 50% ,50% 50% );
       }
     }
   }
@@ -71,7 +91,7 @@ body.preAni {
         display: block;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, .4);
+        background-color: rgba(0, 0, 0, .6);
       }
     }
   }

@@ -41,7 +41,7 @@ html {
   margin: auto;
   max-width: 650px;
   max-height: 430px;
-  transition: .5s;
+  transition: .3s;
   .wrapper {
     position: absolute;
     top: 0;
@@ -56,13 +56,13 @@ html {
     transition-timing-function: cubic-bezier(0.37,-0.29, 0, 1.29);  //cubic-bezier(0.62, 0.02, 0.34, 1)
   }
   &.fly {
-    animation: fly 2s infinite;
+    animation: fly 3s infinite;
   }
   &.fish-l {
-    animation: fish-l 2s infinite;
+    animation: fish-l 8s infinite;
   }
   &.fish-r {
-    animation: fish-r 2s infinite;
+    animation: fish-r 8s infinite;
   }
 }
 .wrapper {

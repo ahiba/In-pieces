@@ -115,9 +115,10 @@ var Pieces = function () {
             }
             ehtml += eleHTMLShadow;
             this.e.innerHTML = ehtml;
-            // document.body.className = this.nameArr[this.n];
+            document.getElementsByClassName('shadow')[0].className = 'inactive';
             this._resize();
             this._initEvent();
+            window.onload = this._preloaderSeq;
         }
     }, {
         key: '_initEvent',
@@ -125,17 +126,19 @@ var Pieces = function () {
             var _this = this;
 
             document.addEventListener('click', function () {
+                document.body.classList.remove('animation-lock');
                 _this.n++;
                 _this.n >= _this.nameArr.length && (_this.n = 0);
-                // document.body.className = this.nameArr[this.n];
-                document.body.className = 'ready';
+                document.body.classList.remove(_this.nameArr[_this.n - 1]);
+                document.body.classList.add(_this.nameArr[_this.n]);
                 setTimeout(function () {
-                    document.body.className = 'title';
-                }, 900);
+                    document.body.classList.add('animation-lock');
+                }, 2300);
             });
-            window.onresize = function () {
-                _this._resize();
-            };
+            window.onresize = this._resize.bind(this);
+            this._setStateX();
+            this._setState_X();
+            this._setShimmer();
         }
     }, {
         key: '_resize',
@@ -145,15 +148,83 @@ var Pieces = function () {
             this.e.style.width = w + 'px';
             this.e.style.height = h + 'px';
         }
+    }, {
+        key: '_preloaderSeq',
+        value: function _preloaderSeq() {
+            var b = document.body;
+            b.classList.add('animation-lock');
+            // setTimeout(function () {
+            //     b.classList.add('ready');
+            //     b.classList.remove('preloader');
+            //     setTimeout(function () {
+            //         b.classList.add('preAni');
+            //         setTimeout(function () {
+            //             b.classList.remove('ready');
+            //             b.classList.remove('preAni');
+            //         }, 10000)
+            //     }, 5000)
+            // }, 3000);
+        }
+    }, {
+        key: '_setStateX',
+        value: function _setStateX() {
+            var b = document.body;
+            setInterval(function () {
+                b.classList.remove("state3");
+                setTimeout(function () {
+                    b.classList.add("state1");
+                }, 1000);
+                setTimeout(function () {
+                    b.classList.remove("state1");
+                    b.classList.add("state2");
+                }, 2500);
+                setTimeout(function () {
+                    b.classList.remove("state2");
+                    b.classList.add("state3");
+                }, 3500);
+            }, 5000);
+        }
+    }, {
+        key: '_setState_X',
+        value: function _setState_X() {
+            setInterval(function () {
+                var b = document.body;
+                setTimeout(function () {
+                    b.classList.add("state-1");
+                }, 700);
+                setTimeout(function () {
+                    b.classList.remove("state-1");
+                }, 1400);
+                setTimeout(function () {
+                    b.classList.add("state-1");
+                }, 1800);
+                setTimeout(function () {
+                    b.classList.remove("state-1");
+                }, 2400);
+            }, 3000);
+        }
+    }, {
+        key: '_setShimmer',
+        value: function _setShimmer() {
+            var b = document.body;
+            setInterval(function () {
+                setTimeout(function () {
+                    b.classList.add("shimmer");
+                }, 2000);
+                setTimeout(function () {
+                    b.classList.remove("shimmer");
+                }, 6000);
+            }, 7000);
+        }
     }]);
 
     return Pieces;
 }();
 
-window.onload = function () {
+document.addEventListener('DOMContentLoaded', function () {
     var ss = new Pieces('show-stage');
     ss.init();
-};
+});
 
 /***/ })
 /******/ ]);
