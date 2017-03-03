@@ -1018,7 +1018,7 @@ body.animation-lock.state3 {
 
 }
 
-body.state-1{
+body.animation-lock.state-1{
   &.rhino {
     .wrapper {
       .pieces {
@@ -1557,10 +1557,12 @@ body.animation-lock.shimmer {
 
 body.animation-lock {
   #show-stage {
+    .shadow {
+      opacity: 1;
+    }
     .wrapper {
       .pieces {
-        //transition-duration: .3s;
-        //transition-timing-function: cubic-bezier(0.62, 0.02, 0.34, 1);
+        transition-timing-function: cubic-bezier(0.62, 0.02, 0.34, 1);
         transition-delay: 0s;
       }
     }

@@ -115,7 +115,6 @@ var Pieces = function () {
             }
             ehtml += eleHTMLShadow;
             this.e.innerHTML = ehtml;
-            document.getElementsByClassName('shadow')[0].className = 'inactive';
             this._resize();
             this._initEvent();
             window.onload = this._preloaderSeq;
@@ -133,7 +132,7 @@ var Pieces = function () {
                 document.body.classList.add(_this.nameArr[_this.n]);
                 setTimeout(function () {
                     document.body.classList.add('animation-lock');
-                }, 2300);
+                }, 2000);
             });
             window.onresize = this._resize.bind(this);
             this._setStateX();
@@ -148,11 +147,13 @@ var Pieces = function () {
             this.e.style.width = w + 'px';
             this.e.style.height = h + 'px';
         }
+
+        //TODO: preloader sequence
+
     }, {
         key: '_preloaderSeq',
         value: function _preloaderSeq() {
             var b = document.body;
-            b.classList.add('animation-lock');
             // setTimeout(function () {
             //     b.classList.add('ready');
             //     b.classList.remove('preloader');
@@ -191,16 +192,16 @@ var Pieces = function () {
                 var b = document.body;
                 setTimeout(function () {
                     b.classList.add("state-1");
-                }, 700);
+                }, 1000);
                 setTimeout(function () {
                     b.classList.remove("state-1");
-                }, 1400);
+                }, 1500);
                 setTimeout(function () {
                     b.classList.add("state-1");
-                }, 1800);
+                }, 1900);
                 setTimeout(function () {
                     b.classList.remove("state-1");
-                }, 2400);
+                }, 2500);
             }, 3000);
         }
     }, {

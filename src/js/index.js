@@ -33,7 +33,6 @@ class Pieces {
         }
         ehtml += eleHTMLShadow;
         this.e.innerHTML = ehtml;
-        document.getElementsByClassName('shadow')[0].className = 'inactive';
         this._resize();
         this._initEvent();
         window.onload = this._preloaderSeq;
@@ -48,7 +47,7 @@ class Pieces {
             document.body.classList.add(this.nameArr[this.n]);
             setTimeout(function () {
                 document.body.classList.add('animation-lock');
-            }, 2300)
+            }, 2000)
         });
         window.onresize = this._resize.bind(this);
         this._setStateX();
@@ -63,9 +62,9 @@ class Pieces {
         this.e.style.height = h + 'px';
     }
 
+    //TODO: preloader sequence
     _preloaderSeq() {
         let b = document.body;
-        b.classList.add('animation-lock');
         // setTimeout(function () {
         //     b.classList.add('ready');
         //     b.classList.remove('preloader');
@@ -101,16 +100,16 @@ class Pieces {
             let b = document.body;
             setTimeout(function() {
                 b.classList.add("state-1");
-            }, 700);
+            }, 1000);
             setTimeout(function() {
                 b.classList.remove("state-1");
-            }, 1400);
+            }, 1500);
             setTimeout(function() {
                 b.classList.add("state-1");
-            }, 1800);
+            }, 1900);
             setTimeout(function() {
                 b.classList.remove("state-1");
-            }, 2400);
+            }, 2500);
         }, 3000)
     }
     _setShimmer() {

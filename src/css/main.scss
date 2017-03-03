@@ -32,6 +32,12 @@ html {
     background-color: $color;
   }
 }
+body.preloader,
+body.preAni {
+  #show-stage {
+    background: transparent;
+  }
+}
 #show-stage {
   position: absolute;
   top: 0;
@@ -42,6 +48,7 @@ html {
   max-width: 650px;
   max-height: 430px;
   transition: .3s;
+  background: -webkit-radial-gradient(center center, 230px 230px, rgba(255, 255, 255, .6), rgba(255, 255, 255, 0));
   .wrapper {
     position: absolute;
     top: 0;
@@ -83,10 +90,7 @@ html {
   width: 50%;
   height: 5%;
   transition: .6s cubic-bezier(1,0.3,0.3,1) .6s;
-  &.inactive {
-    opacity:0;
-    transition: .05s cubic-bezier(.7,0.3,0,1) 0s !important;
-  }
+  opacity:0;
   &::before, &::after {
     content: "";
     position: absolute;

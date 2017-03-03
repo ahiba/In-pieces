@@ -1080,285 +1080,285 @@ body.animation-lock.state3.frog .wrapper:nth-child(5) .pieces {
   -webkit-clip-path: polygon(25.95% 36.857%, 36.25% 47.714%, 27.85% 47.714%);
   background-color: #B89A00; }
 
-body.state-1.rhino .wrapper .pieces {
+body.animation-lock.state-1.rhino .wrapper .pieces {
   transition: .1s; }
 
-body.state-1.rhino .wrapper:nth-child(2) .pieces {
+body.animation-lock.state-1.rhino .wrapper:nth-child(2) .pieces {
   -webkit-clip-path: polygon(17.5% 56.929%, 36.4% 52.071%, 21% 74.5%); }
 
-body.state-1.rhino .wrapper:nth-child(1) .pieces {
+body.animation-lock.state-1.rhino .wrapper:nth-child(1) .pieces {
   -webkit-clip-path: polygon(15.1% 70.071%, 18% 56.929%, 21% 74.5%); }
 
-body.state-1.rhino .wrapper:nth-child(31) .pieces {
+body.animation-lock.state-1.rhino .wrapper:nth-child(31) .pieces {
   -webkit-clip-path: polygon(24% 72.5%, 23% 73.5%, 13% 65%); }
 
-body.state-1.rhino .wrapper:nth-child(32) .pieces {
+body.animation-lock.state-1.rhino .wrapper:nth-child(32) .pieces {
   -webkit-clip-path: polygon(23% 75.5%, 14% 64.5%, 15% 63%); }
 
-body.state-1.peccary .wrapper:nth-child(1) .pieces, body.state-1.peccary .wrapper:nth-child(2) .pieces, body.state-1.peccary .wrapper:nth-child(3) .pieces, body.state-1.peccary .wrapper:nth-child(4) .pieces, body.state-1.peccary .wrapper:nth-child(5) .pieces, body.state-1.peccary .wrapper:nth-child(9) .pieces {
+body.animation-lock.state-1.peccary .wrapper:nth-child(1) .pieces, body.animation-lock.state-1.peccary .wrapper:nth-child(2) .pieces, body.animation-lock.state-1.peccary .wrapper:nth-child(3) .pieces, body.animation-lock.state-1.peccary .wrapper:nth-child(4) .pieces, body.animation-lock.state-1.peccary .wrapper:nth-child(5) .pieces, body.animation-lock.state-1.peccary .wrapper:nth-child(9) .pieces {
   transition-duration: .12s; }
 
-body.state-1.peccary .wrapper:nth-child(1) .pieces {
+body.animation-lock.state-1.peccary .wrapper:nth-child(1) .pieces {
   -webkit-clip-path: polygon(15.95% 78.214%, 14.95% 79.929%, 22.25% 79.929%); }
 
-body.state-1.peccary .wrapper:nth-child(2) .pieces {
+body.animation-lock.state-1.peccary .wrapper:nth-child(2) .pieces {
   -webkit-clip-path: polygon(17.85% 58.786%, 22.05% 58.5%, 16.05% 78.214%); }
 
-body.state-1.peccary .wrapper:nth-child(3) .pieces {
+body.animation-lock.state-1.peccary .wrapper:nth-child(3) .pieces {
   -webkit-clip-path: polygon(15.95% 78.214%, 21.95% 58.214%, 22% 79.929%); }
 
-body.state-1.peccary .wrapper:nth-child(4) .pieces {
+body.animation-lock.state-1.peccary .wrapper:nth-child(4) .pieces {
   -webkit-clip-path: polygon(21.95% 58.643%, 26.85% 58.357%, 22% 79.929%); }
 
-body.state-1.peccary .wrapper:nth-child(5) .pieces {
+body.animation-lock.state-1.peccary .wrapper:nth-child(5) .pieces {
   -webkit-clip-path: polygon(21.95% 58.5%, 26.85% 58.357%, 22.15% 59%); }
 
-body.state-1.peccary .wrapper:nth-child(9) .pieces {
+body.animation-lock.state-1.peccary .wrapper:nth-child(9) .pieces {
   -webkit-clip-path: polygon(26.75% 58.5%, 29.8% 79.8%, 22.55% 77.071%); }
 
-body.state-1.echidna .wrapper:nth-child(1) .pieces {
+body.animation-lock.state-1.echidna .wrapper:nth-child(1) .pieces {
   transition: 0.2s; }
 
-body.state-1.echidna .wrapper:nth-child(2) .pieces {
+body.animation-lock.state-1.echidna .wrapper:nth-child(2) .pieces {
   transition: 0.2s; }
 
-body.state-1.echidna .wrapper:nth-child(3) .pieces {
+body.animation-lock.state-1.echidna .wrapper:nth-child(3) .pieces {
   transition: 0.2s; }
 
-body.state-1.echidna .wrapper:nth-child(4) .pieces {
+body.animation-lock.state-1.echidna .wrapper:nth-child(4) .pieces {
   transition: 0.2s; }
 
-body.state-1.echidna .wrapper:nth-child(5) .pieces {
+body.animation-lock.state-1.echidna .wrapper:nth-child(5) .pieces {
   transition: 0.2s; }
 
-body.state-1.echidna .wrapper:nth-child(6) .pieces {
+body.animation-lock.state-1.echidna .wrapper:nth-child(6) .pieces {
   transition: 0.2s; }
 
-body.state-1.echidna .wrapper:nth-child(7) .pieces {
+body.animation-lock.state-1.echidna .wrapper:nth-child(7) .pieces {
   transition: 0.2s; }
 
-body.state-1.echidna .wrapper:nth-child(1) .pieces {
+body.animation-lock.state-1.echidna .wrapper:nth-child(1) .pieces {
   -webkit-clip-path: polygon(13.4% 75.429%, 22.2% 61.143%, 23.9% 63.429%); }
 
-body.state-1.echidna .wrapper:nth-child(2) .pieces {
+body.animation-lock.state-1.echidna .wrapper:nth-child(2) .pieces {
   -webkit-clip-path: polygon(13.4% 75.286%, 21.5% 66.143%, 14.7% 76.429%); }
 
-body.state-1.echidna .wrapper:nth-child(6) .pieces {
+body.animation-lock.state-1.echidna .wrapper:nth-child(6) .pieces {
   -webkit-clip-path: polygon(23.6% 63.429%, 26.9% 63.714%, 19.9% 68.286%); }
 
-body.state-1.echidna .wrapper:nth-child(7) .pieces {
+body.animation-lock.state-1.echidna .wrapper:nth-child(7) .pieces {
   -webkit-clip-path: polygon(24.8% 60.571%, 26% 59.429%, 27.2% 58.571%); }
 
-body.state-1.crow .wrapper:nth-child(1) .pieces {
+body.animation-lock.state-1.crow .wrapper:nth-child(1) .pieces {
   -webkit-clip-path: polygon(32.8% 58%, 38.4% 61.2%, 12.2% 77.5%); }
 
-body.state-1.crow .wrapper:nth-child(2) .pieces {
+body.animation-lock.state-1.crow .wrapper:nth-child(2) .pieces {
   -webkit-clip-path: polygon(21.9% 66.8%, 34.5% 55.9%, 27% 59.7%); }
 
-body.state-1.crow .wrapper:nth-child(3) .pieces {
+body.animation-lock.state-1.crow .wrapper:nth-child(3) .pieces {
   -webkit-clip-path: polygon(22.7% 61.9%, 39.2% 42.8%, 50.8% 49.8%); }
 
-body.state-1.crow .wrapper:nth-child(6) .pieces {
+body.animation-lock.state-1.crow .wrapper:nth-child(6) .pieces {
   -webkit-clip-path: polygon(30.3% 58.6%, 50% 49.9%, 61% 55.3%); }
 
-body.state-1.tamarin .wrapper:nth-child(30) .pieces {
+body.animation-lock.state-1.tamarin .wrapper:nth-child(30) .pieces {
   transition: 0.1s;
   -webkit-clip-path: polygon(64.45% 80%, 75.85% 78.643%, 64.55% 84.643%); }
 
-body.state-1.butterfly .wrapper:nth-child(1) .pieces, body.state-1.butterfly .wrapper:nth-child(2) .pieces, body.state-1.butterfly .wrapper:nth-child(3) .pieces, body.state-1.butterfly .wrapper:nth-child(4) .pieces, body.state-1.butterfly .wrapper:nth-child(5) .pieces, body.state-1.butterfly .wrapper:nth-child(6) .pieces, body.state-1.butterfly .wrapper:nth-child(7) .pieces, body.state-1.butterfly .wrapper:nth-child(8) .pieces, body.state-1.butterfly .wrapper:nth-child(9) .pieces, body.state-1.butterfly .wrapper:nth-child(10) .pieces, body.state-1.butterfly .wrapper:nth-child(21) .pieces, body.state-1.butterfly .wrapper:nth-child(22) .pieces, body.state-1.butterfly .wrapper:nth-child(23) .pieces, body.state-1.butterfly .wrapper:nth-child(24) .pieces, body.state-1.butterfly .wrapper:nth-child(25) .pieces, body.state-1.butterfly .wrapper:nth-child(26) .pieces, body.state-1.butterfly .wrapper:nth-child(27) .pieces, body.state-1.butterfly .wrapper:nth-child(28) .pieces, body.state-1.butterfly .wrapper:nth-child(29) .pieces, body.state-1.butterfly .wrapper:nth-child(30) .pieces {
+body.animation-lock.state-1.butterfly .wrapper:nth-child(1) .pieces, body.animation-lock.state-1.butterfly .wrapper:nth-child(2) .pieces, body.animation-lock.state-1.butterfly .wrapper:nth-child(3) .pieces, body.animation-lock.state-1.butterfly .wrapper:nth-child(4) .pieces, body.animation-lock.state-1.butterfly .wrapper:nth-child(5) .pieces, body.animation-lock.state-1.butterfly .wrapper:nth-child(6) .pieces, body.animation-lock.state-1.butterfly .wrapper:nth-child(7) .pieces, body.animation-lock.state-1.butterfly .wrapper:nth-child(8) .pieces, body.animation-lock.state-1.butterfly .wrapper:nth-child(9) .pieces, body.animation-lock.state-1.butterfly .wrapper:nth-child(10) .pieces, body.animation-lock.state-1.butterfly .wrapper:nth-child(21) .pieces, body.animation-lock.state-1.butterfly .wrapper:nth-child(22) .pieces, body.animation-lock.state-1.butterfly .wrapper:nth-child(23) .pieces, body.animation-lock.state-1.butterfly .wrapper:nth-child(24) .pieces, body.animation-lock.state-1.butterfly .wrapper:nth-child(25) .pieces, body.animation-lock.state-1.butterfly .wrapper:nth-child(26) .pieces, body.animation-lock.state-1.butterfly .wrapper:nth-child(27) .pieces, body.animation-lock.state-1.butterfly .wrapper:nth-child(28) .pieces, body.animation-lock.state-1.butterfly .wrapper:nth-child(29) .pieces, body.animation-lock.state-1.butterfly .wrapper:nth-child(30) .pieces {
   transition: 0.12s cubic-bezier(0.4, 0.3, 0.1, 0.4); }
 
-body.state-1.butterfly .wrapper:nth-child(1) .pieces {
+body.animation-lock.state-1.butterfly .wrapper:nth-child(1) .pieces {
   -webkit-clip-path: polygon(31.15% 16.5%, 39.25% 27.643%, 46.55% 47.929%); }
 
-body.state-1.butterfly .wrapper:nth-child(2) .pieces {
+body.animation-lock.state-1.butterfly .wrapper:nth-child(2) .pieces {
   -webkit-clip-path: polygon(31.15% 16.5%, 30.9% 53.929%, 33.25% 34.3%); }
 
-body.state-1.butterfly .wrapper:nth-child(3) .pieces {
+body.animation-lock.state-1.butterfly .wrapper:nth-child(3) .pieces {
   -webkit-clip-path: polygon(31.05% 16.5%, 32% 36.3%, 38.4% 27.5%); }
 
-body.state-1.butterfly .wrapper:nth-child(4) .pieces {
+body.animation-lock.state-1.butterfly .wrapper:nth-child(4) .pieces {
   -webkit-clip-path: polygon(32% 36.214%, 38.3% 27.4%, 46.6% 48.2%); }
 
-body.state-1.butterfly .wrapper:nth-child(5) .pieces {
+body.animation-lock.state-1.butterfly .wrapper:nth-child(5) .pieces {
   -webkit-clip-path: polygon(31.9% 36.1%, 46.55% 48.214%, 30.85% 53.929%); }
 
-body.state-1.butterfly .wrapper:nth-child(6) .pieces {
+body.animation-lock.state-1.butterfly .wrapper:nth-child(6) .pieces {
   -webkit-clip-path: polygon(30.75% 53.786%, 46.55% 48.071%, 46.05% 52.643%); }
 
-body.state-1.butterfly .wrapper:nth-child(7) .pieces {
+body.animation-lock.state-1.butterfly .wrapper:nth-child(7) .pieces {
   -webkit-clip-path: polygon(34.25% 55.5%, 45.95% 52.786%, 33.65% 64.786%); }
 
-body.state-1.butterfly .wrapper:nth-child(8) .pieces {
+body.animation-lock.state-1.butterfly .wrapper:nth-child(8) .pieces {
   -webkit-clip-path: polygon(34.15% 55.5%, 45.95% 52.929%, 37.05% 57.643%); }
 
-body.state-1.butterfly .wrapper:nth-child(9) .pieces {
+body.animation-lock.state-1.butterfly .wrapper:nth-child(9) .pieces {
   -webkit-clip-path: polygon(35.45% 60.5%, 36.45% 61.214%, 35.35% 62.071%); }
 
-body.state-1.butterfly .wrapper:nth-child(10) .pieces {
+body.animation-lock.state-1.butterfly .wrapper:nth-child(10) .pieces {
   -webkit-clip-path: polygon(33.55% 64.643%, 45.85% 52.929%, 38.45% 70.214%); }
 
-body.state-1.butterfly .wrapper:nth-child(21) .pieces {
+body.animation-lock.state-1.butterfly .wrapper:nth-child(21) .pieces {
   -webkit-clip-path: polygon(48.45% 54.214%, 55.95% 68.214%, 49.95% 75.214%); }
 
-body.state-1.butterfly .wrapper:nth-child(22) .pieces {
+body.animation-lock.state-1.butterfly .wrapper:nth-child(22) .pieces {
   -webkit-clip-path: polygon(48.35% 54.214%, 55.95% 68.071%, 51.65% 64.786%); }
 
-body.state-1.butterfly .wrapper:nth-child(23) .pieces {
+body.animation-lock.state-1.butterfly .wrapper:nth-child(23) .pieces {
   -webkit-clip-path: polygon(48.45% 54.214%, 49.95% 75.214%, 45.05% 74.214%); }
 
-body.state-1.butterfly .wrapper:nth-child(24) .pieces {
+body.animation-lock.state-1.butterfly .wrapper:nth-child(24) .pieces {
   -webkit-clip-path: polygon(51.05% 70.071%, 51.85% 70.357%, 51.25% 71.929%); }
 
-body.state-1.butterfly .wrapper:nth-child(25) .pieces {
+body.animation-lock.state-1.butterfly .wrapper:nth-child(25) .pieces {
   -webkit-clip-path: polygon(48.35% 54.214%, 50.35% 49.929%, 58.75% 70.786%); }
 
-body.state-1.butterfly .wrapper:nth-child(26) .pieces {
+body.animation-lock.state-1.butterfly .wrapper:nth-child(26) .pieces {
   -webkit-clip-path: polygon(50.45% 50.071%, 64.85% 43.929%, 76.55% 48.929%); }
 
-body.state-1.butterfly .wrapper:nth-child(27) .pieces {
+body.animation-lock.state-1.butterfly .wrapper:nth-child(27) .pieces {
   -webkit-clip-path: polygon(50.45% 50.071%, 64.75% 45.214%, 65.85% 57.5%); }
 
-body.state-1.butterfly .wrapper:nth-child(28) .pieces {
+body.animation-lock.state-1.butterfly .wrapper:nth-child(28) .pieces {
   -webkit-clip-path: polygon(50.35% 50.071%, 65.85% 57.357%, 58.65% 70.786%); }
 
-body.state-1.butterfly .wrapper:nth-child(29) .pieces {
+body.animation-lock.state-1.butterfly .wrapper:nth-child(29) .pieces {
   -webkit-clip-path: polygon(64.65% 45%, 76.55% 48.929%, 65.85% 57.5%); }
 
-body.state-1.butterfly .wrapper:nth-child(30) .pieces {
+body.animation-lock.state-1.butterfly .wrapper:nth-child(30) .pieces {
   -webkit-clip-path: polygon(65.75% 57.357%, 76.65% 48.929%, 58.65% 70.786%); }
 
-body.state-1.kakapo .wrapper:nth-child(5) .pieces {
+body.animation-lock.state-1.kakapo .wrapper:nth-child(5) .pieces {
   -webkit-clip-path: polygon(9.353% 45.567%, 12.853% 54.281%, 10.253% 51.138%);
   transition: 0.1s; }
 
-body.state-1.kakapo .wrapper:nth-child(6) .pieces {
+body.animation-lock.state-1.kakapo .wrapper:nth-child(6) .pieces {
   -webkit-clip-path: polygon(9.353% 45.424%, 12.753% 44.996%, 12.553% 54.71%);
   transition: 0.1s; }
 
-body.state-1.kakapo .wrapper:nth-child(7) .pieces {
+body.animation-lock.state-1.kakapo .wrapper:nth-child(7) .pieces {
   -webkit-clip-path: polygon(12.753% 50.424%, 12.753% 44.996%, 20.853% 56.138%);
   transition: 0.1s; }
 
-body.state-1.kakapo .wrapper:nth-child(30) .pieces {
+body.animation-lock.state-1.kakapo .wrapper:nth-child(30) .pieces {
   -webkit-clip-path: polygon(63.153% 54.138%, 70.753% 51.424%, 89.153% 66.996%); }
 
-body.state-1.kakapo .wrapper:nth-child(4) .pieces {
+body.animation-lock.state-1.kakapo .wrapper:nth-child(4) .pieces {
   background-color: #d2c895;
   transition: 0.03s; }
 
-body.state-1.parrotfish .wrapper:nth-child(19) .pieces, body.state-1.parrotfish .wrapper:nth-child(20) .pieces, body.state-1.parrotfish .wrapper:nth-child(21) .pieces {
+body.animation-lock.state-1.parrotfish .wrapper:nth-child(19) .pieces, body.animation-lock.state-1.parrotfish .wrapper:nth-child(20) .pieces, body.animation-lock.state-1.parrotfish .wrapper:nth-child(21) .pieces {
   transition: 0.1s; }
 
-body.state-1.parrotfish .wrapper:nth-child(19) .pieces {
+body.animation-lock.state-1.parrotfish .wrapper:nth-child(19) .pieces {
   -webkit-clip-path: polygon(53.15% 38.35%, 56.8% 33.4%, 68.5% 48.3%); }
 
-body.state-1.parrotfish .wrapper:nth-child(20) .pieces {
+body.animation-lock.state-1.parrotfish .wrapper:nth-child(20) .pieces {
   -webkit-clip-path: polygon(51.84% 44.6%, 53.212% 38.286%, 68.5% 48.2%); }
 
-body.state-1.parrotfish .wrapper:nth-child(21) .pieces {
+body.animation-lock.state-1.parrotfish .wrapper:nth-child(21) .pieces {
   -webkit-clip-path: polygon(51.812% 44.3%, 68.4% 48%, 55.112% 53.429%); }
 
-body.state-1.damselfly .wrapper:nth-child(27) .pieces, body.state-1.damselfly .wrapper:nth-child(28) .pieces, body.state-1.damselfly .wrapper:nth-child(29) .pieces, body.state-1.damselfly .wrapper:nth-child(30) .pieces {
+body.animation-lock.state-1.damselfly .wrapper:nth-child(27) .pieces, body.animation-lock.state-1.damselfly .wrapper:nth-child(28) .pieces, body.animation-lock.state-1.damselfly .wrapper:nth-child(29) .pieces, body.animation-lock.state-1.damselfly .wrapper:nth-child(30) .pieces {
   transition: 0.3s; }
 
-body.state-1.damselfly .wrapper:nth-child(27) .pieces {
+body.animation-lock.state-1.damselfly .wrapper:nth-child(27) .pieces {
   -webkit-clip-path: polygon(31.6% 39%, 69.5% 53.714%, 41.5% 30.857%); }
 
-body.state-1.damselfly .wrapper:nth-child(28) .pieces {
+body.animation-lock.state-1.damselfly .wrapper:nth-child(28) .pieces {
   -webkit-clip-path: polygon(53.4% 40.714%, 69.5% 53.857%, 45.4% 42.286%); }
 
-body.state-1.damselfly .wrapper:nth-child(29) .pieces {
+body.animation-lock.state-1.damselfly .wrapper:nth-child(29) .pieces {
   -webkit-clip-path: polygon(42.7% 45%, 45.5% 30%, 55.5% 41.429%); }
 
-body.state-1.damselfly .wrapper:nth-child(30) .pieces {
+body.animation-lock.state-1.damselfly .wrapper:nth-child(30) .pieces {
   -webkit-clip-path: polygon(42.7% 45%, 34% 31.857%, 45.6% 30.143%); }
 
-body.state-1.armadillo .wrapper:nth-child(8) .pieces {
+body.animation-lock.state-1.armadillo .wrapper:nth-child(8) .pieces {
   transition-duration: .1s;
   -webkit-clip-path: polygon(21.75% 58.214%, 25.45% 49.071%, 25.75% 62.071%); }
 
-body.state-1.turtle .wrapper:nth-child(2) .pieces, body.state-1.turtle .wrapper:nth-child(3) .pieces, body.state-1.turtle .wrapper:nth-child(4) .pieces, body.state-1.turtle .wrapper:nth-child(5) .pieces {
+body.animation-lock.state-1.turtle .wrapper:nth-child(2) .pieces, body.animation-lock.state-1.turtle .wrapper:nth-child(3) .pieces, body.animation-lock.state-1.turtle .wrapper:nth-child(4) .pieces, body.animation-lock.state-1.turtle .wrapper:nth-child(5) .pieces {
   transition-duration: .1s; }
 
-body.state-1.turtle .wrapper:nth-child(2) .pieces {
+body.animation-lock.state-1.turtle .wrapper:nth-child(2) .pieces {
   -webkit-clip-path: polygon(26.35% 55.857%, 32.45% 58.714%, 21.95% 69.571%); }
 
-body.state-1.turtle .wrapper:nth-child(3) .pieces {
+body.animation-lock.state-1.turtle .wrapper:nth-child(3) .pieces {
   -webkit-clip-path: polygon(22.65% 61%, 26.45% 56.286%, 21.95% 69.429%); }
 
-body.state-1.turtle .wrapper:nth-child(4) .pieces {
+body.animation-lock.state-1.turtle .wrapper:nth-child(4) .pieces {
   -webkit-clip-path: polygon(10.65% 56.714%, 19.05% 52.143%, 30.85% 51.857%); }
 
-body.state-1.turtle .wrapper:nth-child(5) .pieces {
+body.animation-lock.state-1.turtle .wrapper:nth-child(5) .pieces {
   -webkit-clip-path: polygon(10.55% 56.571%, 30.85% 51.857%, 25.45% 58.143%); }
 
-body.state-1.owl .wrapper .pieces {
+body.animation-lock.state-1.owl .wrapper .pieces {
   transition-duration: .1s; }
 
-body.state-1.owl .wrapper:nth-child(27) .pieces {
+body.animation-lock.state-1.owl .wrapper:nth-child(27) .pieces {
   -webkit-clip-path: polygon(48.05% 42.1%, 67.4% 71.214%, 63.3% 47.643%); }
 
-body.state-1.owl .wrapper:nth-child(25) .pieces {
+body.animation-lock.state-1.owl .wrapper:nth-child(25) .pieces {
   -webkit-clip-path: polygon(55% 20.929%, 64% 42.214%, 61.9% 30.214%); }
 
-body.state-1.owl .wrapper:nth-child(24) .pieces {
+body.animation-lock.state-1.owl .wrapper:nth-child(24) .pieces {
   -webkit-clip-path: polygon(55% 20.929%, 55.9% 35.071%, 64.2% 42.5%); }
 
-body.state-1.owl .wrapper:nth-child(23) .pieces {
+body.animation-lock.state-1.owl .wrapper:nth-child(23) .pieces {
   -webkit-clip-path: polygon(48.1% 42.2%, 57.8% 32.071%, 64.9% 48.3%); }
 
-body.state-1.owl .wrapper:nth-child(22) .pieces {
+body.animation-lock.state-1.owl .wrapper:nth-child(22) .pieces {
   -webkit-clip-path: polygon(48% 20.643%, 55.03% 20.929%, 56% 35.7%); }
 
-body.state-1.owl .wrapper:nth-child(21) .pieces {
+body.animation-lock.state-1.owl .wrapper:nth-child(21) .pieces {
   -webkit-clip-path: polygon(48.076% 20.643%, 48.076% 42.3%, 56% 35.1%); }
 
-body.state-1.owl .wrapper:nth-child(26) .pieces {
+body.animation-lock.state-1.owl .wrapper:nth-child(26) .pieces {
   -webkit-clip-path: polygon(55.3% 34.8%, 62.7% 43.929%, 61.4% 40.1%); }
 
-body.state-1.owl .wrapper:nth-child(18) .pieces {
+body.animation-lock.state-1.owl .wrapper:nth-child(18) .pieces {
   -webkit-clip-path: polygon(44.976% 31.357%, 35.876% 50.786%, 56.176% 53.643%); }
 
-body.state-1.owl .wrapper:nth-child(28) .pieces {
+body.animation-lock.state-1.owl .wrapper:nth-child(28) .pieces {
   -webkit-clip-path: polygon(58.3% 57.5%, 61.5% 75.071%, 63.8% 65.357%); }
 
-body.state-1.frog .wrapper:nth-child(10) .pieces {
+body.animation-lock.state-1.frog .wrapper:nth-child(10) .pieces {
   -webkit-clip-path: polygon(31.15% 35.571%, 34.4% 35.9%, 37.35% 38.2%); }
 
-body.state-1.frog .wrapper:nth-child(11) .pieces {
+body.animation-lock.state-1.frog .wrapper:nth-child(11) .pieces {
   -webkit-clip-path: polygon(31.15% 35.429%, 37.45% 38.143%, 34.1% 37.714%); }
 
-body.state-1.frog .wrapper:nth-child(12) .pieces {
+body.animation-lock.state-1.frog .wrapper:nth-child(12) .pieces {
   -webkit-clip-path: polygon(32.65% 35.286%, 33.55% 36.1%, 33.15% 36%); }
 
-body.state-1.tapir .wrapper .pieces {
+body.animation-lock.state-1.tapir .wrapper .pieces {
   transition-duration: .2s; }
 
-body.state-1.tapir .wrapper:nth-child(1) .pieces {
+body.animation-lock.state-1.tapir .wrapper:nth-child(1) .pieces {
   -webkit-clip-path: polygon(11.6% 81.286%, 14.9% 79%, 13.9% 74.429%); }
 
-body.state-1.tapir .wrapper:nth-child(2) .pieces {
+body.animation-lock.state-1.tapir .wrapper:nth-child(2) .pieces {
   -webkit-clip-path: polygon(9.9% 72.3%, 11.7% 81.2%, 13.95% 74.571%); }
 
-body.state-1.tapir .wrapper:nth-child(3) .pieces {
+body.animation-lock.state-1.tapir .wrapper:nth-child(3) .pieces {
   -webkit-clip-path: polygon(9.8% 72.3%, 13.8% 74.571%, 18% 65.7%); }
 
-body.state-1.tapir .wrapper:nth-child(4) .pieces {
+body.animation-lock.state-1.tapir .wrapper:nth-child(4) .pieces {
   -webkit-clip-path: polygon(9.9% 72.4%, 17.9% 65.857%, 11.7% 56.286%); }
 
-body.state-1.tapir .wrapper:nth-child(9) .pieces {
+body.animation-lock.state-1.tapir .wrapper:nth-child(9) .pieces {
   -webkit-clip-path: polygon(15% 41.857%, 18% 40%, 17.4% 47.429%); }
 
-body.state-1.vaquita .wrapper:nth-child(16) .pieces {
+body.animation-lock.state-1.vaquita .wrapper:nth-child(16) .pieces {
   -webkit-clip-path: polygon(25.99% 61.716%, 32.64% 61.368%, 32.91% 73.146%);
   background-color: #0d1417; }
 
-body.state-1.vaquita .wrapper:nth-child(18) .pieces {
+body.animation-lock.state-1.vaquita .wrapper:nth-child(18) .pieces {
   -webkit-clip-path: polygon(27.107% 55.964%, 39.318% 59.352%, 38.467% 66.772%);
   background-color: #334543; }
 
-body.state-1.vaquita .wrapper:nth-child(19) .pieces {
+body.animation-lock.state-1.vaquita .wrapper:nth-child(19) .pieces {
   -webkit-clip-path: polygon(27.107% 55.964%, 38.467% 66.772%, 42.128% 75.085%);
   background-color: #21282f; }
 
@@ -1572,7 +1572,11 @@ body.animation-lock.shimmer .wrapper:nth-of-type(30) .pieces::before {
   height: 100%;
   animation: shimmer 0.8s 1.56s forwards; }
 
+body.animation-lock #show-stage .shadow {
+  opacity: 1; }
+
 body.animation-lock #show-stage .wrapper .pieces {
+  transition-timing-function: cubic-bezier(0.62, 0.02, 0.34, 1);
   transition-delay: 0s; }
 
 /**
@@ -3356,6 +3360,10 @@ body.tamarin {
 body.turtle {
   background-color: #A0CADB; }
 
+body.preloader #show-stage,
+body.preAni #show-stage {
+  background: transparent; }
+
 #show-stage {
   position: absolute;
   top: 0;
@@ -3365,7 +3373,8 @@ body.turtle {
   margin: auto;
   max-width: 650px;
   max-height: 430px;
-  transition: .3s; }
+  transition: .3s;
+  background: -webkit-radial-gradient(center center, 230px 230px, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0)); }
   #show-stage .wrapper {
     position: absolute;
     top: 0;
@@ -3400,10 +3409,8 @@ body.turtle {
   background-image: radial-gradient(closest-side, rgba(0, 0, 0, 0.35) 0, rgba(0, 0, 0, 0.14) 35%, transparent 100%);
   width: 50%;
   height: 5%;
-  transition: 0.6s cubic-bezier(1, 0.3, 0.3, 1) 0.6s; }
-  .shadow.inactive {
-    opacity: 0;
-    transition: 0.05s cubic-bezier(0.7, 0.3, 0, 1) 0s !important; }
+  transition: 0.6s cubic-bezier(1, 0.3, 0.3, 1) 0.6s;
+  opacity: 0; }
   .shadow::before, .shadow::after {
     content: "";
     position: absolute;
