@@ -15,6 +15,14 @@
 //loading 页面
 @import "loader.scss";
 
+@font-face {
+  font-family: 'BlocExtCond';
+  src: url("../fonts/blocextcond.eot");
+  src: url("../fonts/blocextcond.eot?#iefix") format("embedded-opentype"), url("../fonts/blocextcond.woff") format("woff"), url("../fonts/blocextcond.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body,
 html {
   position: absolute;
@@ -23,8 +31,12 @@ html {
   width: 100%;
   height: 100%;
   transition: .5s;
-  background: map-get($bg,startup);
+  background: map-get($bg, startup);
+  font-family: 'BlocExtCond', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 2px;
   overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
 }
 
 @each $color-name, $color in $bg {
@@ -32,12 +44,14 @@ html {
     background-color: $color;
   }
 }
+
 body.preloader,
 body.preAni {
   #show-stage {
     background: transparent;
   }
 }
+
 #show-stage {
   position: absolute;
   top: 0;
@@ -47,8 +61,7 @@ body.preAni {
   margin: auto;
   max-width: 650px;
   max-height: 430px;
-  transition: .3s;
-  background: -webkit-radial-gradient(center center, 230px 230px, rgba(255, 255, 255, .6), rgba(255, 255, 255, 0));
+  transition: 2s;
   .wrapper {
     position: absolute;
     top: 0;
@@ -60,7 +73,7 @@ body.preAni {
     width: 100%;
     height: 100%;
     transition-duration: 0.9s;
-    transition-timing-function: cubic-bezier(0.37,-0.29, 0, 1.29);  //cubic-bezier(0.62, 0.02, 0.34, 1)
+    transition-timing-function: cubic-bezier(0.37, -0.29, 0, 1.29); //cubic-bezier(0.62, 0.02, 0.34, 1)
   }
   &.fly {
     animation: fly 3s infinite;
@@ -72,9 +85,15 @@ body.preAni {
     animation: fish-r 8s infinite;
   }
 }
+
+.main #show-stage {
+  background: -webkit-radial-gradient(center center, 230px 230px, rgba(255, 255, 255, .6), rgba(255, 255, 255, 0));
+}
+
 .wrapper {
   z-index: 2;
 }
+
 .extra {
   z-index: 1;
   .pieces {
@@ -82,15 +101,16 @@ body.preAni {
     clip-path: polygon(50% 50%, 50% 50%, 50% 50%);
   }
 }
+
 .shadow {
   position: absolute;
   bottom: 10%;
   left: 30%;
-  background-image: radial-gradient( closest-side, rgba(0, 0, 0, 0.35) 0, rgba(0, 0, 0, 0.14) 35%, transparent 100%);
+  background-image: radial-gradient(closest-side, rgba(0, 0, 0, 0.35) 0, rgba(0, 0, 0, 0.14) 35%, transparent 100%);
   width: 50%;
   height: 5%;
-  transition: .6s cubic-bezier(1,0.3,0.3,1) .6s;
-  opacity:0;
+  transition: .6s cubic-bezier(1, 0.3, 0.3, 1) .6s;
+  opacity: 0;
   &::before, &::after {
     content: "";
     position: absolute;
@@ -98,8 +118,8 @@ body.preAni {
     left: 0;
     height: 100%;
     width: 50%;
-    background-image: radial-gradient( closest-side, rgba(0, 0, 0, 0.38) 0, rgba(0, 0, 0, 0.185) 35%, transparent 100%);
-    transition: .6s cubic-bezier(1,0.3,0.3,1) .6s;
+    background-image: radial-gradient(closest-side, rgba(0, 0, 0, 0.38) 0, rgba(0, 0, 0, 0.185) 35%, transparent 100%);
+    transition: .6s cubic-bezier(1, 0.3, 0.3, 1) .6s;
   }
   &::before {
     left: 30%
@@ -110,6 +130,7 @@ body.preAni {
     bottom: 20%;
   }
 }
+
 //遍历所有动物的形状及基础颜色
 @each $name, $p in $path {
   @for $i from 1 through 30 {

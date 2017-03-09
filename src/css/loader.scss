@@ -10,7 +10,7 @@ body.preloader {
     @for $i from 1 through 30 {
       &:nth-child(#{$i}) .pieces {
         -webkit-clip-path: polygon(nth(map-get($path-1, loading), $i));
-        clip-path:  polygon(nth(map-get($path-1, loading), $i));
+        clip-path: polygon(nth(map-get($path-1, loading), $i));
         background-color: #111;
         animation: loading 1.3s ((31-$i)*.03s) infinite;
       }
@@ -23,14 +23,25 @@ body.preloader {
 
 body.ready {
   #show-stage {
-    transform: scale(1.2);
+    transform: scale(1.4);
+    animation: rotate-slow 6s 2s forwards;
+    .wrapper .pieces {
+      transition-duration: 3s;
+    }
   }
   .wrapper {
     @for $i from 1 through 30 {
       &:nth-child(#{$i}) .pieces {
         -webkit-clip-path: polygon(nth(map-get($path-1, ready), $i));
-        clip-path:  polygon(nth(map-get($path-1, ready), $i));
-        transition-delay: $i * 0.06s;
+        clip-path: polygon(nth(map-get($path-1, ready), $i));
+        transition-delay: $i * 0.03s;
+      }
+      &:nth-child(#{$i}) .pieces::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .6);
       }
     }
     &:nth-child(5n+1) .pieces {
@@ -50,17 +61,25 @@ body.ready {
     }
     &:nth-child(31), &:nth-child(32), &:nth-child(33) {
       .pieces {
-        -webkit-clip-path: polygon( 50% 50% ,50% 50% ,50% 50% );
+        -webkit-clip-path: polygon(50% 50%, 50% 50%, 50% 50%);
       }
     }
   }
 }
+
 body.title {
+  #show-stage {
+    transition: 2s transform;
+    animation: scale-s 2s forwards;
+    .wrapper .pieces {
+      transition-duration: 1s;
+    }
+  }
   .wrapper {
     @for $i from 1 through 30 {
       &:nth-child(#{$i}) .pieces {
         -webkit-clip-path: polygon(nth(map-get($path-1, title), $i));
-        clip-path:  polygon(nth(map-get($path-1, title), $i));
+        clip-path: polygon(nth(map-get($path-1, title), $i));
         background-color: nth(map-get($color-1, title), $i);
         transition-delay: $i * 0.04s;
       }
@@ -69,30 +88,40 @@ body.title {
         display: block;
         width: 100%;
         height: 100%;
-        animation: shard-flow 4s $i * 0.04s infinite;
+        animation: shard-flow 2.8s $i * 0.04s infinite;
       }
     }
   }
 }
+
 body.preAni {
   #show-stage {
     transform: scale(1.4);
+    transition-duration: 3s;
   }
   .wrapper {
     @for $i from 1 through 30 {
       &:nth-child(#{$i}) .pieces {
         -webkit-clip-path: polygon(nth(map-get($path-1, preAni), $i));
-        clip-path:  polygon(nth(map-get($path-1, preAni), $i));
-        background-color: nth(map-get($color, vaquita), $i);
+        clip-path: polygon(nth(map-get($path-1, preAni), $i));
         transition-delay: $i * 0.04s;
+        transition-duration: 5s;
       }
-      &:nth-child(#{$i}) .pieces::before {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, .6);
-      }
+    }
+    &:nth-child(5n+1) .pieces {
+      background-color: #28282a;
+    }
+    &:nth-child(5n+2) .pieces {
+      background-color: #111;
+    }
+    &:nth-child(5n+3) .pieces {
+      background-color: #333;
+    }
+    &:nth-child(5n+4) .pieces {
+      background-color: #222;
+    }
+    &:nth-child(5n+5) .pieces {
+      background-color: #121212;
     }
   }
 }
@@ -106,6 +135,7 @@ body.preAni {
   transition: 0.7s linear;
   z-index: 4;
 }
+
 .loading-title {
   display: none;
   position: absolute;
@@ -116,7 +146,6 @@ body.preAni {
   width: 100%;
   opacity: 1;
   transition: 0.3s;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #787878;
   font-size: 18px;
   h5 {
@@ -130,6 +159,7 @@ body.preAni {
     font-size: 12px;
   }
 }
+
 .loading-intro {
   p {
     //display: none;
@@ -139,8 +169,7 @@ body.preAni {
     left: 0;
     line-height: 20px;
     text-align: center;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 700;
+    font-size: 22px;
     word-spacing: 5px;
     color: #fff;
     opacity: 0;
@@ -159,4 +188,118 @@ body.preAni {
       }
     }
   }
+  p:nth-of-type(2) {
+    span:nth-of-type(4),
+    span:nth-of-type(5) {
+      color: $main-text;
+    }
+  }
+  p:nth-of-type(3) {
+    span:nth-of-type(4) {
+      transition-delay: 5 * 0.4s;
+    }
+    span:nth-of-type(5) {
+      transition-delay: 6 * 0.4s;
+    }
+    span:nth-of-type(6) {
+      transition-delay: 7 * 0.4s;
+    }
+  }
+}
+
+.intro-content {
+  display: none;
+  position: absolute;
+  text-align: center;
+  top: 100%;
+  margin-top: 2%;
+  left: 0;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28px;
+  color: #fff;
+  h1 {
+    display: none;
+    opacity: 0;
+  }
+  p:nth-of-type(1) {
+    opacity: 0;
+    transition: 1s .2s;
+  }
+  p:nth-of-type(2) {
+    font-size: 14px;
+    color: #787878;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    opacity: 0;
+    transition: 1s .4s;
+    span {
+      color: $main-text;
+    }
+  }
+  a {
+    position: relative;
+    padding: 16px 25px 16px 29px;
+    border-radius: 40px;
+    background: url("../img/red-texture.png") repeat center center/70px 70px;
+    font-size: 20px;
+    color: #fff;
+    opacity: 0;
+    transition: 1s .8s;
+    span {
+      position: relative;
+      z-index: 10;
+    }
+    &:hover {
+      &::after {
+        bottom: 4px;
+        top: 4px;
+        right: 4px;
+        left: 4px;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      border-radius: 40px;
+      background: #1a1a1d;
+      bottom: 2px;
+      top: 2px;
+      right: 2px;
+      left: 2px;
+      transition: 0.18s cubic-bezier(0.62, 0.02, 0.34, 1);
+    }
+  }
+}
+.title {
+  .intro-content {
+    display: block;
+  }
+}
+.show-title {
+  .intro-content {
+    display: block;
+    //opacity: 1;
+    top: 100%;
+    font-size: 24px;
+  }
+  p:nth-of-type(1) {
+    opacity: 1;
+  }
+  p:nth-of-type(2) {
+    opacity: 1;
+  }
+  a {
+    opacity: 1;
+  }
+}
+
+.textuered-type {
+  background: url("../img/repeat-white.png") center center repeat;
+  animation: scratchy 0.253s linear forwards infinite;
+  background-size: 80px 60px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

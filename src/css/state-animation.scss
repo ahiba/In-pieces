@@ -1554,6 +1554,17 @@ body.animation-lock.shimmer {
     }
   }
 }
+body.preAni.shimmer {
+  @for $i from 1 through 30 {
+    .wrapper:nth-of-type(#{$i}) .pieces::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      animation: shimmer-pre 2s ($i*0.05s+0.06s) forwards;
+    }
+  }
+}
 
 body.animation-lock {
   #show-stage {
