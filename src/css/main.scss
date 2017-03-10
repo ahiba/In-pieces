@@ -14,6 +14,10 @@
 @import "shadow.scss";
 //loading 页面
 @import "loader.scss";
+//加载nav
+@import "nav.scss";
+
+
 
 @font-face {
   font-family: 'BlocExtCond';
@@ -62,6 +66,7 @@ body.preAni {
   max-width: 650px;
   max-height: 430px;
   transition: 2s;
+  transform: translateY(-15%);
   .wrapper {
     position: absolute;
     top: 0;
@@ -75,13 +80,17 @@ body.preAni {
     transition-duration: 0.9s;
     transition-timing-function: cubic-bezier(0.37, -0.29, 0, 1.29); //cubic-bezier(0.62, 0.02, 0.34, 1)
   }
-  &.fly {
+}
+.animation-lock {
+  &.butterfly #show-stage,
+  &.damselfly #show-stage {
     animation: fly 3s infinite;
   }
-  &.fish-l {
+  &.vaquita #show-stage  {
     animation: fish-l 8s infinite;
   }
-  &.fish-r {
+  &.turtle #show-stage,
+  &.parrotfish #show-stage {
     animation: fish-r 8s infinite;
   }
 }

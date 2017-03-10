@@ -1556,12 +1556,12 @@ body.animation-lock.shimmer {
 }
 body.preAni.shimmer {
   @for $i from 1 through 30 {
-    .wrapper:nth-of-type(#{$i}) .pieces::after {
+    .wrapper:nth-of-type(#{$i}) .pieces::before {
       content: '';
       display: block;
       width: 100%;
       height: 100%;
-      animation: shimmer-pre 2s ($i*0.05s+0.06s) forwards;
+      animation: shimmer-pre .8s ($i*0.05s+2.06s);
     }
   }
 }

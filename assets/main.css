@@ -32,39 +32,39 @@ body,dd,dl,fieldset,h1,h2,h3,h4,h5,h6,legend,ol,p,ul{margin:0;padding:0}body{fon
 
 @keyframes fish-r {
   0% {
-    transform: translateX(0); }
+    transform: translateX(0) translateY(-15%); }
   23% {
-    transform: translateX(0); }
+    transform: translateX(0) translateY(-15%); }
   46% {
-    transform: translateX(5%); }
+    transform: translateX(5%) translateY(-15%); }
   60% {
-    transform: translateX(0); }
+    transform: translateX(0) translateY(-15%); }
   80% {
-    transform: translateX(5%); }
+    transform: translateX(5%) translateY(-15%); }
   100% {
-    transform: translateX(0); } }
+    transform: translateX(0) translateY(-15%); } }
 
 @keyframes fish-l {
   0% {
-    transform: translateX(0); }
+    transform: translateX(0) translateY(-15%); }
   23% {
-    transform: translateX(0); }
+    transform: translateX(0) translateY(-15%); }
   46% {
-    transform: translateX(-5%); }
+    transform: translateX(-5%) translateY(-15%); }
   60% {
-    transform: translateX(0); }
+    transform: translateX(0) translateY(-15%); }
   80% {
-    transform: translateX(-5%); }
+    transform: translateX(-5%) translateY(-15%); }
   100% {
-    transform: translateX(0); } }
+    transform: translateX(0) translateY(-15%); } }
 
 @keyframes fly {
   0% {
-    transform: translateY(0); }
+    transform: translateY(0) translateY(-15%); }
   50% {
-    transform: translateY(15px); }
+    transform: translateY(15px) translateY(-15%); }
   100% {
-    transform: translateY(0); } }
+    transform: translateY(0) translateY(-15%); } }
 
 @keyframes shimmer {
   0% {
@@ -78,7 +78,7 @@ body,dd,dl,fieldset,h1,h2,h3,h4,h5,h6,legend,ol,p,ul{margin:0;padding:0}body{fon
   0% {
     background-color: transparent; }
   35% {
-    background-color: rgba(0, 0, 0, 0.6); }
+    background-color: rgba(0, 0, 0, 0.4); }
   100% {
     background-color: transparent; } }
 
@@ -133,6 +133,12 @@ body,dd,dl,fieldset,h1,h2,h3,h4,h5,h6,legend,ol,p,ul{margin:0;padding:0}body{fon
     background-position: 60px -60px; }
   100% {
     background-position: 0 0; } }
+
+@keyframes progress {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
 
 /**
  * Created by Moudi on 2017/2/28.
@@ -1614,215 +1620,215 @@ body.animation-lock.shimmer .wrapper:nth-of-type(30) .pieces::before {
   height: 100%;
   animation: shimmer 0.8s 1.56s forwards; }
 
-body.preAni.shimmer .wrapper:nth-of-type(1) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(1) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 0.11s forwards; }
+  animation: shimmer-pre 0.8s 2.11s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(2) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(2) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 0.16s forwards; }
+  animation: shimmer-pre 0.8s 2.16s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(3) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(3) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 0.21s forwards; }
+  animation: shimmer-pre 0.8s 2.21s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(4) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(4) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 0.26s forwards; }
+  animation: shimmer-pre 0.8s 2.26s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(5) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(5) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 0.31s forwards; }
+  animation: shimmer-pre 0.8s 2.31s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(6) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(6) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 0.36s forwards; }
+  animation: shimmer-pre 0.8s 2.36s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(7) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(7) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 0.41s forwards; }
+  animation: shimmer-pre 0.8s 2.41s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(8) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(8) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 0.46s forwards; }
+  animation: shimmer-pre 0.8s 2.46s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(9) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(9) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 0.51s forwards; }
+  animation: shimmer-pre 0.8s 2.51s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(10) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(10) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 0.56s forwards; }
+  animation: shimmer-pre 0.8s 2.56s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(11) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(11) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 0.61s forwards; }
+  animation: shimmer-pre 0.8s 2.61s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(12) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(12) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 0.66s forwards; }
+  animation: shimmer-pre 0.8s 2.66s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(13) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(13) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 0.71s forwards; }
+  animation: shimmer-pre 0.8s 2.71s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(14) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(14) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 0.76s forwards; }
+  animation: shimmer-pre 0.8s 2.76s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(15) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(15) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 0.81s forwards; }
+  animation: shimmer-pre 0.8s 2.81s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(16) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(16) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 0.86s forwards; }
+  animation: shimmer-pre 0.8s 2.86s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(17) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(17) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 0.91s forwards; }
+  animation: shimmer-pre 0.8s 2.91s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(18) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(18) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 0.96s forwards; }
+  animation: shimmer-pre 0.8s 2.96s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(19) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(19) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 1.01s forwards; }
+  animation: shimmer-pre 0.8s 3.01s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(20) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(20) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 1.06s forwards; }
+  animation: shimmer-pre 0.8s 3.06s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(21) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(21) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 1.11s forwards; }
+  animation: shimmer-pre 0.8s 3.11s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(22) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(22) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 1.16s forwards; }
+  animation: shimmer-pre 0.8s 3.16s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(23) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(23) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 1.21s forwards; }
+  animation: shimmer-pre 0.8s 3.21s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(24) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(24) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 1.26s forwards; }
+  animation: shimmer-pre 0.8s 3.26s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(25) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(25) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 1.31s forwards; }
+  animation: shimmer-pre 0.8s 3.31s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(26) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(26) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 1.36s forwards; }
+  animation: shimmer-pre 0.8s 3.36s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(27) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(27) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 1.41s forwards; }
+  animation: shimmer-pre 0.8s 3.41s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(28) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(28) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 1.46s forwards; }
+  animation: shimmer-pre 0.8s 3.46s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(29) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(29) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 1.51s forwards; }
+  animation: shimmer-pre 0.8s 3.51s; }
 
-body.preAni.shimmer .wrapper:nth-of-type(30) .pieces::after {
+body.preAni.shimmer .wrapper:nth-of-type(30) .pieces::before {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
-  animation: shimmer-pre 2s 1.56s forwards; }
+  animation: shimmer-pre 0.8s 3.56s; }
 
 body.animation-lock #show-stage .shadow {
   opacity: 1; }
@@ -2849,22 +2855,22 @@ body.ready .wrapper:nth-child(30) .pieces::before {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6); }
 
-body.ready .wrapper:nth-child(5n+1) .pieces {
+body.ready .wrapper:nth-of-type(5n+1) .pieces {
   background-color: #28282a; }
 
-body.ready .wrapper:nth-child(5n+2) .pieces {
+body.ready .wrapper:nth-of-type(5n+2) .pieces {
   background-color: #111; }
 
-body.ready .wrapper:nth-child(5n+3) .pieces {
+body.ready .wrapper:nth-of-type(5n+3) .pieces {
   background-color: #333; }
 
-body.ready .wrapper:nth-child(5n+4) .pieces {
+body.ready .wrapper:nth-of-type(5n+4) .pieces {
   background-color: #222; }
 
-body.ready .wrapper:nth-child(5n+5) .pieces {
+body.ready .wrapper:nth-of-type(5n+5) .pieces {
   background-color: #121212; }
 
-body.ready .wrapper:nth-child(31) .pieces, body.ready .wrapper:nth-child(32) .pieces, body.ready .wrapper:nth-child(33) .pieces {
+body.ready .wrapper:nth-of-type(31) .pieces, body.ready .wrapper:nth-of-type(32) .pieces, body.ready .wrapper:nth-of-type(33) .pieces {
   -webkit-clip-path: polygon(50% 50%, 50% 50%, 50% 50%); }
 
 body.title #show-stage {
@@ -3621,6 +3627,47 @@ body.preAni .wrapper:nth-child(5n+5) .pieces {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
 
+.loading-progress {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #5aa8ff; }
+  .loading-progress.active {
+    animation: progress 18.8s linear; }
+
+/**
+ * Created by Moudi on 2017/3/10.
+ */
+.nav {
+  display: none;
+  z-index: 100;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transition: 0.7s; }
+  .nav .animal-nav {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    margin-top: -115px;
+    z-index: 1; }
+  .nav .main-nav {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    margin-top: -95px; }
+  .nav .animal-info {
+    position: fixed;
+    width: 100%;
+    top: 50%;
+    margin-top: 13%;
+    transition: 0.18s 0.3s;
+    text-align: center; }
+
 @font-face {
   font-family: 'BlocExtCond';
   src: url(./fonts/blocextcond.eot);
@@ -3752,7 +3799,8 @@ body.preAni #show-stage {
   margin: auto;
   max-width: 650px;
   max-height: 430px;
-  transition: 2s; }
+  transition: 2s;
+  transform: translateY(-15%); }
   #show-stage .wrapper {
     position: absolute;
     top: 0;
@@ -3764,12 +3812,17 @@ body.preAni #show-stage {
     height: 100%;
     transition-duration: 0.9s;
     transition-timing-function: cubic-bezier(0.37, -0.29, 0, 1.29); }
-  #show-stage.fly {
-    animation: fly 3s infinite; }
-  #show-stage.fish-l {
-    animation: fish-l 8s infinite; }
-  #show-stage.fish-r {
-    animation: fish-r 8s infinite; }
+
+.animation-lock.butterfly #show-stage,
+.animation-lock.damselfly #show-stage {
+  animation: fly 3s infinite; }
+
+.animation-lock.vaquita #show-stage {
+  animation: fish-l 8s infinite; }
+
+.animation-lock.turtle #show-stage,
+.animation-lock.parrotfish #show-stage {
+  animation: fish-r 8s infinite; }
 
 .main #show-stage {
   background: -webkit-radial-gradient(center center, 230px 230px, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0)); }

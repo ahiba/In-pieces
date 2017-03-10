@@ -4,92 +4,81 @@
 
 //载入css
 require('../css/main.scss');
+let data = require('./data.js');
 
+console.log(data.animalCopyOne);
+console.log(data.translatedAnimalCopyOne);
 class Pieces {
   constructor(id) {
-    this.e = document.getElementById(id);
-    this.nameArr = ['crow', 'vaquita', 'kakapo', 'ostrich', 'parrotfish', 'penguin', 'iguana', 'peccary', 'drill', 'oryx', 'owl', 'tapir', 'frog', 'seahorse', 'camel', 'butterfly', 'sloth', 'armadillo', 'damselfly', 'loris', 'echidna', 'bear', 'lynx', 'hirola', 'okapi', 'sifaka', 'panda', 'rhino', 'tamarin', 'turtle'];
-    this.n = 0;
+    this.$e = $('#' + id);
+    this.nameArr = data.animalList;
+    this.n = -1;
+    this.$startBtn = $('#start');
     this.init();
   }
 
   init() {
-    let eleHTML = `
-            <div class="wrapper">
-                <div class="pieces"></div>
-            </div>
-        `;
-    let eleHTMLExtra = `
-            <div class="wrapper extra">
-                <div class="pieces"></div>
-            </div>
-        `;
-    let eleHTMLShadow = `<div class="shadow"></div>`;
-    let ehtml = '';
-    for (let i = 0; i < 30; i++) {
-      ehtml += eleHTML;
-    }
-    for (let i = 0; i < 3; i++) {
-      ehtml += eleHTMLExtra;
-    }
-    ehtml += eleHTMLShadow;
-    this.e.innerHTML = ehtml;
     this._resize();
     this._initEvent();
     window.onload = () => {
-      this._preloaderSeq();
-      // this._dev();
+      // this._preloaderSeq();
+      this._dev();
     }
   }
 
   _dev() {
-    document.body.classList.remove('preloader');
-    document.body.classList.add('title');
+    $(document.body).removeClass('preloader').addClass('title');
     setTimeout(function () {
-      document.body.classList.add('show-title');
+      $(document.body).addClass('show-title');
     }, 2000);
   }
 
   _initEvent() {
-    document.addEventListener('click', () => {
-      document.body.classList.remove('animation-lock');
-      this.n++;
-      this.n >= this.nameArr.length && (this.n = 0);
-      document.body.classList.remove(this.nameArr[this.n - 1]);
-      document.body.classList.add(this.nameArr[this.n]);
-      setTimeout(() => {
-        document.body.classList.add('animation-lock');
-      }, 2000)
-    });
     window.onresize = this._resize.bind(this);
     this._setStateX();
     this._setState_X();
     this._setShimmer();
+    this.$startBtn.click(() => {
+      $('.intro-content').fadeOut(300, () => {
+        $(document.body).removeClass('show-title');
+      });
+      $(document.body).removeClass('title');
+      $('.nav').show(200);
+      document.addEventListener('click', () => {
+        $(document.body).removeClass('animation-lock');
+        this.n++;
+        this.n >= this.nameArr.length && (this.n = 0);
+        $('#debug').text(data.translatedAnimalCopyOne[this.n]);
+        $(document.body).removeClass(this.nameArr[this.n - 1]).addClass(this.nameArr[this.n]);
+        setTimeout(() => {
+          $(document.body).addClass('animation-lock');
+        }, 2000)
+      });
+    })
   }
 
   _resize() {
-    let w = window.innerWidth * .9;
+    let w = $(window).innerWidth() * .9;
     let h = w * (2 / 3);
-    this.e.style.width = w + 'px';
-    this.e.style.height = h + 'px';
+    this.$e.width(w);
+    this.$e.height(h);
   }
 
   //TODO: preloader sequence
   _preloaderSeq() {
-    let b = document.body;
+    let b = $(document.body);
     setTimeout(() => {
-      b.classList.add('ready');
-      b.classList.remove('preloader');
+      b.addClass('ready').removeClass('preloader');
+      $('.loading-progress').addClass('active');
       this._introSeq();
       setTimeout(() => {
-        b.classList.add('preAni');
+        b.addClass('preAni');
         setTimeout(() => {
-          b.classList.remove('preAni');
+          b.removeClass('preAni');
           setTimeout(() => {
-            b.classList.remove('ready');
-            b.classList.add('title');
+            b.removeClass('ready').addClass('title');
             setTimeout(() => {
-              b.classList.add('show-title');
+              b.addClass('show-title');
             }, 2000);
           }, 2300);
         }, 10000);
@@ -98,20 +87,19 @@ class Pieces {
   }
 
   _introSeq() {
-    let intro = document.getElementsByClassName('loading-intro')[0];
-    let ps = intro.getElementsByTagName('p');
-    ps[0].classList.add('show');
+    let $ps = $('.loading-intro').find('p');
+    $($ps[0]).addClass('show');
     setTimeout(() => {
-      ps[0].classList.remove('show');
-      ps[1].classList.add('show');
+      $($ps[0]).removeClass('show');
+      $($ps[1]).addClass('show');
       setTimeout(() => {
-        ps[1].classList.remove('show');
-        ps[2].classList.add('show');
+        $($ps[1]).removeClass('show');
+        $($ps[2]).addClass('show');
         setTimeout(() => {
-          ps[2].classList.remove('show');
-          ps[3].classList.add('show');
+         $($ps[2]).removeClass('show');
+          $($ps[3]).addClass('show');
           setTimeout(() => {
-            ps[3].classList.remove('show');
+            $($ps[3]).removeClass('show');
           }, 4000)
         }, 4000)
       }, 4000)
@@ -119,50 +107,48 @@ class Pieces {
   }
 
   _setStateX() {
-    let b = document.body;
+    let b = $(document.body);
     setInterval(() => {
-      b.classList.remove("state3");
+      b.removeClass("state3");
       setTimeout(() => {
-        b.classList.add("state1");
+        b.addClass("state1");
       }, 1000);
       setTimeout(() => {
-        b.classList.remove("state1");
-        b.classList.add("state2");
+        b.removeClass("state1").addClass("state2");
       }, 2500);
       setTimeout(() => {
-        b.classList.remove("state2");
-        b.classList.add("state3");
+        b.removeClass("state2").addClass("state3");
       }, 3500)
     }, 5000)
   }
 
   _setState_X() {
     setInterval(() => {
-      let b = document.body;
+      let b = $(document.body);
       setTimeout(() => {
-        b.classList.add("state-1");
+        b.addClass("state-1");
       }, 1000);
       setTimeout(() => {
-        b.classList.remove("state-1");
+        b.removeClass("state-1");
       }, 1500);
       setTimeout(() => {
-        b.classList.add("state-1");
+        b.addClass("state-1");
       }, 1900);
       setTimeout(() => {
-        b.classList.remove("state-1");
+        b.removeClass("state-1");
       }, 2500);
     }, 3000)
   }
 
   _setShimmer() {
-    let b = document.body;
+    let b = $(document.body);
     setInterval(() => {
       setTimeout(() => {
-        b.classList.add("shimmer")
+        b.addClass("shimmer")
       }, 2000);
       setTimeout(() => {
-        b.classList.remove("shimmer")
-      }, 6000);
+        b.removeClass("shimmer")
+      }, 6700);
     }, 7000)
   }
 }

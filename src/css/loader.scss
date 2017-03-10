@@ -44,22 +44,22 @@ body.ready {
         background-color: rgba(0, 0, 0, .6);
       }
     }
-    &:nth-child(5n+1) .pieces {
+    &:nth-of-type(5n+1) .pieces {
       background-color: #28282a;
     }
-    &:nth-child(5n+2) .pieces {
+    &:nth-of-type(5n+2) .pieces {
       background-color: #111;
     }
-    &:nth-child(5n+3) .pieces {
+    &:nth-of-type(5n+3) .pieces {
       background-color: #333;
     }
-    &:nth-child(5n+4) .pieces {
+    &:nth-of-type(5n+4) .pieces {
       background-color: #222;
     }
-    &:nth-child(5n+5) .pieces {
+    &:nth-of-type(5n+5) .pieces {
       background-color: #121212;
     }
-    &:nth-child(31), &:nth-child(32), &:nth-child(33) {
+    &:nth-of-type(31), &:nth-of-type(32), &:nth-of-type(33) {
       .pieces {
         -webkit-clip-path: polygon(50% 50%, 50% 50%, 50% 50%);
       }
@@ -302,4 +302,16 @@ body.preAni {
   background-size: 80px 60px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.loading-progress {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #5aa8ff;
+  &.active {
+    animation: progress 18.8s linear;
+  }
 }

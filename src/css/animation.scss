@@ -22,54 +22,54 @@
 
 @keyframes fish-r {
   0% {
-    transform: translateX(0);
+    transform: translateX(0) translateY(-15%);
   }
   23% {
-    transform: translateX(0);
+    transform: translateX(0) translateY(-15%);
   }
   46% {
-    transform: translateX(5%);
+    transform: translateX(5%) translateY(-15%);
   }
   60% {
-    transform: translateX(0);
+    transform: translateX(0) translateY(-15%);
   }
   80% {
-    transform: translateX(5%);
+    transform: translateX(5%) translateY(-15%);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(0) translateY(-15%);
   }
 }
 @keyframes fish-l {
   0% {
-    transform: translateX(0);
+    transform: translateX(0) translateY(-15%);
   }
   23% {
-    transform: translateX(0);
+    transform: translateX(0) translateY(-15%);
   }
   46% {
-    transform: translateX(-5%);
+    transform: translateX(-5%) translateY(-15%);
   }
   60% {
-    transform: translateX(0);
+    transform: translateX(0) translateY(-15%);
   }
   80% {
-    transform: translateX(-5%);
+    transform: translateX(-5%) translateY(-15%);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(0) translateY(-15%);
   }
 }
 
 @keyframes fly {
   0% {
-    transform: translateY(0);
+    transform: translateY(0) translateY(-15%);
   }
   50% {
-    transform: translateY(15px);
+    transform: translateY(15px) translateY(-15%);
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(0) translateY(-15%);
   }
 }
 @keyframes shimmer {
@@ -88,7 +88,7 @@
     background-color: rgba(0,0,0,0);
   }
   35% {
-    background-color: rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,.4);
   }
   100% {
     background-color: rgba(0,0,0,0);
@@ -169,5 +169,14 @@
   }
   100% {
     background-position: 0 0;
+  }
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
   }
 }

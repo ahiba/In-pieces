@@ -1,0 +1,35 @@
+/**
+ * Created by Moudi on 2017/3/10.
+ */
+
+.nav {
+  display: none;
+  z-index: 100;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transition: 0.7s;
+  .animal-nav {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    margin-top: -115px;
+    z-index: 1;
+  }
+  .main-nav {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    margin-top: -95px;
+  }
+  .animal-info {
+    position: fixed;
+    width: 100%;
+    top: 50%;
+    margin-top: 13%;
+    transition: 0.18s 0.3s;
+    text-align: center;
+  }
+}
