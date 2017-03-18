@@ -118,9 +118,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 __webpack_require__(1);
 var data = __webpack_require__(0);
 
-console.log(data.animalCopyOne);
-console.log(data.translatedAnimalCopyOne);
-
 var Pieces = function () {
   function Pieces(id) {
     _classCallCheck(this, Pieces);
@@ -167,11 +164,11 @@ var Pieces = function () {
         });
         $(document.body).removeClass('title');
         $('.nav').show(200);
-        document.addEventListener('click', function () {
+        $('.next').on('click', function () {
           $(document.body).removeClass('animation-lock');
           _this2.n++;
           _this2.n >= _this2.nameArr.length && (_this2.n = 0);
-          $('#debug').text(data.translatedAnimalCopyOne[_this2.n]);
+          $('#animal-name').text(data.translatedAnimalNames[_this2.n]);
           $(document.body).removeClass(_this2.nameArr[_this2.n - 1]).addClass(_this2.nameArr[_this2.n]);
           setTimeout(function () {
             $(document.body).addClass('animation-lock');

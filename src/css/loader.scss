@@ -302,6 +302,9 @@ body.preAni {
   background-size: 80px 60px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  &.smaller {
+    background-size: 70px 50px;
+  }
 }
 
 .loading-progress {

@@ -6,8 +6,6 @@
 require('../css/main.scss');
 let data = require('./data.js');
 
-console.log(data.animalCopyOne);
-console.log(data.translatedAnimalCopyOne);
 class Pieces {
   constructor(id) {
     this.$e = $('#' + id);
@@ -44,11 +42,11 @@ class Pieces {
       });
       $(document.body).removeClass('title');
       $('.nav').show(200);
-      document.addEventListener('click', () => {
+      $('.next').on('click', () => {
         $(document.body).removeClass('animation-lock');
         this.n++;
         this.n >= this.nameArr.length && (this.n = 0);
-        $('#debug').text(data.translatedAnimalCopyOne[this.n]);
+        $('#animal-name').text(data.translatedAnimalNames[this.n]);
         $(document.body).removeClass(this.nameArr[this.n - 1]).addClass(this.nameArr[this.n]);
         setTimeout(() => {
           $(document.body).addClass('animation-lock');

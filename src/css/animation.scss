@@ -180,3 +180,24 @@
     width: 100%;
   }
 }
+
+@keyframes pie-rotations {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(175deg);
+  }
+  30% {
+    transform: rotate(175deg);
+  }
+  45% {
+    transform: rotate(-40deg);
+  }
+  70% {
+    transform: rotate(-40deg);
+  }
+  77% {
+    transform: rotate(0deg);
+  }
+}
