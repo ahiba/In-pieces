@@ -3,7 +3,6 @@
  */
 
 .nav {
-  display: none;
   z-index: 100;
   position: absolute;
   height: 100%;
@@ -691,5 +690,41 @@ footer {
     opacity: 0;
     transform: translateY(2px);
     transition: 0.19s;
+  }
+}
+
+
+.preloader-layer {
+  .nav {
+    pointer-events: none;
+  }
+  .animal-nav {
+    li {
+      transition: .23s ease-in;
+      opacity: 0;
+      transform: translateX(11px);
+      pointer-events: none;
+    }
+  }
+  .main-nav {
+    li {
+      transition: .23s ease-in;
+      opacity: 0;
+      transform: translateX(-11px);
+      pointer-events: none;
+    }
+
+  }
+  .animal-info {
+    transition: .2s ease-in 0s;
+    opacity: 0;
+    transform: translateY(11px);
+  }
+  footer {
+    pointer-events: none;
+    ul li {
+      opacity: 0;
+      transform: translateY(4px);
+    }
   }
 }

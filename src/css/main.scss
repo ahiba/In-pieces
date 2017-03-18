@@ -1,23 +1,25 @@
 /**
  * Created by Moudi on 2017/2/25.
  */
-@import "reset.css";
-//变量区
-@import "var.scss";
-//keyframes
-@import "animation.scss";
-//额外碎片的代码
-@import "extraPieces.scss";
-//过程动画
-@import "state-animation.scss";
-//shadow
-@import "shadow.scss";
-//loading 页面
-@import "loader.scss";
-//加载nav
-@import "nav.scss";
-
-
+@import "reset";
+// 变量区
+@import "var";
+// keyframes
+@import "animation";
+// 额外碎片的代码
+@import "extraPieces";
+// 过程动画
+@import "state-animation";
+// shadow
+@import "shadow";
+// loading 页面
+@import "loader";
+// 加载nav
+@import "nav";
+// smash 界面
+@import "smash";
+// overlay 界面
+@import "overlay";
 
 @font-face {
   font-family: 'BlocExtCond';

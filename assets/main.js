@@ -124,7 +124,7 @@ var Pieces = function () {
 
     this.$e = $('#' + id);
     this.nameArr = data.animalList;
-    this.n = -1;
+    this.n = 0;
     this.$startBtn = $('#start');
     this.init();
   }
@@ -163,18 +163,101 @@ var Pieces = function () {
           $(document.body).removeClass('show-title');
         });
         $(document.body).removeClass('title');
-        $('.nav').show(200);
+        $(document.body).addClass(_this2.nameArr[_this2.n]);
+        $('#animal-name').text(data.translatedAnimalNames[_this2.n]);
+        $('.prev .popout').text(data.translatedAnimalNames[_this2.nameArr.length - 1]);
+        $('.next .popout').text(data.translatedAnimalNames[_this2.n + 1]);
+        setTimeout(function () {
+          $(document.body).removeClass('preloader-layer');
+          $(document.body).addClass('animation-lock');
+        }, 1800);
         $('.next').on('click', function () {
-          $(document.body).removeClass('animation-lock');
-          _this2.n++;
-          _this2.n >= _this2.nameArr.length && (_this2.n = 0);
-          $('#animal-name').text(data.translatedAnimalNames[_this2.n]);
-          $(document.body).removeClass(_this2.nameArr[_this2.n - 1]).addClass(_this2.nameArr[_this2.n]);
-          setTimeout(function () {
-            $(document.body).addClass('animation-lock');
-          }, 2000);
+          _this2.next();
+        });
+        $('.prev').on('click', function () {
+          _this2.prev();
         });
       });
+      $('.help').click(function () {
+        $(document.body).removeClass('animation-lock');
+        _this2.$e.addClass('no-delay');
+        $('#scientific-name').text(data.animalScientificName[_this2.n]);
+        $('#range').text(data.translatedAnimalRange[_this2.n]);
+        $('.why-info').eq(0).html(data.translatedAnimalCopyOne[_this2.n]);
+        $('.why-info').eq(1).html(data.animalCopyTwo[_this2.n]);
+        $('.why-info').eq(2).html(data.animalCopyThree[_this2.n]);
+        $(document.body).addClass('smash');
+        setTimeout(function () {
+          $('.content-wrapper').addClass('show');
+        }, 1000);
+      });
+      $('.direct-stats').click(function () {
+        $(document.body).removeClass('animation-lock');
+        _this2.$e.addClass('no-delay');
+        $('#scientific-name').text(data.animalScientificName[_this2.n]);
+        $('#range').text(data.translatedAnimalRange[_this2.n]);
+        $('.why-info').eq(0).html(data.translatedAnimalCopyOne[_this2.n]);
+        $('.why-info').eq(1).html(data.animalCopyTwo[_this2.n]);
+        $('.why-info').eq(2).html(data.animalCopyThree[_this2.n]);
+        $(document.body).addClass('smash');
+        setTimeout(function () {
+          $('.content-wrapper').addClass('show');
+        }, 1000);
+      });
+      $('.content-info .close').click(function () {
+        _this2.$e.removeClass('no-delay');
+        setTimeout(function () {
+          $('.content-wrapper').removeClass('show');
+          $(document.body).removeClass('smash');
+          setTimeout(function () {
+            $(document.body).addClass('animation-lock');
+          }, 1700);
+        }, 100);
+      });
+    }
+  }, {
+    key: 'next',
+    value: function next() {
+      var _this3 = this;
+
+      $(document.body).removeClass('animation-lock');
+      this.n++;
+      this.n >= this.nameArr.length && (this.n = 0);
+      $('.prev .popout').text(data.translatedAnimalNames[this.n - 1 < 0 ? data.translatedAnimalNames.length - 1 : this.n - 1]);
+      $('.next .popout').text(data.translatedAnimalNames[this.n + 1 >= data.translatedAnimalNames.length ? 0 : this.n + 1]);
+      $(document.body).removeClass(this.nameArr[this.n - 1 < 0 ? this.nameArr.length - 1 : this.n - 1]);
+      $('.animal-info').addClass('text-change');
+      setTimeout(function () {
+        $('.pieces-no').text(_this3.n + 1);
+        $('#animal-name').text(data.translatedAnimalNames[_this3.n]);
+        $('.animal-info').removeClass('text-change');
+      }, 300);
+      $(document.body).addClass(this.nameArr[this.n]);
+      setTimeout(function () {
+        $(document.body).addClass('animation-lock');
+      }, 2000);
+    }
+  }, {
+    key: 'prev',
+    value: function prev() {
+      var _this4 = this;
+
+      $(document.body).removeClass('animation-lock');
+      this.n--;
+      this.n < 0 && (this.n = this.nameArr.length - 1);
+      $('.prev .popout').text(data.translatedAnimalNames[this.n - 1 < 0 ? data.translatedAnimalNames.length - 1 : this.n - 1]);
+      $('.next .popout').text(data.translatedAnimalNames[this.n + 1 >= data.translatedAnimalNames.length ? 0 : this.n + 1]);
+      $(document.body).removeClass(this.nameArr[this.n + 1 >= this.nameArr.length ? 0 : this.n + 1]);
+      $('.animal-info').addClass('text-change');
+      setTimeout(function () {
+        $('.pieces-no').text(_this4.n + 1);
+        $('#animal-name').text(data.translatedAnimalNames[_this4.n]);
+        $('.animal-info').removeClass('text-change');
+      }, 300);
+      $(document.body).addClass(this.nameArr[this.n]);
+      setTimeout(function () {
+        $(document.body).addClass('animation-lock');
+      }, 2000);
     }
   }, {
     key: '_resize',
@@ -184,19 +267,16 @@ var Pieces = function () {
       this.$e.width(w);
       this.$e.height(h);
     }
-
-    //TODO: preloader sequence
-
   }, {
     key: '_preloaderSeq',
     value: function _preloaderSeq() {
-      var _this3 = this;
+      var _this5 = this;
 
       var b = $(document.body);
       setTimeout(function () {
         b.addClass('ready').removeClass('preloader');
         $('.loading-progress').addClass('active');
-        _this3._introSeq();
+        _this5._introSeq();
         setTimeout(function () {
           b.addClass('preAni');
           setTimeout(function () {

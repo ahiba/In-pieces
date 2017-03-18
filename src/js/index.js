@@ -10,7 +10,7 @@ class Pieces {
   constructor(id) {
     this.$e = $('#' + id);
     this.nameArr = data.animalList;
-    this.n = -1;
+    this.n = 0;
     this.$startBtn = $('#start');
     this.init();
   }
@@ -41,20 +41,94 @@ class Pieces {
         $(document.body).removeClass('show-title');
       });
       $(document.body).removeClass('title');
-      $('.nav').show(200);
+      $(document.body).addClass(this.nameArr[this.n]);
+      $('#animal-name').text(data.translatedAnimalNames[this.n]);
+      $('.prev .popout').text(data.translatedAnimalNames[this.nameArr.length - 1]);
+      $('.next .popout').text(data.translatedAnimalNames[this.n + 1]);
+      setTimeout(() => {
+        $(document.body).removeClass('preloader-layer');
+        $(document.body).addClass('animation-lock');
+      }, 1800);
       $('.next').on('click', () => {
-        $(document.body).removeClass('animation-lock');
-        this.n++;
-        this.n >= this.nameArr.length && (this.n = 0);
-        $('#animal-name').text(data.translatedAnimalNames[this.n]);
-        $(document.body).removeClass(this.nameArr[this.n - 1]).addClass(this.nameArr[this.n]);
+        this.next();
+      });
+      $('.prev').on('click', () => {
+        this.prev();
+      });
+    });
+    $('.help').click(() => {
+      $(document.body).removeClass('animation-lock');
+      this.$e.addClass('no-delay');
+      $('#scientific-name').text(data.animalScientificName[this.n]);
+      $('#range').text(data.translatedAnimalRange[this.n]);
+      $('.why-info').eq(0).html(data.translatedAnimalCopyOne[this.n]);
+      $('.why-info').eq(1).html(data.animalCopyTwo[this.n]);
+      $('.why-info').eq(2).html(data.animalCopyThree[this.n]);
+      $(document.body).addClass('smash');
+      setTimeout(() => {
+        $('.content-wrapper').addClass('show');
+      }, 1000);
+    });
+    $('.direct-stats').click(() => {
+      $(document.body).removeClass('animation-lock');
+      this.$e.addClass('no-delay');
+      $('#scientific-name').text(data.animalScientificName[this.n]);
+      $('#range').text(data.translatedAnimalRange[this.n]);
+      $('.why-info').eq(0).html(data.translatedAnimalCopyOne[this.n]);
+      $('.why-info').eq(1).html(data.animalCopyTwo[this.n]);
+      $('.why-info').eq(2).html(data.animalCopyThree[this.n]);
+      $(document.body).addClass('smash');
+      setTimeout(() => {
+        $('.content-wrapper').addClass('show');
+      }, 1000);
+    });
+    $('.content-info .close').click(() => {
+      this.$e.removeClass('no-delay');
+      setTimeout(() => {
+        $('.content-wrapper').removeClass('show');
+        $(document.body).removeClass('smash');
         setTimeout(() => {
           $(document.body).addClass('animation-lock');
-        }, 2000)
-      });
-    })
+        }, 1700)
+      }, 100);
+    });
   }
-
+  next() {
+    $(document.body).removeClass('animation-lock');
+    this.n++;
+    this.n >= this.nameArr.length && (this.n = 0);
+    $('.prev .popout').text(data.translatedAnimalNames[(this.n - 1) < 0 ? data.translatedAnimalNames.length-1 : (this.n - 1)]);
+    $('.next .popout').text(data.translatedAnimalNames[(this.n + 1) >= data.translatedAnimalNames.length ? 0 : (this.n + 1)]);
+    $(document.body).removeClass(this.nameArr[(this.n - 1) < 0 ? this.nameArr.length-1 : (this.n - 1)]);
+    $('.animal-info').addClass('text-change');
+    setTimeout(() => {
+      $('.pieces-no').text(this.n + 1);
+      $('#animal-name').text(data.translatedAnimalNames[this.n]);
+      $('.animal-info').removeClass('text-change');
+    }, 300);
+    $(document.body).addClass(this.nameArr[this.n]);
+    setTimeout(() => {
+      $(document.body).addClass('animation-lock');
+    }, 2000)
+  }
+  prev() {
+    $(document.body).removeClass('animation-lock');
+    this.n--;
+    this.n < 0 && (this.n = this.nameArr.length - 1);
+    $('.prev .popout').text(data.translatedAnimalNames[(this.n - 1) < 0 ? data.translatedAnimalNames.length-1 : (this.n - 1)]);
+    $('.next .popout').text(data.translatedAnimalNames[(this.n + 1) >= data.translatedAnimalNames.length ? 0 : (this.n + 1)]);
+    $(document.body).removeClass(this.nameArr[(this.n + 1) >= this.nameArr.length ? 0 : (this.n + 1)]);
+    $('.animal-info').addClass('text-change');
+    setTimeout(() => {
+      $('.pieces-no').text(this.n + 1);
+      $('#animal-name').text(data.translatedAnimalNames[this.n]);
+      $('.animal-info').removeClass('text-change');
+    }, 300);
+    $(document.body).addClass(this.nameArr[this.n]);
+    setTimeout(() => {
+      $(document.body).addClass('animation-lock');
+    }, 2000)
+  }
   _resize() {
     let w = $(window).innerWidth() * .9;
     let h = w * (2 / 3);
@@ -62,7 +136,6 @@ class Pieces {
     this.$e.height(h);
   }
 
-  //TODO: preloader sequence
   _preloaderSeq() {
     let b = $(document.body);
     setTimeout(() => {

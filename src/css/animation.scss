@@ -201,3 +201,15 @@
     transform: rotate(0deg);
   }
 }
+
+@keyframes rotate19 {
+  0% {
+    transform: rotate(0) scale(1) translateY(-15%);
+  }
+  0.4% {
+    transform: scale(1.9) translateY(0);
+  }
+  100% {
+    transform: rotate(6000deg) scale(1.9);
+  }
+}
