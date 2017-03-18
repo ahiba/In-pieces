@@ -4599,6 +4599,107 @@ footer {
 /**
  * Created by Moudi on 2017/3/18.
  */
+.overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.945);
+  z-index: 999;
+  overflow-y: scroll;
+  pointer-events: none;
+  transform: translateY(100%);
+  transition: 0.45s cubic-bezier(1, 0, 0, 1);
+  text-align: center; }
+  .overlay.active {
+    pointer-events: auto;
+    transform: translateY(0); }
+    .overlay.active .close {
+      opacity: 1 !important; }
+    .overlay.active div.active > * {
+      opacity: 1 !important; }
+      .overlay.active div.active > *:nth-child(1) {
+        transition: 0.56s cubic-bezier(0.62, 0.02, 0.34, 1) 0.5s; }
+      .overlay.active div.active > *:nth-child(2) {
+        transition: 0.64s cubic-bezier(0.62, 0.02, 0.34, 1) 0.6s; }
+      .overlay.active div.active > *:nth-child(3) {
+        transition: 0.72s cubic-bezier(0.62, 0.02, 0.34, 1) 0.7s; }
+      .overlay.active div.active > *:nth-child(4) {
+        transition: 0.8s cubic-bezier(0.62, 0.02, 0.34, 1) 0.8s; }
+      .overlay.active div.active > *:nth-child(5) {
+        transition: 0.88s cubic-bezier(0.62, 0.02, 0.34, 1) 0.9s; }
+      .overlay.active div.active > *:nth-child(6) {
+        transition: 0.96s cubic-bezier(0.62, 0.02, 0.34, 1) 1s; }
+      .overlay.active div.active > *:nth-child(7) {
+        transition: 1.04s cubic-bezier(0.62, 0.02, 0.34, 1) 1.1s; }
+      .overlay.active div.active > *:nth-child(8) {
+        transition: 1.12s cubic-bezier(0.62, 0.02, 0.34, 1) 1.2s; }
+      .overlay.active div.active > *:nth-child(9) {
+        transition: 1.2s cubic-bezier(0.62, 0.02, 0.34, 1) 1.3s; }
+      .overlay.active div.active > *:nth-child(10) {
+        transition: 1.28s cubic-bezier(0.62, 0.02, 0.34, 1) 1.4s; }
+  .overlay .nav-btn.close {
+    margin-top: 4%;
+    opacity: 0;
+    transition-delay: 0.4s;
+    background: url(./img/2dd9263e.green-texture.png) repeat center center/40px 40px; }
+    .overlay .nav-btn.close::after {
+      background-color: #fafafa; }
+    .overlay .nav-btn.close .icon::before, .overlay .nav-btn.close .icon::after {
+      background: url(./img/c6a8686a.green-texture-less.png) repeat center center/30px 30px; }
+  .overlay > div {
+    display: none;
+    width: 80%;
+    max-width: 580px;
+    margin: 0 auto;
+    padding: 1% 10% 5.5%;
+    transition: 1s cubic-bezier(0.62, 0.02, 0.34, 1); }
+  .overlay h2 {
+    font-size: 24px;
+    color: #f03252;
+    margin: 1.4em 0 .4em; }
+  .overlay div > * {
+    opacity: 0; }
+  .overlay p {
+    color: #444;
+    font-size: 16px;
+    text-transform: none;
+    line-height: 20px;
+    margin-bottom: 10px; }
+    .overlay p:nth-child(2) {
+      font-size: 20px;
+      text-transform: uppercase;
+      line-height: 1.2em;
+      letter-spacing: .06em; }
+  .overlay ul {
+    margin-bottom: 3.2em; }
+    .overlay ul li {
+      border-bottom: 2px solid #ccc;
+      padding: 1.7em 0 1.4em; }
+      .overlay ul li a {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 1.1em; }
+        .overlay ul li a span {
+          font-size: 12px;
+          -webkit-filter: brightness(0.6);
+          filter: brightness(0.6); }
+  .overlay img {
+    width: 100%;
+    margin: 1.6em 0 1.8em;
+    border: 1px solid #ededed;
+    transition: 0.2s; }
+  .overlay a:hover img {
+    border: 1px solid #ddd; }
+
+.line-link:hover::after {
+  opacity: 1;
+  transform: translateY(0); }
+
+.line-link.dark-line::after {
+  background: url(./img/c6a8686a.green-texture-less.png) repeat left center; }
+
 @font-face {
   font-family: 'BlocExtCond';
   src: url(./fonts/blocextcond.eot);
@@ -4647,6 +4748,8 @@ body.main {
       border-color: #181818; }
     body.main .wallpaper span::after {
       border-color: #181818; }
+  body.main .overlay h2, body.main .overlay p span, body.main .overlay a {
+    color: #181818; }
 
 body.startup {
   background-color: #181818; }
@@ -4666,6 +4769,8 @@ body.startup {
       border-color: #181818; }
     body.startup .wallpaper span::after {
       border-color: #181818; }
+  body.startup .overlay h2, body.startup .overlay p span, body.startup .overlay a {
+    color: #181818; }
 
 body.smash {
   background-color: #1c1c1c; }
@@ -4685,6 +4790,8 @@ body.smash {
       border-color: #1c1c1c; }
     body.smash .wallpaper span::after {
       border-color: #1c1c1c; }
+  body.smash .overlay h2, body.smash .overlay p span, body.smash .overlay a {
+    color: #1c1c1c; }
 
 body.crow {
   background-color: #84A5DD; }
@@ -4704,6 +4811,8 @@ body.crow {
       border-color: #84A5DD; }
     body.crow .wallpaper span::after {
       border-color: #84A5DD; }
+  body.crow .overlay h2, body.crow .overlay p span, body.crow .overlay a {
+    color: #84A5DD; }
 
 body.vaquita {
   background-color: #64d6e2; }
@@ -4723,6 +4832,8 @@ body.vaquita {
       border-color: #64d6e2; }
     body.vaquita .wallpaper span::after {
       border-color: #64d6e2; }
+  body.vaquita .overlay h2, body.vaquita .overlay p span, body.vaquita .overlay a {
+    color: #64d6e2; }
 
 body.kakapo {
   background-color: #dbbe39; }
@@ -4742,6 +4853,8 @@ body.kakapo {
       border-color: #dbbe39; }
     body.kakapo .wallpaper span::after {
       border-color: #dbbe39; }
+  body.kakapo .overlay h2, body.kakapo .overlay p span, body.kakapo .overlay a {
+    color: #dbbe39; }
 
 body.ostrich {
   background-color: #de89ac; }
@@ -4761,6 +4874,8 @@ body.ostrich {
       border-color: #de89ac; }
     body.ostrich .wallpaper span::after {
       border-color: #de89ac; }
+  body.ostrich .overlay h2, body.ostrich .overlay p span, body.ostrich .overlay a {
+    color: #de89ac; }
 
 body.parrotfish {
   background-color: #ccc5e3; }
@@ -4780,6 +4895,8 @@ body.parrotfish {
       border-color: #ccc5e3; }
     body.parrotfish .wallpaper span::after {
       border-color: #ccc5e3; }
+  body.parrotfish .overlay h2, body.parrotfish .overlay p span, body.parrotfish .overlay a {
+    color: #ccc5e3; }
 
 body.penguin {
   background-color: #3CCAD1; }
@@ -4799,6 +4916,8 @@ body.penguin {
       border-color: #3CCAD1; }
     body.penguin .wallpaper span::after {
       border-color: #3CCAD1; }
+  body.penguin .overlay h2, body.penguin .overlay p span, body.penguin .overlay a {
+    color: #3CCAD1; }
 
 body.iguana {
   background-color: #F6D860; }
@@ -4818,6 +4937,8 @@ body.iguana {
       border-color: #F6D860; }
     body.iguana .wallpaper span::after {
       border-color: #F6D860; }
+  body.iguana .overlay h2, body.iguana .overlay p span, body.iguana .overlay a {
+    color: #F6D860; }
 
 body.drill {
   background-color: #87C4A3; }
@@ -4837,6 +4958,8 @@ body.drill {
       border-color: #87C4A3; }
     body.drill .wallpaper span::after {
       border-color: #87C4A3; }
+  body.drill .overlay h2, body.drill .overlay p span, body.drill .overlay a {
+    color: #87C4A3; }
 
 body.owl {
   background-color: #a09de5; }
@@ -4856,6 +4979,8 @@ body.owl {
       border-color: #a09de5; }
     body.owl .wallpaper span::after {
       border-color: #a09de5; }
+  body.owl .overlay h2, body.owl .overlay p span, body.owl .overlay a {
+    color: #a09de5; }
 
 body.tapir {
   background-color: #FEC54F; }
@@ -4875,6 +5000,8 @@ body.tapir {
       border-color: #FEC54F; }
     body.tapir .wallpaper span::after {
       border-color: #FEC54F; }
+  body.tapir .overlay h2, body.tapir .overlay p span, body.tapir .overlay a {
+    color: #FEC54F; }
 
 body.peccary {
   background-color: #F4696B; }
@@ -4894,6 +5021,8 @@ body.peccary {
       border-color: #F4696B; }
     body.peccary .wallpaper span::after {
       border-color: #F4696B; }
+  body.peccary .overlay h2, body.peccary .overlay p span, body.peccary .overlay a {
+    color: #F4696B; }
 
 body.oryx {
   background-color: #79BBB5; }
@@ -4913,6 +5042,8 @@ body.oryx {
       border-color: #79BBB5; }
     body.oryx .wallpaper span::after {
       border-color: #79BBB5; }
+  body.oryx .overlay h2, body.oryx .overlay p span, body.oryx .overlay a {
+    color: #79BBB5; }
 
 body.frog {
   background-color: #785ebb; }
@@ -4932,6 +5063,8 @@ body.frog {
       border-color: #785ebb; }
     body.frog .wallpaper span::after {
       border-color: #785ebb; }
+  body.frog .overlay h2, body.frog .overlay p span, body.frog .overlay a {
+    color: #785ebb; }
 
 body.seahorse {
   background-color: #9988CD; }
@@ -4951,6 +5084,8 @@ body.seahorse {
       border-color: #9988CD; }
     body.seahorse .wallpaper span::after {
       border-color: #9988CD; }
+  body.seahorse .overlay h2, body.seahorse .overlay p span, body.seahorse .overlay a {
+    color: #9988CD; }
 
 body.camel {
   background-color: #FD9372; }
@@ -4970,6 +5105,8 @@ body.camel {
       border-color: #FD9372; }
     body.camel .wallpaper span::after {
       border-color: #FD9372; }
+  body.camel .overlay h2, body.camel .overlay p span, body.camel .overlay a {
+    color: #FD9372; }
 
 body.butterfly {
   background-color: #9B7AD5; }
@@ -4989,6 +5126,8 @@ body.butterfly {
       border-color: #9B7AD5; }
     body.butterfly .wallpaper span::after {
       border-color: #9B7AD5; }
+  body.butterfly .overlay h2, body.butterfly .overlay p span, body.butterfly .overlay a {
+    color: #9B7AD5; }
 
 body.sloth {
   background-color: #FDACB4; }
@@ -5008,6 +5147,8 @@ body.sloth {
       border-color: #FDACB4; }
     body.sloth .wallpaper span::after {
       border-color: #FDACB4; }
+  body.sloth .overlay h2, body.sloth .overlay p span, body.sloth .overlay a {
+    color: #FDACB4; }
 
 body.armadillo {
   background-color: #EDB948; }
@@ -5027,6 +5168,8 @@ body.armadillo {
       border-color: #EDB948; }
     body.armadillo .wallpaper span::after {
       border-color: #EDB948; }
+  body.armadillo .overlay h2, body.armadillo .overlay p span, body.armadillo .overlay a {
+    color: #EDB948; }
 
 body.damselfly {
   background-color: #F68F6F; }
@@ -5046,6 +5189,8 @@ body.damselfly {
       border-color: #F68F6F; }
     body.damselfly .wallpaper span::after {
       border-color: #F68F6F; }
+  body.damselfly .overlay h2, body.damselfly .overlay p span, body.damselfly .overlay a {
+    color: #F68F6F; }
 
 body.loris {
   background-color: #9B7FE6; }
@@ -5065,6 +5210,8 @@ body.loris {
       border-color: #9B7FE6; }
     body.loris .wallpaper span::after {
       border-color: #9B7FE6; }
+  body.loris .overlay h2, body.loris .overlay p span, body.loris .overlay a {
+    color: #9B7FE6; }
 
 body.echidna {
   background-color: #DFBC94; }
@@ -5084,6 +5231,8 @@ body.echidna {
       border-color: #DFBC94; }
     body.echidna .wallpaper span::after {
       border-color: #DFBC94; }
+  body.echidna .overlay h2, body.echidna .overlay p span, body.echidna .overlay a {
+    color: #DFBC94; }
 
 body.bear {
   background-color: #9787EA; }
@@ -5103,6 +5252,8 @@ body.bear {
       border-color: #9787EA; }
     body.bear .wallpaper span::after {
       border-color: #9787EA; }
+  body.bear .overlay h2, body.bear .overlay p span, body.bear .overlay a {
+    color: #9787EA; }
 
 body.lynx {
   background-color: #F4C3C5; }
@@ -5122,6 +5273,8 @@ body.lynx {
       border-color: #F4C3C5; }
     body.lynx .wallpaper span::after {
       border-color: #F4C3C5; }
+  body.lynx .overlay h2, body.lynx .overlay p span, body.lynx .overlay a {
+    color: #F4C3C5; }
 
 body.okapi {
   background-color: #E794AE; }
@@ -5141,6 +5294,8 @@ body.okapi {
       border-color: #E794AE; }
     body.okapi .wallpaper span::after {
       border-color: #E794AE; }
+  body.okapi .overlay h2, body.okapi .overlay p span, body.okapi .overlay a {
+    color: #E794AE; }
 
 body.panda {
   background-color: #98BFF6; }
@@ -5160,6 +5315,8 @@ body.panda {
       border-color: #98BFF6; }
     body.panda .wallpaper span::after {
       border-color: #98BFF6; }
+  body.panda .overlay h2, body.panda .overlay p span, body.panda .overlay a {
+    color: #98BFF6; }
 
 body.hirola {
   background-color: #EF9F64; }
@@ -5179,6 +5336,8 @@ body.hirola {
       border-color: #EF9F64; }
     body.hirola .wallpaper span::after {
       border-color: #EF9F64; }
+  body.hirola .overlay h2, body.hirola .overlay p span, body.hirola .overlay a {
+    color: #EF9F64; }
 
 body.sifaka {
   background-color: #9784ED; }
@@ -5198,6 +5357,8 @@ body.sifaka {
       border-color: #9784ED; }
     body.sifaka .wallpaper span::after {
       border-color: #9784ED; }
+  body.sifaka .overlay h2, body.sifaka .overlay p span, body.sifaka .overlay a {
+    color: #9784ED; }
 
 body.rhino {
   background-color: #63C5AB; }
@@ -5217,6 +5378,8 @@ body.rhino {
       border-color: #63C5AB; }
     body.rhino .wallpaper span::after {
       border-color: #63C5AB; }
+  body.rhino .overlay h2, body.rhino .overlay p span, body.rhino .overlay a {
+    color: #63C5AB; }
 
 body.tamarin {
   background-color: #FDAED4; }
@@ -5236,6 +5399,8 @@ body.tamarin {
       border-color: #FDAED4; }
     body.tamarin .wallpaper span::after {
       border-color: #FDAED4; }
+  body.tamarin .overlay h2, body.tamarin .overlay p span, body.tamarin .overlay a {
+    color: #FDAED4; }
 
 body.turtle {
   background-color: #A0CADB; }
@@ -5255,6 +5420,8 @@ body.turtle {
       border-color: #A0CADB; }
     body.turtle .wallpaper span::after {
       border-color: #A0CADB; }
+  body.turtle .overlay h2, body.turtle .overlay p span, body.turtle .overlay a {
+    color: #A0CADB; }
 
 body.preloader #show-stage,
 body.preAni #show-stage {

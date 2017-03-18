@@ -12,6 +12,7 @@ class Pieces {
     this.nameArr = data.animalList;
     this.n = 0;
     this.$startBtn = $('#start');
+    this.timer = null;
     this.init();
   }
 
@@ -92,6 +93,62 @@ class Pieces {
         }, 1700)
       }, 100);
     });
+    $('.main-nav .nav-btn').eq(2).click(() => {
+      if (!!$('#audio')[0].muted) {
+        $('#audio')[0].muted = false;
+        $('.main-nav .nav-btn').eq(2).parent().removeClass('muted');
+      } else {
+        $('#audio')[0].muted = true;
+        $('.main-nav .nav-btn').eq(2).parent().addClass('muted');
+      }
+    });
+    $('.main-nav .nav-btn').eq(1).click(() => {
+      if (this.timer) {
+        $('.main-nav .nav-btn').eq(1).removeClass('stop');
+        this.autoPlay(false);
+      } else {
+        $('.main-nav .nav-btn').eq(1).addClass('stop');
+        this.autoPlay(true);
+      }
+    });
+    this._linkEvent();
+  }
+
+  _linkEvent() {
+    $('.overlay .close').click(() => {
+      $('.overlay > div').hide(0).removeClass('active');
+      $('.overlay').removeClass('active');
+    });
+    $('.link .about').click(() => {
+      $('.overlay').addClass('active');
+      $('.overlay .about').show(0).addClass('active');
+    });
+    $('.link .how').click(() => {
+      $('.overlay').addClass('active');
+      $('.overlay .how').show(0).addClass('active');
+    });
+    $('.link .sources').click(() => {
+      $('.overlay').addClass('active');
+      $('.overlay .sources').show(0).addClass('active');
+    });
+    $('.link .share').click(() => {
+      $('.overlay').addClass('active');
+      $('.overlay .shring-goodies').show(0).addClass('active');
+    });
+    $('.animal-info .wallpaper').click(() => {
+      $('.overlay').addClass('active');
+      $('.overlay .download').show(0).addClass('active');
+    });
+  }
+  autoPlay(opt) {
+    if (opt) {
+      this.timer = setInterval(() => {
+        this.next();
+      }, 4500);
+    } else {
+      clearInterval(this.timer);
+      this.timer = null;
+    }
   }
   next() {
     $(document.body).removeClass('animation-lock');

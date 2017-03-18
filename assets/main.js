@@ -126,6 +126,7 @@ var Pieces = function () {
     this.nameArr = data.animalList;
     this.n = 0;
     this.$startBtn = $('#start');
+    this.timer = null;
     this.init();
   }
 
@@ -214,11 +215,72 @@ var Pieces = function () {
           }, 1700);
         }, 100);
       });
+      $('.main-nav .nav-btn').eq(2).click(function () {
+        if (!!$('#audio')[0].muted) {
+          $('#audio')[0].muted = false;
+          $('.main-nav .nav-btn').eq(2).parent().removeClass('muted');
+        } else {
+          $('#audio')[0].muted = true;
+          $('.main-nav .nav-btn').eq(2).parent().addClass('muted');
+        }
+      });
+      $('.main-nav .nav-btn').eq(1).click(function () {
+        if (_this2.timer) {
+          $('.main-nav .nav-btn').eq(1).removeClass('stop');
+          _this2.autoPlay(false);
+        } else {
+          $('.main-nav .nav-btn').eq(1).addClass('stop');
+          _this2.autoPlay(true);
+        }
+      });
+      this._linkEvent();
+    }
+  }, {
+    key: '_linkEvent',
+    value: function _linkEvent() {
+      $('.overlay .close').click(function () {
+        $('.overlay > div').hide(0).removeClass('active');
+        $('.overlay').removeClass('active');
+      });
+      $('.link .about').click(function () {
+        $('.overlay').addClass('active');
+        $('.overlay .about').show(0).addClass('active');
+      });
+      $('.link .how').click(function () {
+        $('.overlay').addClass('active');
+        $('.overlay .how').show(0).addClass('active');
+      });
+      $('.link .sources').click(function () {
+        $('.overlay').addClass('active');
+        $('.overlay .sources').show(0).addClass('active');
+      });
+      $('.link .share').click(function () {
+        $('.overlay').addClass('active');
+        $('.overlay .shring-goodies').show(0).addClass('active');
+      });
+      $('.animal-info .wallpaper').click(function () {
+        $('.overlay').addClass('active');
+        $('.overlay .download').show(0).addClass('active');
+      });
+    }
+  }, {
+    key: 'autoPlay',
+    value: function autoPlay(opt) {
+      var _this3 = this;
+
+      if (opt) {
+        this.timer = setInterval(function () {
+          _this3.next();
+        }, 4500);
+      } else {
+        clearInterval(this.timer);
+        this.timer = null;
+      }
     }
   }, {
     key: 'next',
     value: function next() {
-      var _this3 = this;
+      var _this4 = this;
 
       $(document.body).removeClass('animation-lock');
       this.n++;
@@ -228,8 +290,8 @@ var Pieces = function () {
       $(document.body).removeClass(this.nameArr[this.n - 1 < 0 ? this.nameArr.length - 1 : this.n - 1]);
       $('.animal-info').addClass('text-change');
       setTimeout(function () {
-        $('.pieces-no').text(_this3.n + 1);
-        $('#animal-name').text(data.translatedAnimalNames[_this3.n]);
+        $('.pieces-no').text(_this4.n + 1);
+        $('#animal-name').text(data.translatedAnimalNames[_this4.n]);
         $('.animal-info').removeClass('text-change');
       }, 300);
       $(document.body).addClass(this.nameArr[this.n]);
@@ -240,7 +302,7 @@ var Pieces = function () {
   }, {
     key: 'prev',
     value: function prev() {
-      var _this4 = this;
+      var _this5 = this;
 
       $(document.body).removeClass('animation-lock');
       this.n--;
@@ -250,8 +312,8 @@ var Pieces = function () {
       $(document.body).removeClass(this.nameArr[this.n + 1 >= this.nameArr.length ? 0 : this.n + 1]);
       $('.animal-info').addClass('text-change');
       setTimeout(function () {
-        $('.pieces-no').text(_this4.n + 1);
-        $('#animal-name').text(data.translatedAnimalNames[_this4.n]);
+        $('.pieces-no').text(_this5.n + 1);
+        $('#animal-name').text(data.translatedAnimalNames[_this5.n]);
         $('.animal-info').removeClass('text-change');
       }, 300);
       $(document.body).addClass(this.nameArr[this.n]);
@@ -270,13 +332,13 @@ var Pieces = function () {
   }, {
     key: '_preloaderSeq',
     value: function _preloaderSeq() {
-      var _this5 = this;
+      var _this6 = this;
 
       var b = $(document.body);
       setTimeout(function () {
         b.addClass('ready').removeClass('preloader');
         $('.loading-progress').addClass('active');
-        _this5._introSeq();
+        _this6._introSeq();
         setTimeout(function () {
           b.addClass('preAni');
           setTimeout(function () {
