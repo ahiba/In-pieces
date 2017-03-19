@@ -286,11 +286,11 @@
           }
         }
       }
-      .popout {
-        right: auto;
-        left: 80px;
-        transform: translateX(-8px);
-      }
+    }
+    .popout {
+      right: auto;
+      left: 80px;
+      transform: translateX(-8px);
     }
     .all-animals-off-btn {
       position: absolute;
@@ -300,6 +300,10 @@
       transition: 0.23s;
       transform: translateX(-11px);
       pointer-events: none;
+      &.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
     }
   }
   .animal-info {

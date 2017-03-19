@@ -111,6 +111,26 @@ class Pieces {
         this.autoPlay(true);
       }
     });
+    $('#all-animals-btn').click(() =>{
+      $(document.body).removeClass('animation-lock');
+      $(document.body).addClass('all-animals');
+      $('.hover-detector').removeClass('inactive');
+      $('.animal-nav-content').removeClass('inactive');
+      setTimeout(() => {
+        $('.hover-detector').addClass('active');
+        $('.animal-nav-content').addClass('active');
+      }, 1200);
+      $('.main-nav > .close').addClass('active');
+    });
+    $('.main-nav > .close').click(() => {
+      $('.hover-detector').removeClass('active').addClass('inactive');
+      $('.animal-nav-content').removeClass('active').addClass('inactive');
+      $('.main-nav > .close').removeClass('active');
+      $(document.body).removeClass('all-animals');
+      setTimeout(() => {
+        $(document.body).addClass('animation-lock');
+      }, 1500)
+    });
     this._linkEvent();
   }
 

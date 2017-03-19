@@ -23,12 +23,12 @@ body.preloader {
 
 body.ready {
   #show-stage {
-    transform: scale(1.4);
-    animation: rotate-slow 6s 2s forwards;
-    .wrapper .pieces {
-      transition-duration: 3s;
-    }
-  }
+     transform: scale(1.4);
+     animation: rotate-slow 6s 2s forwards;
+     .wrapper .pieces {
+       transition-duration: 3s;
+     }
+   }
   .wrapper {
     @for $i from 1 through 30 {
       &:nth-child(#{$i}) .pieces {

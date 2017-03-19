@@ -20,6 +20,8 @@
 @import "smash";
 // overlay 界面
 @import "overlay";
+// animal-nav
+@import "animal-nav";
 
 @font-face {
   font-family: 'BlocExtCond';
@@ -28,7 +30,25 @@
   font-weight: normal;
   font-style: normal;
 }
-
+::selection {
+  background: #f03252;
+}
+::-webkit-scrollbar-thumb {
+  background: #f03252;
+  border: 3px solid #232323;
+  border-radius: 20px;
+}
+::-webkit-scrollbar {
+  height: 12px;
+  width: 9px;
+  background: transparent;
+  border-radius: 20px;
+}
+.overlay::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border: 8px solid rgba(255, 255, 255, 0.945);
+  border-radius: 20px;
+}
 body,
 html {
   position: absolute;
@@ -51,6 +71,9 @@ a, p, h1, h2, h3, h4, h5 {
   font-weight: 300;
   margin: 0;
   font-size: 1.05em;
+}
+i {
+  display: inline-block;
 }
 @each $color-name, $color in $bg {
   body.#{$color-name} {
