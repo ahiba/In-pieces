@@ -3,6 +3,10 @@
  */
 body.all-animals {
   background-color: #1b1b1c !important;
+  .footer-nav {
+    pointer-events: none;
+    opacity: 0;
+  }
   .main-nav {
     .nav-btn::after {
       background-color: #1b1b1c !important;
@@ -15,7 +19,8 @@ body.all-animals {
     opacity: 0 !important;
   }
   #show-stage {
-    transform: scale(1.4) !important;
+    transform: scale(1.7) translateY(-15%) !important;
+    transition: 2s !important;
   }
   .wrapper {
     @for $i from 1 through 30 {
@@ -93,6 +98,30 @@ html:not(.small-nav) {
       transition: 200s cubic-bezier(0.11, 0.01, 0.45, 0.74);
       &.active {
         transform: rotate(1000deg);
+      }
+    }
+    #show-stage {
+      @for $i from 1 through 30 {
+        .wrapper:nth-child(#{$i}) .pieces {
+          transition-delay: 0s !important;
+          &.active {
+            background-color: nth($hover-color, $i) !important;
+          }
+        }
+      }
+      .wrapper {
+        .pieces.active {
+          -webkit-clip-path: polygon(43% 43%, 50% 57%, 57% 46%) !important;
+          clip-path: polygon(43% 43%, 50% 57%, 57% 46%) !important;
+        }
+        &:nth-child(3n+1) .pieces.active {
+          -webkit-clip-path: polygon(43% 57%, 50% 43%, 57% 56%) !important;
+          clip-path: polygon(43% 57%, 50% 43%, 57% 56%) !important;
+        }
+        &:nth-child(3n+2) .pieces.active {
+          -webkit-clip-path: polygon(57% 43%, 50% 57%, 43% 46%) !important;
+          clip-path: polygon(57% 43%, 50% 57%, 43% 46%) !important;
+        }
       }
     }
   }
@@ -176,8 +205,6 @@ html:not(.small-nav) {
   }
 }
 
-
-
 html:not(.small-nav) {
   .animal-nav-content {
     position: absolute;
@@ -193,7 +220,7 @@ html:not(.small-nav) {
     ul {
       position: relative;
       z-index: 1;
-      margin-top: -60px;
+      margin-top: -110px;
       pointer-events: none;
       li {
         position: absolute;
@@ -230,6 +257,7 @@ html:not(.small-nav) {
     display: none;
   }
   &.active {
+    opacity: 1;
     .title-content {
       h1, h2, h4, p {
         opacity: 1;
@@ -238,40 +266,32 @@ html:not(.small-nav) {
     }
   }
   ul {
-    li {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      text-align: center;
-      span {
-        color: #706e6e;
-        letter-spacing: .2em;
-        i {
-          color: #bbb;
-        }
+    span {
+      color: #706e6e;
+      letter-spacing: .2em;
+      i {
+        color: #bbb;
       }
-      h2 {
-        margin-bottom: .2em;
-        font-size: 36px;
-        line-height: 1em;
-        color: #fff;
-        letter-spacing: .05em;
-      }
-      h4 {
-        font-size: 18px;
-        letter-spacing: .16em;
-        margin-bottom: .5em;
-      }
-      @for $i from 1 through 30 {
-        &:nth-child(#{$i}) {
-          h4 {
-            color: nth($hover-color, $i);
-          }
+    }
+    h2 {
+      margin-bottom: .2em;
+      font-size: 36px;
+      line-height: 1em;
+      color: #fff;
+      letter-spacing: .05em;
+    }
+    h4 {
+      font-size: 18px;
+      letter-spacing: .16em;
+      margin-bottom: .5em;
+    }
+    @for $i from 1 through 30 {
+      li:nth-child(#{$i}) {
+        h4 {
+          color: nth($hover-color, $i);
         }
       }
     }
-
   }
   h2 {
     background: url(../img/repeat-white.png) center center repeat;
@@ -280,55 +300,58 @@ html:not(.small-nav) {
     -webkit-text-fill-color: transparent;
     animation: scratchy 0.253s linear forwards infinite;
   }
-  .title-content {
-    position: relative;
-    z-index: 3;
-    margin-top: -166px;
-    transition: 0.5s 0.3s;
-    &.inactive {
-      opacity: 0;
-      transition: .2s .06s;
-    }
-    h1, h2, h4, p {
-      text-align: center;
-      opacity: 0;
-      transition: 0.45s 0.7s cubic-bezier(0.62, 0.02, 0.34, 1);
-      transform: translateY(-2px);
-    }
-    p {
-      font-size: 16px;
-      a {
-        letter-spacing: .2em;
-        display: inline-block;
-        color: $main-text;
-      }
-    }
-    h1 {
-      color: #f03252;
-      font-size: 22px;
+}
+
+
+
+.title-content {
+  position: relative;
+  z-index: 3;
+  margin-top: -194px;
+  transition: 0.5s 0.3s;
+  &.inactive {
+    opacity: 0;
+    transition: .2s .06s;
+  }
+  h1, h2, h4, p {
+    text-align: center;
+    opacity: 0;
+    transition: 0.45s 0.7s cubic-bezier(0.62, 0.02, 0.34, 1);
+    transform: translateY(-2px);
+  }
+  p {
+    font-size: 16px;
+    a {
       letter-spacing: .2em;
-      margin-bottom: 15px;
-      transform: translateY(5px);
-      transition-delay: 0.85s;
+      display: inline-block;
+      color: $main-text;
     }
-    h2 {
-      margin: 6px 0 15px;
-      font-size: 64px;
-      line-height: .9em;
-      color: #fff;
-      letter-spacing: .05em;
-      transform: translateY(5px);
-      span {
-        display: block;
-      }
+  }
+  h1 {
+    color: #f03252;
+    font-size: 22px;
+    letter-spacing: .2em;
+    margin-bottom: 15px;
+    transform: translateY(5px);
+    transition-delay: 0.85s;
+  }
+  h2 {
+    margin: 6px 0 15px;
+    font-size: 64px;
+    line-height: .9em;
+    color: #fff;
+    letter-spacing: .05em;
+    transform: translateY(5px);
+    span {
+      display: block;
     }
-    h4 {
-      margin-bottom: 25px;
-      color: #656b72;
-      font-size: 20px;
-      letter-spacing: .2em;
-      transition: 1.2s 1.2s;
-    }
+  }
+  h4 {
+    margin-bottom: 25px;
+    color: #656b72;
+    font-size: 20px;
+    letter-spacing: .2em;
+    transition: 1.2s 1.2s;
   }
 }
 

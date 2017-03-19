@@ -137,6 +137,7 @@ var Pieces = function () {
 
       this._resize();
       this._initEvent();
+      this._initData();
       window.onload = function () {
         // this._preloaderSeq();
         _this._dev();
@@ -233,10 +234,19 @@ var Pieces = function () {
           _this2.autoPlay(true);
         }
       });
+      this._linkEvent();
+      this._allAnimalEvent();
+    }
+  }, {
+    key: '_allAnimalEvent',
+    value: function _allAnimalEvent() {
+      var _this3 = this;
+
+      // 所有动物按钮点击事件
       $('#all-animals-btn').click(function () {
         $(document.body).removeClass('animation-lock');
         $(document.body).addClass('all-animals');
-        $('.hover-detector').removeClass('inactive');
+        $('.hover-detector').removeClass('inactive').find('div').removeClass('active-animal').eq(_this3.n).addClass('active-animal');
         $('.animal-nav-content').removeClass('inactive');
         setTimeout(function () {
           $('.hover-detector').addClass('active');
@@ -244,6 +254,7 @@ var Pieces = function () {
         }, 1200);
         $('.main-nav > .close').addClass('active');
       });
+      // 所有动物关闭按钮
       $('.main-nav > .close').click(function () {
         $('.hover-detector').removeClass('active').addClass('inactive');
         $('.animal-nav-content').removeClass('active').addClass('inactive');
@@ -253,7 +264,46 @@ var Pieces = function () {
           $(document.body).addClass('animation-lock');
         }, 1500);
       });
-      this._linkEvent();
+      // 随机
+      $('.random-animal-btn').click(function () {
+        $('.hover-detector').removeClass('active').addClass('inactive');
+        $('.animal-nav-content').removeClass('active').addClass('inactive');
+        $('.main-nav > .close').removeClass('active');
+        $(document.body).removeClass('all-animals');
+        _this3.random();
+      });
+      // 遍历小圆点
+      $('.hover-detector').find('div').each(function (index, ele) {
+        $(ele).hover(function (ev) {
+          $('.title-content').addClass('inactive');
+          $('#show-stage').find('.pieces').removeClass('active').eq($(ev.target).index()).addClass('active');
+          $('.all-animals-title').find('li').eq($(ev.target).index()).addClass('active');
+        }, function () {
+          $('.title-content').removeClass('inactive');
+          $('#show-stage').find('.pieces').removeClass('active');
+          $('.all-animals-title').find('li').removeClass('active');
+        });
+        $(ele).click(function (ev) {
+          $('.hover-detector').removeClass('active').addClass('inactive');
+          $('.animal-nav-content').removeClass('active').addClass('inactive');
+          $('.main-nav > .close').removeClass('active');
+          $(document.body).removeClass('all-animals');
+          _this3.n = $(ev.target).index();
+          _this3.show();
+        });
+      });
+      // 遍历列表
+      $('.all-animals-title').find('li').each(function (index, ele) {
+        if (document.documentElement.className !== 'small-nav') return;
+        $(ele).click(function (ev) {
+          var target = ev.target.nodeName === 'LI' ? ev.target : ev.target.parentNode;
+          $('.animal-nav-content').removeClass('active').addClass('inactive');
+          $('.main-nav > .close').removeClass('active');
+          $(document.body).removeClass('all-animals');
+          _this3.n = $(target).index();
+          _this3.show();
+        });
+      });
     }
   }, {
     key: '_linkEvent',
@@ -282,15 +332,30 @@ var Pieces = function () {
         $('.overlay').addClass('active');
         $('.overlay .download').show(0).addClass('active');
       });
+      $('.footer-nav').click(function () {
+        if ($('footer')[0].className === 'mobile-footer-active') {
+          $('footer').removeClass('mobile-footer-active');
+        } else {
+          $('footer').addClass('mobile-footer-active');
+        }
+      });
+    }
+  }, {
+    key: '_initData',
+    value: function _initData() {
+      $('.all-animals-title').find('h2').each(function (index, ele) {
+        $(ele).text(data.translatedAnimalNames[index]);
+      });
     }
   }, {
     key: 'autoPlay',
     value: function autoPlay(opt) {
-      var _this3 = this;
+      var _this4 = this;
 
       if (opt) {
+        this.next();
         this.timer = setInterval(function () {
-          _this3.next();
+          _this4.next();
         }, 4500);
       } else {
         clearInterval(this.timer);
@@ -298,38 +363,13 @@ var Pieces = function () {
       }
     }
   }, {
-    key: 'next',
-    value: function next() {
-      var _this4 = this;
-
-      $(document.body).removeClass('animation-lock');
-      this.n++;
-      this.n >= this.nameArr.length && (this.n = 0);
-      $('.prev .popout').text(data.translatedAnimalNames[this.n - 1 < 0 ? data.translatedAnimalNames.length - 1 : this.n - 1]);
-      $('.next .popout').text(data.translatedAnimalNames[this.n + 1 >= data.translatedAnimalNames.length ? 0 : this.n + 1]);
-      $(document.body).removeClass(this.nameArr[this.n - 1 < 0 ? this.nameArr.length - 1 : this.n - 1]);
-      $('.animal-info').addClass('text-change');
-      setTimeout(function () {
-        $('.pieces-no').text(_this4.n + 1);
-        $('#animal-name').text(data.translatedAnimalNames[_this4.n]);
-        $('.animal-info').removeClass('text-change');
-      }, 300);
-      $(document.body).addClass(this.nameArr[this.n]);
-      setTimeout(function () {
-        $(document.body).addClass('animation-lock');
-      }, 2000);
-    }
-  }, {
-    key: 'prev',
-    value: function prev() {
+    key: 'show',
+    value: function show() {
       var _this5 = this;
 
-      $(document.body).removeClass('animation-lock');
-      this.n--;
-      this.n < 0 && (this.n = this.nameArr.length - 1);
       $('.prev .popout').text(data.translatedAnimalNames[this.n - 1 < 0 ? data.translatedAnimalNames.length - 1 : this.n - 1]);
       $('.next .popout').text(data.translatedAnimalNames[this.n + 1 >= data.translatedAnimalNames.length ? 0 : this.n + 1]);
-      $(document.body).removeClass(this.nameArr[this.n + 1 >= this.nameArr.length ? 0 : this.n + 1]);
+      $(document.body).removeClass();
       $('.animal-info').addClass('text-change');
       setTimeout(function () {
         $('.pieces-no').text(_this5.n + 1);
@@ -342,10 +382,38 @@ var Pieces = function () {
       }, 2000);
     }
   }, {
+    key: 'next',
+    value: function next() {
+      $(document.body).removeClass('animation-lock');
+      this.n++;
+      this.n >= this.nameArr.length && (this.n = 0);
+      this.show();
+    }
+  }, {
+    key: 'prev',
+    value: function prev() {
+      $(document.body).removeClass('animation-lock');
+      this.n--;
+      this.n < 0 && (this.n = this.nameArr.length - 1);
+      this.show();
+    }
+  }, {
+    key: 'random',
+    value: function random() {
+      $(document.body).removeClass('animation-lock');
+      this.n = Math.floor(Math.random() * this.nameArr.length);
+      this.show();
+    }
+  }, {
     key: '_resize',
     value: function _resize() {
       var w = $(window).innerWidth() * .9;
       var h = w * (2 / 3);
+      if ($(window).innerWidth() < 700) {
+        $(document.documentElement).addClass('small-nav');
+      } else {
+        $(document.documentElement).removeClass('small-nav');
+      }
       this.$e.width(w);
       this.$e.height(h);
     }

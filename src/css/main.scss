@@ -22,6 +22,9 @@
 @import "overlay";
 // animal-nav
 @import "animal-nav";
+// mediaReq
+@import "mediaReq";
+
 
 @font-face {
   font-family: 'BlocExtCond';
@@ -151,6 +154,21 @@ body.preAni {
   &.turtle #show-stage,
   &.parrotfish #show-stage {
     animation: fish-r 8s infinite;
+  }
+}
+.small-nav {
+  .animation-lock {
+    &.butterfly #show-stage,
+    &.damselfly #show-stage {
+      animation: fly-noy 3s infinite;
+    }
+    &.vaquita #show-stage  {
+      animation: fish-l-noy 8s infinite;
+    }
+    &.turtle #show-stage,
+    &.parrotfish #show-stage {
+      animation: fish-r-noy 8s infinite;
+    }
   }
 }
 

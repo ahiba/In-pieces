@@ -3,7 +3,7 @@
  */
 
 .nav {
-  z-index: 100;
+  z-index: 200;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -348,7 +348,7 @@
         font-size: 46px;
         color: #fff;
         margin-top: -4px;
-        font-weight: 700;
+        font-weight: 500;
       }
     }
     li:nth-child(3) {
@@ -702,6 +702,10 @@ footer {
   .nav {
     pointer-events: none;
   }
+  .footer-nav {
+    pointer-events: none;
+    opacity: 0;
+  }
   .animal-nav {
     li {
       transition: .23s ease-in;
@@ -729,6 +733,13 @@ footer {
     ul li {
       opacity: 0;
       transform: translateY(4px);
+    }
+  }
+}
+.nav {
+  footer {
+    .footer-nav {
+      display: none;
     }
   }
 }

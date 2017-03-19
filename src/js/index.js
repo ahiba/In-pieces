@@ -19,6 +19,7 @@ class Pieces {
   init() {
     this._resize();
     this._initEvent();
+    this._initData();
     window.onload = () => {
       // this._preloaderSeq();
       this._dev();
@@ -111,10 +112,16 @@ class Pieces {
         this.autoPlay(true);
       }
     });
-    $('#all-animals-btn').click(() =>{
+    this._linkEvent();
+    this._allAnimalEvent();
+  }
+
+  _allAnimalEvent() {
+    // 所有动物按钮点击事件
+    $('#all-animals-btn').click(() => {
       $(document.body).removeClass('animation-lock');
       $(document.body).addClass('all-animals');
-      $('.hover-detector').removeClass('inactive');
+      $('.hover-detector').removeClass('inactive').find('div').removeClass('active-animal').eq(this.n).addClass('active-animal');
       $('.animal-nav-content').removeClass('inactive');
       setTimeout(() => {
         $('.hover-detector').addClass('active');
@@ -122,6 +129,7 @@ class Pieces {
       }, 1200);
       $('.main-nav > .close').addClass('active');
     });
+    // 所有动物关闭按钮
     $('.main-nav > .close').click(() => {
       $('.hover-detector').removeClass('active').addClass('inactive');
       $('.animal-nav-content').removeClass('active').addClass('inactive');
@@ -131,7 +139,46 @@ class Pieces {
         $(document.body).addClass('animation-lock');
       }, 1500)
     });
-    this._linkEvent();
+    // 随机
+    $('.random-animal-btn').click(() => {
+      $('.hover-detector').removeClass('active').addClass('inactive');
+      $('.animal-nav-content').removeClass('active').addClass('inactive');
+      $('.main-nav > .close').removeClass('active');
+      $(document.body).removeClass('all-animals');
+      this.random();
+    });
+    // 遍历小圆点
+    $('.hover-detector').find('div').each((index, ele) => {
+      $(ele).hover((ev) => {
+        $('.title-content').addClass('inactive');
+        $('#show-stage').find('.pieces').removeClass('active').eq($(ev.target).index()).addClass('active');
+        $('.all-animals-title').find('li').eq($(ev.target).index()).addClass('active');
+      }, () => {
+        $('.title-content').removeClass('inactive');
+        $('#show-stage').find('.pieces').removeClass('active');
+        $('.all-animals-title').find('li').removeClass('active');
+      });
+      $(ele).click((ev) => {
+        $('.hover-detector').removeClass('active').addClass('inactive');
+        $('.animal-nav-content').removeClass('active').addClass('inactive');
+        $('.main-nav > .close').removeClass('active');
+        $(document.body).removeClass('all-animals');
+        this.n = $(ev.target).index();
+        this.show();
+      });
+    });
+    // 遍历列表
+    $('.all-animals-title').find('li').each((index, ele) => {
+      if (document.documentElement.className !== 'small-nav') return;
+      $(ele).click((ev) => {
+        let target = ev.target.nodeName === 'LI' ? ev.target : ev.target.parentNode;
+        $('.animal-nav-content').removeClass('active').addClass('inactive');
+        $('.main-nav > .close').removeClass('active');
+        $(document.body).removeClass('all-animals');
+        this.n = $(target).index();
+        this.show();
+      });
+    });
   }
 
   _linkEvent() {
@@ -159,9 +206,24 @@ class Pieces {
       $('.overlay').addClass('active');
       $('.overlay .download').show(0).addClass('active');
     });
+    $('.footer-nav').click(() => {
+      if ($('footer')[0].className === 'mobile-footer-active') {
+        $('footer').removeClass('mobile-footer-active');
+      } else {
+        $('footer').addClass('mobile-footer-active');
+      }
+    });
   }
+
+  _initData() {
+    $('.all-animals-title').find('h2').each((index, ele) => {
+      $(ele).text(data.translatedAnimalNames[index]);
+    });
+  }
+
   autoPlay(opt) {
     if (opt) {
+      this.next();
       this.timer = setInterval(() => {
         this.next();
       }, 4500);
@@ -170,45 +232,51 @@ class Pieces {
       this.timer = null;
     }
   }
+
+  show() {
+    $('.prev .popout').text(data.translatedAnimalNames[(this.n - 1) < 0 ? data.translatedAnimalNames.length - 1 : (this.n - 1)]);
+    $('.next .popout').text(data.translatedAnimalNames[(this.n + 1) >= data.translatedAnimalNames.length ? 0 : (this.n + 1)]);
+    $(document.body).removeClass();
+    $('.animal-info').addClass('text-change');
+    setTimeout(() => {
+      $('.pieces-no').text(this.n + 1);
+      $('#animal-name').text(data.translatedAnimalNames[this.n]);
+      $('.animal-info').removeClass('text-change');
+    }, 300);
+    $(document.body).addClass(this.nameArr[this.n]);
+    setTimeout(() => {
+      $(document.body).addClass('animation-lock');
+    }, 2000)
+  }
+
   next() {
     $(document.body).removeClass('animation-lock');
     this.n++;
     this.n >= this.nameArr.length && (this.n = 0);
-    $('.prev .popout').text(data.translatedAnimalNames[(this.n - 1) < 0 ? data.translatedAnimalNames.length-1 : (this.n - 1)]);
-    $('.next .popout').text(data.translatedAnimalNames[(this.n + 1) >= data.translatedAnimalNames.length ? 0 : (this.n + 1)]);
-    $(document.body).removeClass(this.nameArr[(this.n - 1) < 0 ? this.nameArr.length-1 : (this.n - 1)]);
-    $('.animal-info').addClass('text-change');
-    setTimeout(() => {
-      $('.pieces-no').text(this.n + 1);
-      $('#animal-name').text(data.translatedAnimalNames[this.n]);
-      $('.animal-info').removeClass('text-change');
-    }, 300);
-    $(document.body).addClass(this.nameArr[this.n]);
-    setTimeout(() => {
-      $(document.body).addClass('animation-lock');
-    }, 2000)
+    this.show();
   }
+
   prev() {
     $(document.body).removeClass('animation-lock');
     this.n--;
     this.n < 0 && (this.n = this.nameArr.length - 1);
-    $('.prev .popout').text(data.translatedAnimalNames[(this.n - 1) < 0 ? data.translatedAnimalNames.length-1 : (this.n - 1)]);
-    $('.next .popout').text(data.translatedAnimalNames[(this.n + 1) >= data.translatedAnimalNames.length ? 0 : (this.n + 1)]);
-    $(document.body).removeClass(this.nameArr[(this.n + 1) >= this.nameArr.length ? 0 : (this.n + 1)]);
-    $('.animal-info').addClass('text-change');
-    setTimeout(() => {
-      $('.pieces-no').text(this.n + 1);
-      $('#animal-name').text(data.translatedAnimalNames[this.n]);
-      $('.animal-info').removeClass('text-change');
-    }, 300);
-    $(document.body).addClass(this.nameArr[this.n]);
-    setTimeout(() => {
-      $(document.body).addClass('animation-lock');
-    }, 2000)
+    this.show();
   }
+
+  random() {
+    $(document.body).removeClass('animation-lock');
+    this.n = Math.floor(Math.random() * this.nameArr.length);
+    this.show();
+  }
+
   _resize() {
     let w = $(window).innerWidth() * .9;
     let h = w * (2 / 3);
+    if ($(window).innerWidth() < 700) {
+      $(document.documentElement).addClass('small-nav');
+    } else {
+      $(document.documentElement).removeClass('small-nav');
+    }
     this.$e.width(w);
     this.$e.height(h);
   }
@@ -244,7 +312,7 @@ class Pieces {
         $($ps[1]).removeClass('show');
         $($ps[2]).addClass('show');
         setTimeout(() => {
-         $($ps[2]).removeClass('show');
+          $($ps[2]).removeClass('show');
           $($ps[3]).addClass('show');
           setTimeout(() => {
             $($ps[3]).removeClass('show');

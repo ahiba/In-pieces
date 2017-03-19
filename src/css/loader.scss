@@ -250,6 +250,8 @@ body.preAni {
     span {
       position: relative;
       z-index: 10;
+      font-weight: 500;
+      font-family: "黑体", sans-serif;
     }
     &:hover {
       &::after {
