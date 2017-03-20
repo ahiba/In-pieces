@@ -21,8 +21,8 @@ class Pieces {
     this._initEvent();
     this._initData();
     window.onload = () => {
-      // this._preloaderSeq();
-      this._dev();
+      this._preloaderSeq();
+      // this._dev();
     }
   }
 
@@ -175,6 +175,7 @@ class Pieces {
         $('.animal-nav-content').removeClass('active').addClass('inactive');
         $('.main-nav > .close').removeClass('active');
         $(document.body).removeClass('all-animals');
+        $('.hover-detector').removeClass('active').addClass('inactive');
         this.n = $(target).index();
         this.show();
       });

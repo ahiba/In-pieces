@@ -3594,10 +3594,10 @@ body.preAni .wrapper:nth-child(5n+5) .pieces {
   opacity: 1;
   transition: 0.3s;
   color: #787878;
-  font-size: 18px; }
+  font-size: 16px; }
   .loading-title h5 {
     display: inline-block;
-    font-weight: 700; }
+    font-weight: 500; }
   .loading-title span {
     color: #f03252; }
   .loading-title p {
@@ -3673,8 +3673,9 @@ body.preAni .wrapper:nth-child(5n+5) .pieces {
     transition: 1s .2s; }
   .intro-content p:nth-of-type(2) {
     font-size: 14px;
-    color: #787878;
+    color: #9c9c9c;
     letter-spacing: 1px;
+    margin-top: 10px;
     margin-bottom: 30px;
     opacity: 0;
     transition: 1s .4s; }
@@ -5829,6 +5830,68 @@ html:not(.small-nav) .animal-nav-content {
       font-size: 20px;
       margin-bottom: .6em; }
 
+@media only screen and (max-width: 1150px) {
+  .loading-title {
+    margin-top: 4%; }
+  .loading-intro p {
+    font-size: 18px; } }
+
+@media only screen and (max-width: 700px) {
+  .loading-title {
+    margin-top: 18%; }
+  .loading-intro p {
+    font-size: 16px; } }
+
+@media only screen and (max-width: 600px) {
+  .loading-title {
+    margin-top: 24%; }
+  .loading-intro p {
+    font-size: 14px; } }
+
+@media only screen and (min-width: 1440px) and (max-width: 1920px) {
+  #show-stage {
+    max-width: 850px !important;
+    max-height: 566px !important; }
+  .nav .animal-nav {
+    right: 54px;
+    margin-top: -142px; }
+    .nav .animal-nav li:nth-child(2) {
+      padding: 7px 0 14px; }
+  .nav .main-nav {
+    left: 54px; }
+    .nav .main-nav li:nth-child(1) {
+      transform-origin: 50% 170%; }
+    .nav .main-nav li:nth-child(3) {
+      transform-origin: 50% -70%; }
+  .nav .animal-nav li, .nav .main-nav li {
+    transform: scale(1.13); }
+  .nav .nav-btn.close {
+    transform: scale(1.13); }
+  .content-wrapper .content .content-info {
+    max-width: 590px; } }
+
+@media only screen and (min-width: 1920px) {
+  #show-stage {
+    max-width: 950px !important;
+    max-height: 633px !important; }
+  .nav .animal-nav {
+    right: 54px;
+    margin-top: -142px; }
+    .nav .animal-nav li:nth-child(2) {
+      padding: 18px 0 27px; }
+  .nav .main-nav {
+    left: 54px; }
+    .nav .main-nav li:nth-child(1) {
+      transform-origin: 50% 170%; }
+    .nav .main-nav li:nth-child(3) {
+      transform-origin: 50% -70%; }
+  .nav .animal-nav li, .nav .main-nav li {
+    transform: scale(1.33); }
+  .nav .nav-btn.close {
+    transform: scale(1.33); }
+  .content-wrapper .content .content-info {
+    max-width: 610px; } }
+
 @font-face {
   font-family: 'BlocExtCond';
   src: url(./fonts/blocextcond.eot);
@@ -5864,7 +5927,7 @@ html {
   height: 100%;
   transition: .5s;
   background: #181818;
-  font-family: 'BlocExtCond', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'BlocExtCond', "\5FAE\8F6F\96C5\9ED1", "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: 2px;
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
@@ -5873,7 +5936,7 @@ html {
 a, p, h1, h2, h3, h4, h5 {
   color: #fff;
   text-decoration: none;
-  font-family: 'BlocExtCond', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'BlocExtCond', "\5FAE\8F6F\96C5\9ED1", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   margin: 0;
   font-size: 1.05em; }

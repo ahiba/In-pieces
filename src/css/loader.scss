@@ -147,10 +147,10 @@ body.preAni {
   opacity: 1;
   transition: 0.3s;
   color: #787878;
-  font-size: 18px;
+  font-size: 16px;
   h5 {
     display: inline-block;
-    font-weight: 700;
+    font-weight: 500;
   }
   span {
     color: #f03252;
@@ -229,8 +229,9 @@ body.preAni {
   }
   p:nth-of-type(2) {
     font-size: 14px;
-    color: #787878;
+    color: #9c9c9c;
     letter-spacing: 1px;
+    margin-top: 10px;
     margin-bottom: 30px;
     opacity: 0;
     transition: 1s .4s;

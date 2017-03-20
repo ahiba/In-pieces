@@ -139,8 +139,8 @@ var Pieces = function () {
       this._initEvent();
       this._initData();
       window.onload = function () {
-        // this._preloaderSeq();
-        _this._dev();
+        _this._preloaderSeq();
+        // this._dev();
       };
     }
   }, {
@@ -300,6 +300,7 @@ var Pieces = function () {
           $('.animal-nav-content').removeClass('active').addClass('inactive');
           $('.main-nav > .close').removeClass('active');
           $(document.body).removeClass('all-animals');
+          $('.hover-detector').removeClass('active').addClass('inactive');
           _this3.n = $(target).index();
           _this3.show();
         });

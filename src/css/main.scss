@@ -61,7 +61,7 @@ html {
   height: 100%;
   transition: .5s;
   background: map-get($bg, startup);
-  font-family: 'BlocExtCond', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'BlocExtCond', "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: 2px;
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
@@ -70,7 +70,7 @@ html {
 a, p, h1, h2, h3, h4, h5 {
   color: #fff;
   text-decoration: none;
-  font-family: 'BlocExtCond', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'BlocExtCond', "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   margin: 0;
   font-size: 1.05em;
