@@ -168,6 +168,16 @@ html:not(.small-nav) {
             border-color: nth($hover-color, $i);
           }
         }
+        @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+          &:nth-child(#{$i}) {
+            transform: rotate($i*12+5deg) translateY(-320px);
+          }
+        }
+        @media only screen and (min-width: 1921px) {
+          &:nth-child(#{$i}) {
+            transform: rotate($i*12+5deg) translateY(-390px);
+          }
+        }
       }
       &::before {
         content: "";

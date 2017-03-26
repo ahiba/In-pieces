@@ -275,6 +275,16 @@
     max-width: 850px !important;
     max-height: 566px !important;
   }
+  .loading-title {
+    margin-top: 7% !important;
+    font-size: 20px;
+    p {
+      font-size: 14px;
+    }
+  }
+  .intro-content {
+    margin-top: 7% !important;
+  }
   .nav {
     .animal-nav {
       right: 54px;
@@ -304,15 +314,133 @@
   .content-wrapper {
     .content {
       .content-info {
-        max-width: 590px;
+        max-width: 630px;
       }
     }
   }
+
+  .intro-content {
+    .textuered-type {
+      line-height: 40px !important;
+      font-size: 40px !important;
+    }
+    p:nth-of-type(2) {
+      font-size: 28px;
+      margin-bottom: 55px;
+      span {
+        font-size: 28px;
+      }
+    }
+    a {
+      padding: 21px 39px 23px 39px;
+      font-size: 28px;
+    }
+  }
+  .nav {
+    .animal-info {
+      margin-top: 16%;
+    }
+    footer {
+      ul {
+        li {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .content-wrapper {
+    .content {
+      .content-info {
+        .infos {
+          ul {
+            li {
+              font-size: 21px;
+            }
+          }
+          p {
+            font-size: 22px;
+          }
+          p:nth-child(3) {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+  .title-content {
+    h1 {
+      font-size: 30px;
+    }
+    h2 {
+      font-size: 80px;
+    }
+    p {
+      font-size: 22px;
+    }
+  }
+  html:not(.small-nav) {
+    .animal-nav-content {
+      width: 400px;
+      margin-left: -192px;
+      margin-top: 25px;
+      ul {
+        margin-top: -126px;
+      }
+      ul {
+        h2 {
+          font-size: 46px;
+        }
+        h4 {
+          font-size: 26px;
+        }
+        & > span {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+  .overlay {
+    & > div {
+      max-width: 700px;
+    }
+    h2 {
+      font-size: 32px;
+    }
+    p {
+      font-size: 22px;
+      line-height: 24px;
+      &:nth-child(2) {
+        font-size: 25px;
+      }
+    }
+    ul {
+      li {
+        a {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  body.all-animals {
+    #show-stage {
+      transform: scale(1.7) translateY(-10%) !important;
+    }
+  }
 }
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1921px) {
   #show-stage {
-    max-width: 950px !important;
-    max-height: 633px !important;
+    max-width: 1000px !important;
+    max-height: 666px !important;
+  }
+  .loading-title {
+    margin-top: 6% !important;
+    font-size: 24px;
+    p {
+      font-size: 16px;
+    }
+  }
+  .intro-content {
+    margin-top: 6% !important;
   }
   .nav {
     .animal-nav {
@@ -343,8 +471,115 @@
   .content-wrapper {
     .content {
       .content-info {
-        max-width: 610px;
+        max-width: 680px;
       }
+    }
+  }
+  .intro-content {
+    .textuered-type {
+      line-height: 44px !important;
+      font-size: 44px !important;
+    }
+    p:nth-of-type(2) {
+      font-size: 30px;
+      margin-bottom: 60px;
+      span {
+        font-size: 30px;
+      }
+    }
+    a {
+      padding: 21px 39px 23px 39px;
+      font-size: 30px;
+    }
+  }
+  .nav {
+    .animal-info {
+      margin-top: 16%;
+    }
+    footer {
+      ul {
+        li {
+          font-size: 21px;
+        }
+      }
+    }
+  }
+  .content-wrapper {
+    .content {
+      .content-info {
+        .infos {
+          ul {
+            li {
+              font-size: 23px;
+            }
+          }
+          p {
+            font-size: 24px;
+          }
+          p:nth-child(3) {
+            font-size: 28px;
+          }
+        }
+      }
+    }
+  }
+  .title-content {
+    h1 {
+      font-size: 34px;
+    }
+    h2 {
+      font-size: 84px;
+    }
+    p {
+      font-size: 24px;
+    }
+  }
+  html:not(.small-nav) {
+    .animal-nav-content {
+      width: 420px;
+      margin-left: -202px;
+      margin-top: 20px;
+      ul {
+        margin-top: -136px;
+      }
+      ul {
+        h2 {
+          font-size: 49px;
+        }
+        h4 {
+          font-size: 29px;
+        }
+        & > span {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+  .overlay {
+    & > div {
+      max-width: 980px;
+    }
+    h2 {
+      font-size: 40px;
+    }
+    p {
+      font-size: 30px;
+      line-height: 32px;
+      &:nth-child(2) {
+        font-size: 32px;
+      }
+    }
+    ul {
+      li {
+        a {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  body.all-animals {
+    #show-stage {
+      transform: scale(1.7) translateY(-10%) !important;
     }
   }
 }

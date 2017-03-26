@@ -4287,15 +4287,15 @@ footer {
       transition: 0.27s;
       transform: translateY(0); }
       footer ul li:nth-child(1) {
-        transition-delay: 1-0.14s; }
+        transition-delay: 0.14s; }
       footer ul li:nth-child(2) {
-        transition-delay: 2-0.14s; }
+        transition-delay: 0.28s; }
       footer ul li:nth-child(3) {
-        transition-delay: 3-0.14s; }
+        transition-delay: 0.42s; }
       footer ul li:nth-child(4) {
-        transition-delay: 4-0.14s; }
+        transition-delay: 0.56s; }
       footer ul li:nth-child(5) {
-        transition-delay: 5-0.14s; }
+        transition-delay: 0.7s; }
       footer ul li .share {
         padding-left: 34px;
         background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAcCAYAAAFt+W06AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAi1JREFUeNpi/P//PwM2wITGB6kSANMgHUjY4T8EJDDiMgoggLBKMEHNRLEDm6UMLEDsiGwciAAIIJjtBlDbGfBhFix2wcADIJbH5tr/cKuwuAmmFiCAcPoZX5D+x+McrOGP7gwBNIMOMPxHgAVovkcHeD2I7ixGJjxOxBkpDoQiBIQBAoikoCMFMKH55z+xQY4GEpD0gUJ8ArZQJeRNGHgAxApA3IAtRrBFEzhLEWEwPgBO+IxoUctIwNuMBIKKEVvpQAy4gEWsEGogI96yghoAIIDoktxoZvAFMtMwXoMnALE+EeoV8BSd/6HmKIAxWtp0ICJzbEAT+4AlHS8g1eADSGoLcGSYC/hyHi6DHxCR6xaQY3ACEQYbwAwmJSjQgwOno8hJxwuIqh3IcDEuV6OUiKQajC2MQREqgKtqckDKfR8GdSEEEGA0M5hWgAWPnAFSEwcGDgw2BytA0wU/vmqSxgAWUNgDh0B2ugAtGx1IyJLI+AKWtiapJRussD+AnJ1xtXDIcSQu80DZPgCLmgAiW1YgzwuAMh1y0NujRcBFpGIDlFQKSIxeUPGzH4/8R2gdTKgOPwgryliwOBIZ6FOY4RYQkOcnssGxAblYc0CS2I+l+XiBwkIa5Oh4CjLhQ+QWEno5/B9LpUhpUQay7D41HEvT1itaOxFUHCoC8URouiUGJGJre7LQ0KEN0PLUAIr5iQzRBHyxSmsHIycLmMPRQ/8AlB6ebQkmhiEGAOUmzRtRhiXSAAAAAElFTkSuQmCC) left center no-repeat;
@@ -5307,151 +5307,331 @@ html:not(.small-nav) .hover-detector {
       transition: 0.44s 0.03s; }
       html:not(.small-nav) .hover-detector div:nth-child(1)::after {
         border-color: #84A5DD; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(1) {
+        transform: rotate(17deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(1) {
+        transform: rotate(17deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(2) {
       transform: rotate(29deg) translateY(-230px);
       transition: 0.49s 0.06s; }
       html:not(.small-nav) .hover-detector div:nth-child(2)::after {
         border-color: #64d6e2; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(2) {
+        transform: rotate(29deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(2) {
+        transform: rotate(29deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(3) {
       transform: rotate(41deg) translateY(-230px);
       transition: 0.54s 0.09s; }
       html:not(.small-nav) .hover-detector div:nth-child(3)::after {
         border-color: #FDAED4; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(3) {
+        transform: rotate(41deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(3) {
+        transform: rotate(41deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(4) {
       transform: rotate(53deg) translateY(-230px);
       transition: 0.59s 0.12s; }
       html:not(.small-nav) .hover-detector div:nth-child(4)::after {
         border-color: #785ebb; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(4) {
+        transform: rotate(53deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(4) {
+        transform: rotate(53deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(5) {
       transform: rotate(65deg) translateY(-230px);
       transition: 0.64s 0.15s; }
       html:not(.small-nav) .hover-detector div:nth-child(5)::after {
         border-color: #a09de5; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(5) {
+        transform: rotate(65deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(5) {
+        transform: rotate(65deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(6) {
       transform: rotate(77deg) translateY(-230px);
       transition: 0.69s 0.18s; }
       html:not(.small-nav) .hover-detector div:nth-child(6)::after {
         border-color: #A0CADB; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(6) {
+        transform: rotate(77deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(6) {
+        transform: rotate(77deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(7) {
       transform: rotate(89deg) translateY(-230px);
       transition: 0.74s 0.21s; }
       html:not(.small-nav) .hover-detector div:nth-child(7)::after {
         border-color: #79BBB5; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(7) {
+        transform: rotate(89deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(7) {
+        transform: rotate(89deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(8) {
       transform: rotate(101deg) translateY(-230px);
       transition: 0.79s 0.24s; }
       html:not(.small-nav) .hover-detector div:nth-child(8)::after {
         border-color: #F6D860; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(8) {
+        transform: rotate(101deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(8) {
+        transform: rotate(101deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(9) {
       transform: rotate(113deg) translateY(-230px);
       transition: 0.84s 0.27s; }
       html:not(.small-nav) .hover-detector div:nth-child(9)::after {
         border-color: #9988CD; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(9) {
+        transform: rotate(113deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(9) {
+        transform: rotate(113deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(10) {
       transform: rotate(125deg) translateY(-230px);
       transition: 0.89s 0.3s; }
       html:not(.small-nav) .hover-detector div:nth-child(10)::after {
         border-color: #EDB948; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(10) {
+        transform: rotate(125deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(10) {
+        transform: rotate(125deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(11) {
       transform: rotate(137deg) translateY(-230px);
       transition: 0.94s 0.33s; }
       html:not(.small-nav) .hover-detector div:nth-child(11)::after {
         border-color: #FDACB4; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(11) {
+        transform: rotate(137deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(11) {
+        transform: rotate(137deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(12) {
       transform: rotate(149deg) translateY(-230px);
       transition: 0.99s 0.36s; }
       html:not(.small-nav) .hover-detector div:nth-child(12)::after {
         border-color: #dbbe39; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(12) {
+        transform: rotate(149deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(12) {
+        transform: rotate(149deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(13) {
       transform: rotate(161deg) translateY(-230px);
       transition: 1.04s 0.39s; }
       html:not(.small-nav) .hover-detector div:nth-child(13)::after {
         border-color: #DFBC94; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(13) {
+        transform: rotate(161deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(13) {
+        transform: rotate(161deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(14) {
       transform: rotate(173deg) translateY(-230px);
       transition: 1.09s 0.42s; }
       html:not(.small-nav) .hover-detector div:nth-child(14)::after {
         border-color: #3CCAD1; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(14) {
+        transform: rotate(173deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(14) {
+        transform: rotate(173deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(15) {
       transform: rotate(185deg) translateY(-230px);
       transition: 1.14s 0.45s; }
       html:not(.small-nav) .hover-detector div:nth-child(15)::after {
         border-color: #F68F6F; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(15) {
+        transform: rotate(185deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(15) {
+        transform: rotate(185deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(16) {
       transform: rotate(197deg) translateY(-230px);
       transition: 1.19s 0.48s; }
       html:not(.small-nav) .hover-detector div:nth-child(16)::after {
         border-color: #9787EA; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(16) {
+        transform: rotate(197deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(16) {
+        transform: rotate(197deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(17) {
       transform: rotate(209deg) translateY(-230px);
       transition: 1.24s 0.51s; }
       html:not(.small-nav) .hover-detector div:nth-child(17)::after {
         border-color: #ccc5e3; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(17) {
+        transform: rotate(209deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(17) {
+        transform: rotate(209deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(18) {
       transform: rotate(221deg) translateY(-230px);
       transition: 1.29s 0.54s; }
       html:not(.small-nav) .hover-detector div:nth-child(18)::after {
         border-color: #FD9372; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(18) {
+        transform: rotate(221deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(18) {
+        transform: rotate(221deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(19) {
       transform: rotate(233deg) translateY(-230px);
       transition: 1.34s 0.57s; }
       html:not(.small-nav) .hover-detector div:nth-child(19)::after {
         border-color: #9B7AD5; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(19) {
+        transform: rotate(233deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(19) {
+        transform: rotate(233deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(20) {
       transform: rotate(245deg) translateY(-230px);
       transition: 1.39s 0.6s; }
       html:not(.small-nav) .hover-detector div:nth-child(20)::after {
         border-color: #de89ac; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(20) {
+        transform: rotate(245deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(20) {
+        transform: rotate(245deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(21) {
       transform: rotate(257deg) translateY(-230px);
       transition: 1.44s 0.63s; }
       html:not(.small-nav) .hover-detector div:nth-child(21)::after {
         border-color: #98BFF6; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(21) {
+        transform: rotate(257deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(21) {
+        transform: rotate(257deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(22) {
       transform: rotate(269deg) translateY(-230px);
       transition: 1.49s 0.66s; }
       html:not(.small-nav) .hover-detector div:nth-child(22)::after {
         border-color: #FEC54F; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(22) {
+        transform: rotate(269deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(22) {
+        transform: rotate(269deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(23) {
       transform: rotate(281deg) translateY(-230px);
       transition: 1.54s 0.69s; }
       html:not(.small-nav) .hover-detector div:nth-child(23)::after {
         border-color: #9784ED; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(23) {
+        transform: rotate(281deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(23) {
+        transform: rotate(281deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(24) {
       transform: rotate(293deg) translateY(-230px);
       transition: 1.59s 0.72s; }
       html:not(.small-nav) .hover-detector div:nth-child(24)::after {
         border-color: #F4C3C5; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(24) {
+        transform: rotate(293deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(24) {
+        transform: rotate(293deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(25) {
       transform: rotate(305deg) translateY(-230px);
       transition: 1.64s 0.75s; }
       html:not(.small-nav) .hover-detector div:nth-child(25)::after {
         border-color: #63C5AB; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(25) {
+        transform: rotate(305deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(25) {
+        transform: rotate(305deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(26) {
       transform: rotate(317deg) translateY(-230px);
       transition: 1.69s 0.78s; }
       html:not(.small-nav) .hover-detector div:nth-child(26)::after {
         border-color: #F4696B; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(26) {
+        transform: rotate(317deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(26) {
+        transform: rotate(317deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(27) {
       transform: rotate(329deg) translateY(-230px);
       transition: 1.74s 0.81s; }
       html:not(.small-nav) .hover-detector div:nth-child(27)::after {
         border-color: #E794AE; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(27) {
+        transform: rotate(329deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(27) {
+        transform: rotate(329deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(28) {
       transform: rotate(341deg) translateY(-230px);
       transition: 1.79s 0.84s; }
       html:not(.small-nav) .hover-detector div:nth-child(28)::after {
         border-color: #9B7FE6; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(28) {
+        transform: rotate(341deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(28) {
+        transform: rotate(341deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(29) {
       transform: rotate(353deg) translateY(-230px);
       transition: 1.84s 0.87s; }
       html:not(.small-nav) .hover-detector div:nth-child(29)::after {
         border-color: #EF9F64; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(29) {
+        transform: rotate(353deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(29) {
+        transform: rotate(353deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div:nth-child(30) {
       transform: rotate(365deg) translateY(-230px);
       transition: 1.89s 0.9s; }
       html:not(.small-nav) .hover-detector div:nth-child(30)::after {
         border-color: #87C4A3; }
+    @media only screen and (min-width: 1440px) and (max-width: 1920px) {
+      html:not(.small-nav) .hover-detector div:nth-child(30) {
+        transform: rotate(365deg) translateY(-320px); } }
+    @media only screen and (min-width: 1921px) {
+      html:not(.small-nav) .hover-detector div:nth-child(30) {
+        transform: rotate(365deg) translateY(-390px); } }
     html:not(.small-nav) .hover-detector div::before {
       content: "";
       position: absolute;
@@ -5852,6 +6032,13 @@ html:not(.small-nav) .animal-nav-content {
   #show-stage {
     max-width: 850px !important;
     max-height: 566px !important; }
+  .loading-title {
+    margin-top: 7% !important;
+    font-size: 20px; }
+    .loading-title p {
+      font-size: 14px; }
+  .intro-content {
+    margin-top: 7% !important; }
   .nav .animal-nav {
     right: 54px;
     margin-top: -142px; }
@@ -5868,12 +6055,71 @@ html:not(.small-nav) .animal-nav-content {
   .nav .nav-btn.close {
     transform: scale(1.13); }
   .content-wrapper .content .content-info {
-    max-width: 590px; } }
+    max-width: 630px; }
+  .intro-content .textuered-type {
+    line-height: 40px !important;
+    font-size: 40px !important; }
+  .intro-content p:nth-of-type(2) {
+    font-size: 28px;
+    margin-bottom: 55px; }
+    .intro-content p:nth-of-type(2) span {
+      font-size: 28px; }
+  .intro-content a {
+    padding: 21px 39px 23px 39px;
+    font-size: 28px; }
+  .nav .animal-info {
+    margin-top: 16%; }
+  .nav footer ul li {
+    font-size: 18px; }
+  .content-wrapper .content .content-info .infos ul li {
+    font-size: 21px; }
+  .content-wrapper .content .content-info .infos p {
+    font-size: 22px; }
+  .content-wrapper .content .content-info .infos p:nth-child(3) {
+    font-size: 24px; }
+  .title-content h1 {
+    font-size: 30px; }
+  .title-content h2 {
+    font-size: 80px; }
+  .title-content p {
+    font-size: 22px; }
+  html:not(.small-nav) .animal-nav-content {
+    width: 400px;
+    margin-left: -192px;
+    margin-top: 25px; }
+    html:not(.small-nav) .animal-nav-content ul {
+      margin-top: -126px; }
+    html:not(.small-nav) .animal-nav-content ul h2 {
+      font-size: 46px; }
+    html:not(.small-nav) .animal-nav-content ul h4 {
+      font-size: 26px; }
+    html:not(.small-nav) .animal-nav-content ul > span {
+      font-size: 22px; }
+  .overlay > div {
+    max-width: 700px; }
+  .overlay h2 {
+    font-size: 32px; }
+  .overlay p {
+    font-size: 22px;
+    line-height: 24px; }
+    .overlay p:nth-child(2) {
+      font-size: 25px; }
+  .overlay ul li a {
+    font-size: 20px; }
+  body.all-animals #show-stage {
+    transform: scale(1.7) translateY(-10%) !important; } }
 
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1921px) {
   #show-stage {
-    max-width: 950px !important;
-    max-height: 633px !important; }
+    max-width: 1000px !important;
+    max-height: 666px !important; }
+  .loading-title {
+    margin-top: 6% !important;
+    font-size: 24px; }
+    .loading-title p {
+      font-size: 16px; }
+  .intro-content {
+    margin-top: 6% !important; }
   .nav .animal-nav {
     right: 54px;
     margin-top: -142px; }
@@ -5890,7 +6136,59 @@ html:not(.small-nav) .animal-nav-content {
   .nav .nav-btn.close {
     transform: scale(1.33); }
   .content-wrapper .content .content-info {
-    max-width: 610px; } }
+    max-width: 680px; }
+  .intro-content .textuered-type {
+    line-height: 44px !important;
+    font-size: 44px !important; }
+  .intro-content p:nth-of-type(2) {
+    font-size: 30px;
+    margin-bottom: 60px; }
+    .intro-content p:nth-of-type(2) span {
+      font-size: 30px; }
+  .intro-content a {
+    padding: 21px 39px 23px 39px;
+    font-size: 30px; }
+  .nav .animal-info {
+    margin-top: 16%; }
+  .nav footer ul li {
+    font-size: 21px; }
+  .content-wrapper .content .content-info .infos ul li {
+    font-size: 23px; }
+  .content-wrapper .content .content-info .infos p {
+    font-size: 24px; }
+  .content-wrapper .content .content-info .infos p:nth-child(3) {
+    font-size: 28px; }
+  .title-content h1 {
+    font-size: 34px; }
+  .title-content h2 {
+    font-size: 84px; }
+  .title-content p {
+    font-size: 24px; }
+  html:not(.small-nav) .animal-nav-content {
+    width: 420px;
+    margin-left: -202px;
+    margin-top: 20px; }
+    html:not(.small-nav) .animal-nav-content ul {
+      margin-top: -136px; }
+    html:not(.small-nav) .animal-nav-content ul h2 {
+      font-size: 49px; }
+    html:not(.small-nav) .animal-nav-content ul h4 {
+      font-size: 29px; }
+    html:not(.small-nav) .animal-nav-content ul > span {
+      font-size: 25px; }
+  .overlay > div {
+    max-width: 980px; }
+  .overlay h2 {
+    font-size: 40px; }
+  .overlay p {
+    font-size: 30px;
+    line-height: 32px; }
+    .overlay p:nth-child(2) {
+      font-size: 32px; }
+  .overlay ul li a {
+    font-size: 24px; }
+  body.all-animals #show-stage {
+    transform: scale(1.7) translateY(-10%) !important; } }
 
 @font-face {
   font-family: 'BlocExtCond';

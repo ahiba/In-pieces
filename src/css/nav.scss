@@ -633,7 +633,7 @@ footer {
       transform: translateY(0);
       @for $i from 1 through 5 {
         &:nth-child(#{$i}) {
-          transition-delay: (#{$i}-1)*.14s;
+          transition-delay: $i*.14s;
         }
       }
       .share {
