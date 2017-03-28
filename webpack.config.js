@@ -3,9 +3,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 
 const config = {
-  //source-map的作用： 在报错的时候，会对应源代码中的行数  cheap-eval-source-map
   // devtool: "inline-source-map",
-  devtool: "source-map",
+  // devtool: "source-map",
   entry: './src/js/index.js',
   output: {
     path: path.resolve(__dirname, './assets/'),

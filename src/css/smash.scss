@@ -67,6 +67,10 @@
       transform: translateY(4px);
     }
   }
+  .footer-nav {
+    pointer-events: none;
+    opacity: 0;
+  }
 }
 
 .popout.big-red {

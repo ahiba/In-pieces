@@ -22,15 +22,7 @@ class Pieces {
     this._initData();
     window.onload = () => {
       this._preloaderSeq();
-      // this._dev();
     }
-  }
-
-  _dev() {
-    $(document.body).removeClass('preloader').addClass('title');
-    setTimeout(function () {
-      $(document.body).addClass('show-title');
-    }, 2000);
   }
 
   _initEvent() {
