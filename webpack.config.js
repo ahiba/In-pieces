@@ -18,6 +18,7 @@ const config = {
         use: ExtractTextPlugin.extract({
           use: [
             "css-loader",
+            "postcss-loader",
             "sass-loader"
           ]
         })
