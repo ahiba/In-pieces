@@ -140,5 +140,54 @@ $('body').on('click', function (e){
     -webkit-text-fill-color: transparent;
 }
 ```
+
+> 动物的微动
+
+我在浏览网站的时候，注意到一个细节，那就是动物在运动的时候，非常的细腻，不止一个地方在运动，有时会交替运动，显得十分生动。探究其原理，是类名控制，这就需要设置一个不断循环的定时器，而且要在几个状态间反复切换。代码如下：
+
+```javascript
+setInterval(() => {
+      b.removeClass("state3");
+      setTimeout(() => {
+        b.addClass("state1");
+      }, 1000);
+      setTimeout(() => {
+        b.removeClass("state1").addClass("state2");
+      }, 2500);
+      setTimeout(() => {
+        b.removeClass("state2").addClass("state3");
+      }, 3500)
+    }, 5000)
+```
+
+通过interval嵌套timeout的方式达到微动状态间的切换，每个类名对应每个动物的不同微动状态。第二种微动状态也如上代码，大同小异。在这里不赘述了。
+
+做到这里就要考虑如何在动物切换的时候不让其运动，这里我想到了使用animation-lock这个类名限定动物微动的前提条件，当animation-lock类名存在时才进行微动。在切换动物时，去掉这个类名，当变换完成时加入这个类名就可以实现我们希望的效果。
+
+> 动物碎片的闪烁
+动物展示的时候，会发现，碎片有闪烁的效果，这是通过伪元素实现的，创建一个100%宽高的伪元素，添加一个animation，让其有一个透明度的变化，达到相当于遮罩层的闪烁。通过scss循环，可以方便的设定动画执行延迟。
+
+```css
+.pieces{
+   content: "";
+   display: block;
+   width: 100%;
+   height: 100%;
+   animation: shimmer .8s forwards;
+}
+@keyframes shimmer {
+  0% {
+    background-color: rgba(255,255,255,0);
+  }
+  35% {
+    background-color: rgba(255,255,255,.1);
+  }
+  100% {
+    background-color: rgba(255,255,255,0);
+  }
+}
+```
+
+
 ## License
 MIT &copy; [Moudicat](https://github.com/moudicat)
