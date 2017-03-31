@@ -96,5 +96,49 @@ $('body').on('click', function (e){
 ![clip-path3](https://moudicat-data.oss-cn-beijing.aliyuncs.com/cdn/2017/03/piecesclick.png)
 
 尝试绘制了这样一个图形，当然也发现了不少问题，点击的精确度并不如预想，图形绘制有间隙，只能通过微调让它对齐，这十分考验人的耐心。
+
+> 特殊边框的按钮
+
+![clip-path4](https://moudicat-data.oss-cn-beijing.aliyuncs.com/cdn/2017/03/R@U5W6FIJDOHB79.png)
+
+像上面这种按钮，实际上是通过元素背景配合伪元素实现的，具体代码如下：
+
+```css
+.btn {
+    height: 54px;
+    width: 54px;
+    border-radius: 50%;
+    background: (背景图);
+    &::after {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 44px;
+        height: 44px;
+        background-color: #64d6e2;
+        border-radius: 100px;
+    }
+}
+```
+
+通过这种方式，在元素内部创建伪元素定位遮盖该元素背景图，就能图中的效果。 而hover边框变宽，实际上是给元素加了transfrom:scale属性，让元素略微放大，伪元素略微缩小。
+
+关于这类伪元素的妙用，[这里有更多，更实用的示例](https://tympanus.net/Development/HoverEffectIdeas/index.html)，非常赞！
+
+> 实现闪烁字体
+
+![clip-path5](https://moudicat-data.oss-cn-beijing.aliyuncs.com/cdn/2017/03/@3H@YEMJ10RIYWUU9.png)
+
+闪烁字体实现的原理就比较简单了，他是通过text-fill-color，-webkit-background-clip属性加背景配合使用，闪烁是通过反复移动背景图坐标达到的效果。
+
+```css
+.textuered-type {
+    background: url(./img/d82f7f22.repeat-white.png) 50% repeat;
+    animation: scratchy .253s linear forwards infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+```
 ## License
 MIT &copy; [Moudicat](https://github.com/moudicat)
